@@ -17,6 +17,8 @@ from .medqa_run import DIRECTORY, prepare, records
 from .medqa_prepare import EXPERIMENT
 from .report import paired_difference, quantile, wilson
 
+BREAK = chr(10)
+
 PUBLIC=ROOT/'results'/EXPERIMENT
 
 
@@ -148,31 +150,9 @@ def publish():
         'The Korean KorMedMCQA pilot and this original-English MedQA sample are different item sets. They differ in curriculum, difficulty, selection and number of options. A model ranking reversal across them would be a task-specific finding, not proof that English caused it. Do not subtract the two benchmark accuracies to estimate a language effect or pool them into one medical score.','',
         f"The observed point estimates do reverse: Korean KorMedMCQA with Korean instructions was Jev 80% versus Luna 88%, while this English MedQA sample is Jev {j['accuracy']:.0%} versus Luna {l['accuracy']:.0%}. The English paired interval includes zero, and the independent question sets prevent attributing that reversal specifically to language.",'',
         'Public benchmark training exposure is unknown. Source screening affects representativeness. Historical examination answers were preserved. This pilot evaluates multiple-choice benchmark performance, not diagnostic safety or clinical readiness.','',
-        f'[Public evidence](https://github.com/mahlernim/jev-korean-benchmark/tree/main/results/{EXPERIMENT}) · [Korean comparison](luna-comparison.html) · [Main report](index.html)']
-    (ROOT/'docs/medqa-english.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
-    block=['<!-- medqa-summary-start -->','## Original-English medical QA','',
-        f"On 100 original-English MedQA test questions, **Jev scored {j['accuracy']:.0%} and Luna-none {l['accuracy']:.0%}**. Luna minus Jev was {d['difference']*100:+.0f} percentage points (paired 95% interval {d['ci95'][0]*100:+.0f} to {d['ci95'][1]*100:+.0f}). These are different questions from the Korean medical benchmark and cannot isolate a language effect.",'',
-        '![Original-English MedQA comparison](docs/figures/medqa-english.png)','',
-        '**Figure.** One hundred matched questions per model. Accuracy bars show Wilson 95% intervals. Latency and cost are point estimates under four concurrent requests per provider. Parallel batch time is not comparable with the earlier sequential timings.','',
-        f'[Full English MedQA report](https://ahn-lab.org/jev-korean-benchmark/medqa-english.html) · [Frozen evidence](results/{EXPERIMENT}/)','<!-- medqa-summary-end -->','']
-    path=ROOT/'README.md'; text=path.read_text(encoding='utf-8')
-    if '<!-- medqa-summary-start -->' in text:
-        before,rest=text.split('<!-- medqa-summary-start -->',1); _,after=rest.split('<!-- medqa-summary-end -->',1)
-        text=before+'\n'.join(block)+after.lstrip('\n')
-    else: text=text.replace('<!-- luna-summary-start -->','\n'.join(block)+'\n<!-- luna-summary-start -->',1)
-    path.write_text(text,encoding='utf-8')
-    ko_path=ROOT/'docs/korean-supplement.md'; ko=ko_path.read_text(encoding='utf-8')
-    ko_block=['<!-- medqa-ko-start -->','## 영어 원문 MedQA 후속 평가','',
-        f"한국어 문항을 번역하지 않고 원래 영어로 작성된 MedQA 시험 문항 100개를 평가했습니다. Jev는 {j['correct']}/100, Luna-none은 {l['correct']}/100이었습니다. 점추정치 순서는 한국어 시험 결과와 반대였지만, Luna−Jev 차이의 탐색적 95% 구간은 {d['ci95'][0]*100:+.0f}~{d['ci95'][1]*100:+.0f}%p로 0을 포함합니다.",'',
-        '두 벤치마크는 문항, 교육과정, 난도 및 선택지 수가 다르므로 이 결과만으로 영어가 순위 역전의 원인이라고 해석할 수 없습니다. 모델별 동시 요청 수는 4개였으며 이전 순차 실행의 시간과 직접 비교하지 않습니다.','',
-        f"두 모델의 합산 추정 API 비용은 ${j['estimated_cost_usd']+l['estimated_cost_usd']:.5f}, 준비 및 검토를 제외한 병렬 실행시간은 약 {summary['combined_invocation_wall_seconds']:.0f}초였습니다.",'',
-        '[영어 MedQA 전체 보고서와 그림](medqa-english.html)','<!-- medqa-ko-end -->','']
-    if '<!-- medqa-ko-start -->' in ko:
-        before,rest=ko.split('<!-- medqa-ko-start -->',1); _,after=rest.split('<!-- medqa-ko-end -->',1)
-        ko=before+'\n'.join(ko_block)+after.lstrip('\n')
-    else:
-        ko=ko.replace('<!-- luna-ko-start -->','\n'.join(ko_block)+'\n<!-- luna-ko-start -->',1)
-    ko_path.write_text(ko,encoding='utf-8')
+        f'[Public evidence](https://github.com/mahlernim/jev-korean-benchmark/tree/main/results/{EXPERIMENT}) · [Sample check](https://ahn-lab.org/jev-korean-benchmark/index.html)']
+    # Detailed report kept as regenerable evidence; narrative pages are hand-written.
+    (ROOT/'results'/EXPERIMENT/'report.md').write_text(BREAK.join(lines)+BREAK,encoding='utf-8')
     from .publish import render_web
     render_web()
     write('checksums.json',{p.name:filehash(p) for p in sorted(PUBLIC.iterdir()) if p.is_file() and p.name!='checksums.json'})

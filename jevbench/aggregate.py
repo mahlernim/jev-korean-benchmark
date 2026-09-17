@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 from .common import ROOT, filehash
 from .report import paired_difference, quantile, wilson
 
+BREAK = chr(10)
+
 
 def read(path):
     return json.loads((ROOT/path).read_text(encoding='utf-8'))
@@ -151,15 +153,9 @@ def build():
         'English MedQA used four concurrent requests per provider. Earlier tasks ran sequentially. No pooled elapsed-time speedup is reported across these protocols. The MedQA report records combined wall time separately from summed call durations. No new API cost was incurred to generate this overview.','',
         '## Reproduction and evidence','',
         'Run `python -m jevbench.aggregate` against the published repository. The output records source response-file checksums, cell membership, aggregate methodology and sensitivity results. Development items, repeated or perturbed robustness items, and unreviewed synthetic medical notes are excluded. Luna supplied categorical answers without probability vectors, so cross-model calibration scores cannot be computed from this run.','',
-        '[Machine-readable aggregation](https://github.com/mahlernim/jev-korean-benchmark/blob/main/results/aggregate/summary.json) · [Original-English MedQA](medqa-english.html) · [Original paired comparison](luna-comparison.html)']
-    (ROOT/'docs/aggregate.md').write_text('\n'.join(lines)+'\n',encoding='utf-8',newline='\n')
-    block='\n'.join(['## English/Korean × Jev/Luna-none','',*table,'',overview,'',general,'',
-        '![Six-cell benchmark overview](docs/figures/aggregate.png)','',
-        'Each cell has 100 questions. The general tasks are bilingual matched items; the medical rows are different exams. Error bars show 95% intervals. Timing remains separated by concurrency protocol.','',
-        '[Detailed aggregate methods and results](https://ahn-lab.org/jev-korean-benchmark/aggregate.html) · [Reproducible data](results/aggregate/summary.json)'])
-    replace_block(ROOT/'README.md','aggregate-summary',block)
-    replace_block(ROOT/'docs/korean-supplement.md','aggregate-ko',
-        f"## 영어·한국어 통합 비교\n\n6개 평가 조건을 동일 가중치로 평균하면 Jev {a['jev']:.2%}, Luna-none {a['luna']:.2%}입니다. 이는 선택한 평가 묶음의 기술통계이며 모델의 일반적 우열을 뜻하지 않습니다. Belebele와 PAWS-X는 언어 간 동일 문항을 사용하지만 영어 MedQA와 한국어 KorMedMCQA는 서로 다른 시험입니다. 의학 문항의 차이를 언어 효과로 해석하지 않습니다.\n\n[통합 표·그림 및 상세 분석](aggregate.html)")
+        '[Machine-readable aggregation](https://github.com/mahlernim/jev-korean-benchmark/blob/main/results/aggregate/summary.json) · [Sample check](https://ahn-lab.org/jev-korean-benchmark/index.html) · [Methodology](https://ahn-lab.org/jev-korean-benchmark/methodology.html)']
+    # Detailed report kept as regenerable evidence; narrative pages are hand-written.
+    (ROOT/'results/aggregate/report.md').write_text(BREAK.join(lines)+BREAK,encoding='utf-8',newline=BREAK)
     from .publish import render_web
     render_web()
     print(json.dumps({'six_cell':a,'general_only':g,'cost':costs},indent=2))
