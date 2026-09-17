@@ -1,0 +1,35 @@
+[
+  {
+    "eval_id": "kormed-2022-1-18__ko_ko",
+    "attempt": 1,
+    "original_record_hash": "e9b58934a6ed6a879f830899345ed62cba85369501d3b2a03e227c2105e8e7bf",
+    "created_at": "2026-09-17T01:32:15.103233+00:00",
+    "reason": "All observed Choice probabilities lie on a 0.01 grid. This vector sums to 0.99, consistent with rounding. Amend validator to tolerate only bounded grid rounding and normalize for proper probability metrics. Server rounding is inferred, not confirmed. No request, gold label or raw evidence changed; no extra API call.",
+    "effective_fields": {
+      "status": "success",
+      "terminal": true,
+      "fatal": false,
+      "score": {
+        "prediction": "1",
+        "probabilities": {
+          "3": 0.1212121212121212,
+          "5": 0.050505050505050504,
+          "4": 0.0,
+          "2": 0.0101010101010101,
+          "1": 0.8181818181818181
+        },
+        "rank_confidence": 0.77,
+        "reported_probability_sum": 0.9900000000000001,
+        "probabilities_renormalized": true,
+        "raw_vector_brier": 1.4331,
+        "raw_gold_log_loss": 2.120263536200091,
+        "correct": false,
+        "brier": 1.4443424140393837,
+        "log_loss": 2.11021320034659,
+        "input_tokens": 520,
+        "estimated_cost_usd": 2.1840000000000004e-05
+      },
+      "budget_charge_usd": 2.1840000000000004e-05
+    }
+  }
+]

@@ -1,0 +1,680 @@
+{
+  "stage": 3,
+  "generated_at": "2026-09-17T01:43:21.591149+00:00",
+  "manifest_hash": "3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61",
+  "planned": 120,
+  "successful": 120,
+  "failed": 0,
+  "pending": 0,
+  "failures": [],
+  "pending_ids": [],
+  "groups": {
+    "medical_text/en_en": {
+      "n": 40,
+      "correct": 40,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.9123783988027135,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.007300000000000001,
+      "raw_gold_log_loss": 0.02005521580601826,
+      "brier": 0.007300000000000001,
+      "log_loss": 0.02005521580601826,
+      "median_latency_ms": 210.61189999454655,
+      "p95_latency_ms": 272.476225008722,
+      "input_tokens": 14635,
+      "cost_usd": 0.0006146700000000001,
+      "coverage": {
+        "0.5": {
+          "n": 20,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 30,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 40,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "medical_text/ko_en": {
+      "n": 40,
+      "correct": 40,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.9123783988027135,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.011954999999999999,
+      "raw_gold_log_loss": 0.026592762331954244,
+      "brier": 0.011954999999999999,
+      "log_loss": 0.026592762331954244,
+      "median_latency_ms": 220.76554999512155,
+      "p95_latency_ms": 271.32285998522974,
+      "input_tokens": 14870,
+      "cost_usd": 0.00062454,
+      "coverage": {
+        "0.5": {
+          "n": 20,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 30,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 40,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "medical_text/ko_ko": {
+      "n": 40,
+      "correct": 40,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.9123783988027135,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.00039,
+      "raw_gold_log_loss": 0.006871256532520398,
+      "brier": 0.00039,
+      "log_loss": 0.006871256532520398,
+      "median_latency_ms": 220.6723499984946,
+      "p95_latency_ms": 269.06209498411044,
+      "input_tokens": 15510,
+      "cost_usd": 0.0006514200000000001,
+      "coverage": {
+        "0.5": {
+          "n": 20,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 30,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 40,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    }
+  },
+  "runtime": {
+    "api_call_seconds": 27.544653199845925,
+    "recorded_invocation_wall_seconds": 29.741166699997848,
+    "attempts": 120,
+    "retries": 0,
+    "input_tokens": 45015,
+    "output_tokens": 4812,
+    "observed_cost_usd": 0.0018906300000000003,
+    "first_request_at": "2026-09-17T01:35:22.806063+00:00",
+    "last_request_at": "2026-09-17T01:35:51.730285+00:00"
+  },
+  "paired": {
+    "medical_text/ko_en-en_en": {
+      "n": 40,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "left_only_correct": 0,
+      "right_only_correct": 0
+    },
+    "medical_text/ko_ko-ko_en": {
+      "n": 40,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "left_only_correct": 0,
+      "right_only_correct": 0
+    }
+  },
+  "categories": {
+    "evidence/en_en": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 2.5000000000000025e-05,
+      "raw_gold_log_loss": 0.0012562919816876813,
+      "brier": 2.5000000000000025e-05,
+      "log_loss": 0.0012562919816876813,
+      "median_latency_ms": 210.84780000091996,
+      "p95_latency_ms": 236.15536998549942,
+      "input_tokens": 3019,
+      "cost_usd": 0.00012679800000000001,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "evidence/ko_en": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 5.000000000000005e-05,
+      "raw_gold_log_loss": 0.0025125839633753626,
+      "brier": 5.000000000000005e-05,
+      "log_loss": 0.0025125839633753626,
+      "median_latency_ms": 200.39889999316074,
+      "p95_latency_ms": 218.03332998388214,
+      "input_tokens": 3096,
+      "cost_usd": 0.00013003200000000003,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "evidence/ko_ko": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0001750000000000002,
+      "raw_gold_log_loss": 0.006294214359752977,
+      "brier": 0.0001750000000000002,
+      "log_loss": 0.006294214359752977,
+      "median_latency_ms": 226.96865000762045,
+      "p95_latency_ms": 379.40913001075376,
+      "input_tokens": 3224,
+      "cost_usd": 0.00013540800000000003,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "experiencer/en_en": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.03487500000000001,
+      "raw_gold_log_loss": 0.08859708593102225,
+      "brier": 0.03487500000000001,
+      "log_loss": 0.08859708593102225,
+      "median_latency_ms": 201.92074999795295,
+      "p95_latency_ms": 232.18672499351666,
+      "input_tokens": 2858,
+      "cost_usd": 0.00012003600000000001,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "experiencer/ko_en": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.057874999999999996,
+      "raw_gold_log_loss": 0.11496483366173824,
+      "brier": 0.057874999999999996,
+      "log_loss": 0.11496483366173824,
+      "median_latency_ms": 233.64214999310207,
+      "p95_latency_ms": 391.40304001484753,
+      "input_tokens": 2903,
+      "cost_usd": 0.00012192600000000002,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "experiencer/ko_ko": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 5.000000000000005e-05,
+      "raw_gold_log_loss": 0.0025125839633753626,
+      "brier": 5.000000000000005e-05,
+      "log_loss": 0.0025125839633753626,
+      "median_latency_ms": 207.04164999187924,
+      "p95_latency_ms": 245.1905950103537,
+      "input_tokens": 3047,
+      "cost_usd": 0.00012797400000000002,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "medication/en_en": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0015999999999999992,
+      "raw_gold_log_loss": 0.010422701117381377,
+      "brier": 0.0015999999999999992,
+      "log_loss": 0.010422701117381377,
+      "median_latency_ms": 207.90570000826847,
+      "p95_latency_ms": 254.1608650062699,
+      "input_tokens": 2944,
+      "cost_usd": 0.00012364800000000002,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "medication/ko_en": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0,
+      "raw_gold_log_loss": 0.0,
+      "brier": 0.0,
+      "log_loss": 0.0,
+      "median_latency_ms": 224.22595000534784,
+      "p95_latency_ms": 264.0069149900228,
+      "input_tokens": 3015,
+      "cost_usd": 0.00012663000000000003,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "medication/ko_ko": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0,
+      "raw_gold_log_loss": 0.0,
+      "brier": 0.0,
+      "log_loss": 0.0,
+      "median_latency_ms": 220.05914998590015,
+      "p95_latency_ms": 269.3308350048028,
+      "input_tokens": 3135,
+      "cost_usd": 0.00013167000000000002,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "negation/en_en": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0,
+      "raw_gold_log_loss": 0.0,
+      "brier": 0.0,
+      "log_loss": 0.0,
+      "median_latency_ms": 225.4926999885356,
+      "p95_latency_ms": 568.8856900000245,
+      "input_tokens": 2926,
+      "cost_usd": 0.00012289200000000002,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "negation/ko_en": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0002250000000000002,
+      "raw_gold_log_loss": 0.0038074009355885717,
+      "brier": 0.0002250000000000002,
+      "log_loss": 0.0038074009355885717,
+      "median_latency_ms": 234.1622499807272,
+      "p95_latency_ms": 327.164905022073,
+      "input_tokens": 2949,
+      "cost_usd": 0.00012385800000000002,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "negation/ko_ko": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0013749999999999995,
+      "raw_gold_log_loss": 0.015460623495446673,
+      "brier": 0.0013749999999999995,
+      "log_loss": 0.015460623495446673,
+      "median_latency_ms": 226.73434999887832,
+      "p95_latency_ms": 253.41029499395518,
+      "input_tokens": 3093,
+      "cost_usd": 0.00012990600000000003,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "temporality/en_en": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0,
+      "raw_gold_log_loss": 0.0,
+      "brier": 0.0,
+      "log_loss": 0.0,
+      "median_latency_ms": 213.35915000236128,
+      "p95_latency_ms": 255.64672500040615,
+      "input_tokens": 2888,
+      "cost_usd": 0.00012129600000000001,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "temporality/ko_en": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0016249999999999993,
+      "raw_gold_log_loss": 0.011678993099069057,
+      "brier": 0.0016249999999999993,
+      "log_loss": 0.011678993099069057,
+      "median_latency_ms": 214.28179999929853,
+      "p95_latency_ms": 224.6017249985016,
+      "input_tokens": 2907,
+      "cost_usd": 0.00012209400000000003,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "temporality/ko_ko": {
+      "n": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6755924351161198,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0003500000000000003,
+      "raw_gold_log_loss": 0.010088860844026978,
+      "brier": 0.0003500000000000003,
+      "log_loss": 0.010088860844026978,
+      "median_latency_ms": 214.5487499947194,
+      "p95_latency_ms": 234.4987149888766,
+      "input_tokens": 3011,
+      "cost_usd": 0.000126462,
+      "coverage": {
+        "0.5": {
+          "n": 4,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 8,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    }
+  },
+  "errors": [],
+  "condition_disagreements": []
+}

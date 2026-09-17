@@ -1,0 +1,437 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A reproducible early-access evaluation of Jev on Korean reading, paraphrase decisions and medical text."><title>An early look at Jev on Korean and medical text</title><style>body{margin:0;background:#f7f8fa;color:#192434;font:17px/1.7 system-ui,-apple-system,sans-serif}main{max-width:1020px;margin:auto;padding:48px 28px 80px}nav{font-size:14px;display:flex;gap:22px;flex-wrap:wrap;border-bottom:1px solid #cad2dc;padding-bottom:18px}h1{font-size:clamp(30px,5vw,48px);line-height:1.15;letter-spacing:-.035em;margin:40px 0 18px}h2{font-size:25px;margin-top:44px;line-height:1.3}h3{font-size:21px}p,li{max-width:880px}a{color:#125ac4;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;margin:20px 0;background:white}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #d7dee7;vertical-align:top}th{background:#e9eef5}code{font-size:.85em;overflow-wrap:anywhere}pre{padding:16px;background:#e9eef5;overflow:auto}footer{border-top:1px solid #cad2dc;margin-top:50px;padding-top:16px;font-size:13px;color:#526173}.table-wrap{overflow-x:auto} @media(max-width:600px){main{padding:24px 16px 50px}body{font-size:16px}th,td{padding:8px;min-width:65px}}</style></head><body><main><nav><a href="index.html">Jev Korean pilot</a><a href="methodology.html">Methods</a><a href="korean-supplement.html">한국어</a><a href="results.zip">Download results</a></nav><h1 id="an-early-look-at-jev-on-korean-and-medical-text">An early look at Jev on Korean and medical text</h1>
+<h2 id="a-small-early-access-pilot">A small early-access pilot</h2>
+<p>We evaluated TypeSafe <strong>jev-1.13.0</strong> on September 17, 2026, using 1,036 planned evaluations and 1,037 sequential API attempts including retries. The study compares English and Korean reading comprehension and paraphrase decisions, tests Korean medical examination knowledge, and separately explores simple synthetic medical-note interpretation.</p>
+<p>On 100 matched questions, Belebele accuracy was <strong>97% in English and 96% in Korean with Korean instructions</strong>. On 100 matched PAWS-X pairs, the corresponding values were <strong>80% and 76%</strong>. Korean medical examination accuracy was <strong>80%</strong> on a screened 100-question doctor subset.</p>
+<p>The analysis contains 1,036 scored responses after the disclosed probability-rounding amendment. The total token-based cost estimate was <strong>$0.02056 USD</strong>, and summed client-observed API call time was <strong>262.0 seconds</strong>. These measurements describe this service, account, workload and run. No other model was evaluated, so this report makes no comparative speed or cost claim.</p>
+<p>The central finding is task dependence. Good reading-comprehension performance does not establish equally strong semantic discrimination, medical competence, or dependable confidence estimates. The small sample and unknown training exposure limit generalization.</p>
+<p><a href="korean-supplement.html">Korean supplement</a> · <a href="methodology.html">Detailed methodology</a> · <a href="results.zip">Download recorded results</a></p>
+<p>A small robustness check also found that reversing sentence order changed 3/5 paraphrase predictions. This observation is more actionable than interpreting a one-point instruction-language difference as a general advantage.</p>
+<h2 id="experiment-design">Experiment design</h2>
+<p>The sample, labels, prompts and 20 robustness cases were frozen before inference. Jev received one question per request and no tools, retrieval or generated rationale. Choice handled multiple-choice questions; Noul returned a yes/no equivalence probability. This evaluates an observable decision task without requiring Jev to behave like a chat model.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th style="text-align: right;">Source cases</th>
+<th style="text-align: right;">Conditions / calls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Development only</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">3 / 36</td>
+</tr>
+<tr>
+<td>Belebele reading comprehension</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">3 / 300</td>
+</tr>
+<tr>
+<td>PAWS-X paraphrase identification</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">3 / 300</td>
+</tr>
+<tr>
+<td>KorMedMCQA doctor questions</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">2 / 200</td>
+</tr>
+<tr>
+<td>Synthetic medical notes, unreviewed</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">3 / 120</td>
+</tr>
+<tr>
+<td>Robustness</td>
+<td style="text-align: right;">20 reused cases</td>
+<td style="text-align: right;">4 extra / 80</td>
+</tr>
+</tbody>
+</table></div>
+<p>There are 340 scored source cases, plus 12 development cases. The 1,036 calls are not independent questions. Synthetic medical examples include related minimal pairs.</p>
+<h2 id="general-language-understanding">General language understanding</h2>
+<p>EN/EN means English content and instructions. KO/EN means Korean content with English instructions. KO/KO means Korean content and instructions. Public answer-option text follows content language.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Condition</th>
+<th style="text-align: right;">Correct / 100</th>
+<th style="text-align: right;">Accuracy, 95% Wilson interval</th>
+<th style="text-align: right;">Brier</th>
+<th style="text-align: right;">Log loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>belebele</td>
+<td>EN/EN</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">97%, 91.5%–99.0%</td>
+<td style="text-align: right;">0.029</td>
+<td style="text-align: right;">0.044</td>
+</tr>
+<tr>
+<td>belebele</td>
+<td>KO/EN</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">95%, 88.8%–97.8%</td>
+<td style="text-align: right;">0.061</td>
+<td style="text-align: right;">0.118</td>
+</tr>
+<tr>
+<td>belebele</td>
+<td>KO/KO</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">96%, 90.2%–98.4%</td>
+<td style="text-align: right;">0.052</td>
+<td style="text-align: right;">0.101</td>
+</tr>
+<tr>
+<td>pawsx</td>
+<td>EN/EN</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">80%, 71.1%–86.7%</td>
+<td style="text-align: right;">0.271</td>
+<td style="text-align: right;">0.405</td>
+</tr>
+<tr>
+<td>pawsx</td>
+<td>KO/EN</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">75%, 65.7%–82.5%</td>
+<td style="text-align: right;">0.337</td>
+<td style="text-align: right;">0.498</td>
+</tr>
+<tr>
+<td>pawsx</td>
+<td>KO/KO</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">76%, 66.8%–83.3%</td>
+<td style="text-align: right;">0.332</td>
+<td style="text-align: right;">0.494</td>
+</tr>
+</tbody>
+</table></div>
+<p>The English-to-Korean comparison holds the underlying item fixed, using existing translations. Switching instruction language is a separate comparison. A one-point difference here is just one answer and should not be interpreted as evidence that one prompt language is generally better.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Paired comparison</th>
+<th style="text-align: right;">Difference in percentage points</th>
+<th style="text-align: right;">95% paired bootstrap interval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>belebele/ko_en-en_en</td>
+<td style="text-align: right;">-2.0</td>
+<td style="text-align: right;">-5.0 to +0.0</td>
+</tr>
+<tr>
+<td>belebele/ko_ko-ko_en</td>
+<td style="text-align: right;">+1.0</td>
+<td style="text-align: right;">+0.0 to +3.0</td>
+</tr>
+<tr>
+<td>pawsx/ko_en-en_en</td>
+<td style="text-align: right;">-5.0</td>
+<td style="text-align: right;">-14.0 to +4.0</td>
+</tr>
+<tr>
+<td>pawsx/ko_ko-ko_en</td>
+<td style="text-align: right;">+1.0</td>
+<td style="text-align: right;">+0.0 to +3.0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Bootstrap intervals are descriptive and can have boundary artifacts when there are very few discordant pairs. This pilot is not powered for small language differences, and no multiple-comparison-adjusted claims are made.</p>
+<h2 id="medical-knowledge">Medical knowledge</h2>
+<p>The KorMedMCQA doctor sample uses original Korean examination questions and historical gold labels. It has no matched English translation, so its errors cannot be assigned specifically to Korean language understanding.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Instructions</th>
+<th style="text-align: right;">Correct / 100</th>
+<th style="text-align: right;">Accuracy, 95% Wilson interval</th>
+<th style="text-align: right;">Brier</th>
+<th style="text-align: right;">Log loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ko_en</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">82%, 73.3%–88.3%</td>
+<td style="text-align: right;">0.254</td>
+<td style="text-align: right;">0.454</td>
+</tr>
+<tr>
+<td>ko_ko</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">80%, 71.1%–86.7%</td>
+<td style="text-align: right;">0.255</td>
+<td style="text-align: right;">0.456</td>
+</tr>
+</tbody>
+</table></div>
+<p>The pinned doctor test split has 435 questions. A conservative text screen retained 259 candidates, from which 35, 33 and 32 were sampled from 2022, 2023 and 2024 respectively. The selected inputs were inspected for missing media dependencies. The screen also excludes some potentially usable text questions, so this is a selected subset rather than an official full-benchmark score.</p>
+<p>The sample includes clinical, public-health, ethics and medical-law questions. Excluding media-dependent items can shift the subject mix away from image-heavy clinical questions. Historical answers are evaluated as provided, not reinterpreted as current clinical or legal recommendations.</p>
+<h2 id="exploratory-medical-note-interpretation">Exploratory medical-note interpretation</h2>
+<p>Forty synthetic bilingual cases cover negation, time, patient versus family history, medication status, and support for a claim. All answers are intended to follow from the supplied note. The cases and translations were AI-authored before inference and <strong>have not received clinician review</strong>. These results are excluded from primary medical scoring.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Condition</th>
+<th style="text-align: right;">Correct / 40</th>
+<th style="text-align: right;">Exploratory accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>en_en</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">100.0%</td>
+</tr>
+<tr>
+<td>ko_en</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">100.0%</td>
+</tr>
+<tr>
+<td>ko_ko</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">100.0%</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are short, deliberately simple probes, not representative clinical records. They do not test diagnosis, treatment safety, long-note processing, or real patient workflows. The <a href="clinician-review.html">case review packet</a> exposes every proposed label and translation for review.</p>
+<h2 id="does-uncertainty-identify-mistakes">Does uncertainty identify mistakes?</h2>
+<p>We ranked Choice answers by returned confidence and Noul answers by distance from 0.5. The table shows errors among the retained fraction, not the fraction of errors removed.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Task, Korean instructions</th>
+<th style="text-align: right;">50% retained</th>
+<th style="text-align: right;">75% retained</th>
+<th style="text-align: right;">All retained</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>belebele</td>
+<td style="text-align: right;">0.0%</td>
+<td style="text-align: right;">0.0%</td>
+<td style="text-align: right;">4.0%</td>
+</tr>
+<tr>
+<td>pawsx</td>
+<td style="text-align: right;">12.0%</td>
+<td style="text-align: right;">18.7%</td>
+<td style="text-align: right;">24.0%</td>
+</tr>
+<tr>
+<td>kormed</td>
+<td style="text-align: right;">2.0%</td>
+<td style="text-align: right;">6.7%</td>
+<td style="text-align: right;">20.0%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Returned confidence summarizes a distribution and is not itself measured correctness probability. Noul has no separate confidence field. Brier scores and log loss evaluate the actual returned probabilities against labels. No thresholds were tuned on these test results.</p>
+<p>The initial strict sum-to-one validator stopped on one five-option vector summing to 0.99. We preserved that event and amended the analysis to allow only bounded rounding-compatible vectors, normalizing them for probability metrics. The <a href="methodology.html#probability-validation-amendment">methodology amendment</a> documents the rule and timing. This is consistent with observed two-decimal precision, but server rounding has not been independently confirmed.</p>
+<h2 id="runtime-and-cost">Runtime and cost</h2>
+<p>The resolved model was <code>jev-1.13.0</code> throughout. The requested alias was <code>jev-latest</code>. Requests ran sequentially through Python SDK 0.6.0 on Windows, with a 30-second timeout and at most two logged retries for transient failures.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th style="text-align: right;">Calls</th>
+<th style="text-align: right;">API call seconds</th>
+<th style="text-align: right;">Recorded runner seconds</th>
+<th style="text-align: right;">Input tokens</th>
+<th style="text-align: right;">Output tokens</th>
+<th style="text-align: right;">Estimated USD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">10.427</td>
+<td style="text-align: right;">7.897</td>
+<td style="text-align: right;">12,586</td>
+<td style="text-align: right;">1,044</td>
+<td style="text-align: right;">0.000529</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">140.813</td>
+<td style="text-align: right;">147.865</td>
+<td style="text-align: right;">286,838</td>
+<td style="text-align: right;">19,500</td>
+<td style="text-align: right;">0.012047</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">201</td>
+<td style="text-align: right;">65.402</td>
+<td style="text-align: right;">70.831</td>
+<td style="text-align: right;">107,150</td>
+<td style="text-align: right;">10,400</td>
+<td style="text-align: right;">0.004500</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">27.545</td>
+<td style="text-align: right;">29.741</td>
+<td style="text-align: right;">45,015</td>
+<td style="text-align: right;">4,812</td>
+<td style="text-align: right;">0.001891</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">17.842</td>
+<td style="text-align: right;">19.335</td>
+<td style="text-align: right;">38,000</td>
+<td style="text-align: right;">3,164</td>
+<td style="text-align: right;">0.001596</td>
+</tr>
+</tbody>
+</table></div>
+<p>Across successful responses, median client latency was 221 ms and p95 was 306 ms. Summed API duration, including failed attempts, was 262.029 seconds. Recorded runner invocation time was 275.669 seconds, but it omits the first ten development calls because wall-time instrumentation was added afterward. Complete per-request timing exists for all attempts. Dataset preparation, coding, review and human gaps are excluded from these execution-time figures.</p>
+<p>Transient failed attempts: 1. Retry attempts: 1. Failed attempts without reported token usage are excluded from the observed token-cost estimate; the conservative local budget ledger reserves $0.020678 including those attempts. A local validation stop was resolved without repeating its request.</p>
+<p>Latency is measured around the synchronous SDK call and includes network travel and decoding. It is not server compute time. Client geography was not measured; the workspace timezone was Asia/Seoul. Runs were not randomized by condition order, and no concurrency sweep was performed.</p>
+<p>Cost is calculated from reported input tokens at the September 17, 2026 published rate of $0.042 per million input tokens; output tokens were advertised as free. It is a usage estimate rather than a billing invoice, and excludes minimum purchases or account credits. <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">TypeSafe pricing statement</a>.</p>
+<p>For future model comparisons, use these same source IDs, conditions and answer choices; keep concurrency and latency boundaries identical; disclose token pricing and reasoning settings separately. Do not compare self-reported LLM confidence directly with Jev's distribution-derived confidence.</p>
+<h2 id="robustness">Robustness</h2>
+<p><strong>Sentence-order sensitivity was visible even in this small check.</strong> Reversing the two sentences changed 3 of 5 PAWS-X predictions relative to the base condition. The same cases flipped in both reversed runs. Semantic equivalence is symmetric, so this is a useful failure mode to investigate on a larger held-out set. It is not an estimate of the population-wide flip rate.
+Five cases from each scored task were selected before viewing results. Each Korean-instruction condition was repeated twice and tested with two option-order rotations. PAWS-X instead reversed sentence order twice. Option IDs remained attached to their original meanings.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Task / variant</th>
+<th style="text-align: right;">Calls</th>
+<th style="text-align: right;">Answer flips from base</th>
+<th style="text-align: right;">Mean probability total variation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>belebele/repeat1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.0200</td>
+</tr>
+<tr>
+<td>belebele/repeat2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0040</td>
+</tr>
+<tr>
+<td>belebele/variant1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0420</td>
+</tr>
+<tr>
+<td>belebele/variant2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0376</td>
+</tr>
+<tr>
+<td>kormed/repeat1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0200</td>
+</tr>
+<tr>
+<td>kormed/repeat2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0140</td>
+</tr>
+<tr>
+<td>kormed/variant1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0600</td>
+</tr>
+<tr>
+<td>kormed/variant2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0820</td>
+</tr>
+<tr>
+<td>medical_text/repeat1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0020</td>
+</tr>
+<tr>
+<td>medical_text/repeat2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0020</td>
+</tr>
+<tr>
+<td>medical_text/variant1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0040</td>
+</tr>
+<tr>
+<td>medical_text/variant2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0040</td>
+</tr>
+<tr>
+<td>pawsx/repeat1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0220</td>
+</tr>
+<tr>
+<td>pawsx/repeat2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0220</td>
+</tr>
+<tr>
+<td>pawsx/variant1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.2420</td>
+</tr>
+<tr>
+<td>pawsx/variant2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.2420</td>
+</tr>
+</tbody>
+</table></div>
+<p>This small check probes repeated predictions and option ordering. It does not establish general determinism or robustness to other paraphrases.</p>
+<h2 id="limitations-and-disclosure">Limitations and disclosure</h2>
+<ul>
+<li>This is a convenience-scale early-access pilot, not a leaderboard or clinical validation study. The model can change after this run.</li>
+<li>Public benchmark training exposure is unknown. Strong scores could partly reflect familiarity with public items.</li>
+<li>Translated paired benchmarks can contain translation artifacts. Disagreements identify cases to inspect, not proof of mistranslation.</li>
+<li>Medical question screening changes the target population. Original source typographical errors and historical labels were preserved.</li>
+<li>Synthetic medical labels and English equivalents are unreviewed. Perfect performance, if observed, would not establish clinical reliability.</li>
+<li>Repeated conditions and minimal pairs are dependent. No overall accuracy is pooled across tasks.</li>
+<li>The run used an early-access account. No third-party model baseline was run. This is a technical pilot report, not a peer-reviewed study.</li>
+<li>Code and English/Korean drafts were prepared with AI assistance. Benchmark answers were scored deterministically against frozen labels.</li>
+</ul>
+<h2 id="reproducibility-and-corrections">Reproducibility and corrections</h2>
+<p>The original manifest hash is <code>3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61</code>. The repository includes frozen source revisions and checksums, sample IDs, prompts, request hashes, response bodies, timing and per-item scores. Public benchmark input text is fetched from its original sources rather than redistributed in the results bundle.</p>
+<p><a href="methodology.html">Methodology</a> · <a href="results.zip">Recorded outputs</a> · <a href="stage-0.html">Stage 0</a> · <a href="stage-1.html">Stage 1</a> · <a href="stage-2.html">Stage 2</a> · <a href="stage-3.html">Stage 3</a> · <a href="stage-4.html">Stage 4</a></p>
+<p>Corrections should identify the item and preserve the original results. Reviewed synthetic cases or revised prompts belong to a separately versioned experiment.</p><footer>Early-access pilot · September 17, 2026 · Synthetic medical cases await clinician review.</footer></main></body></html>

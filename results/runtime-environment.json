@@ -1,0 +1,129 @@
+[
+  {
+    "manifest_hash": "3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61",
+    "sdk_version": "0.6.0",
+    "runner_source_hash": "2788c46e2b0678c1d303f24859e1d4e0aa8f3c9ff9b378a40123f52508f266e7",
+    "price_per_input_token": 4.2000000000000006e-08,
+    "budget_usd": 0.25
+  },
+  {
+    "manifest_hash": "3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61",
+    "sdk_version": "0.6.0",
+    "runner_source_hash": "071ae40b8eae83f97cb716d96bba3aa95384d37d5ff06fd8154670f17a67c177",
+    "price_per_input_token": 4.2000000000000006e-08,
+    "budget_usd": 0.25,
+    "python_version": "3.14.2",
+    "os": "Windows",
+    "os_release": "11",
+    "local_timezone": [
+      "대한민국 표준시",
+      "대한민국 일광 절약 시간"
+    ],
+    "concurrency": 1,
+    "timeout_seconds": 30,
+    "max_retries": 2,
+    "latency_definition": "Client-observed synchronous SDK call duration, including network and decoding; excludes local disk writes and retry sleep",
+    "client_geography": "Not measured; workspace timezone Asia/Seoul",
+    "pricing_source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+  },
+  {
+    "manifest_hash": "3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61",
+    "sdk_version": "0.6.0",
+    "runner_source_hash": "071ae40b8eae83f97cb716d96bba3aa95384d37d5ff06fd8154670f17a67c177",
+    "price_per_input_token": 4.2000000000000006e-08,
+    "budget_usd": 0.25,
+    "python_version": "3.14.2",
+    "os": "Windows",
+    "os_release": "11",
+    "local_timezone": [
+      "대한민국 표준시",
+      "대한민국 일광 절약 시간"
+    ],
+    "concurrency": 1,
+    "timeout_seconds": 30,
+    "max_retries": 2,
+    "latency_definition": "Client-observed synchronous SDK call duration, including network and decoding; excludes local disk writes and retry sleep",
+    "client_geography": "Not measured; workspace timezone Asia/Seoul",
+    "pricing_source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+  },
+  {
+    "manifest_hash": "3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61",
+    "sdk_version": "0.6.0",
+    "runner_source_hash": "071ae40b8eae83f97cb716d96bba3aa95384d37d5ff06fd8154670f17a67c177",
+    "price_per_input_token": 4.2000000000000006e-08,
+    "budget_usd": 0.25,
+    "python_version": "3.14.2",
+    "os": "Windows",
+    "os_release": "11",
+    "local_timezone": [
+      "대한민국 표준시",
+      "대한민국 일광 절약 시간"
+    ],
+    "concurrency": 1,
+    "timeout_seconds": 30,
+    "max_retries": 2,
+    "latency_definition": "Client-observed synchronous SDK call duration, including network and decoding; excludes local disk writes and retry sleep",
+    "client_geography": "Not measured; workspace timezone Asia/Seoul",
+    "pricing_source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+  },
+  {
+    "manifest_hash": "3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61",
+    "sdk_version": "0.6.0",
+    "runner_source_hash": "72e762b9ec8aa6261442e46c1edbe83478b17767a586b547615a9183c6d839b8",
+    "price_per_input_token": 4.2000000000000006e-08,
+    "budget_usd": 0.25,
+    "python_version": "3.14.2",
+    "os": "Windows",
+    "os_release": "11",
+    "local_timezone": [
+      "대한민국 표준시",
+      "대한민국 일광 절약 시간"
+    ],
+    "concurrency": 1,
+    "timeout_seconds": 30,
+    "max_retries": 2,
+    "latency_definition": "Client-observed synchronous SDK call duration, including network and decoding; excludes local disk writes and retry sleep",
+    "client_geography": "Not measured; workspace timezone Asia/Seoul",
+    "pricing_source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+  },
+  {
+    "manifest_hash": "3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61",
+    "sdk_version": "0.6.0",
+    "runner_source_hash": "72e762b9ec8aa6261442e46c1edbe83478b17767a586b547615a9183c6d839b8",
+    "price_per_input_token": 4.2000000000000006e-08,
+    "budget_usd": 0.25,
+    "python_version": "3.14.2",
+    "os": "Windows",
+    "os_release": "11",
+    "local_timezone": [
+      "대한민국 표준시",
+      "대한민국 일광 절약 시간"
+    ],
+    "concurrency": 1,
+    "timeout_seconds": 30,
+    "max_retries": 2,
+    "latency_definition": "Client-observed synchronous SDK call duration, including network and decoding; excludes local disk writes and retry sleep",
+    "client_geography": "Not measured; workspace timezone Asia/Seoul",
+    "pricing_source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+  },
+  {
+    "manifest_hash": "3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61",
+    "sdk_version": "0.6.0",
+    "runner_source_hash": "72e762b9ec8aa6261442e46c1edbe83478b17767a586b547615a9183c6d839b8",
+    "price_per_input_token": 4.2000000000000006e-08,
+    "budget_usd": 0.25,
+    "python_version": "3.14.2",
+    "os": "Windows",
+    "os_release": "11",
+    "local_timezone": [
+      "대한민국 표준시",
+      "대한민국 일광 절약 시간"
+    ],
+    "concurrency": 1,
+    "timeout_seconds": 30,
+    "max_retries": 2,
+    "latency_definition": "Client-observed synchronous SDK call duration, including network and decoding; excludes local disk writes and retry sleep",
+    "client_geography": "Not measured; workspace timezone Asia/Seoul",
+    "pricing_source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+  }
+]

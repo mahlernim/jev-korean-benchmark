@@ -1,0 +1,206 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A reproducible early-access evaluation of Jev on Korean reading, paraphrase decisions and medical text."><title>Stage 2 report</title><style>body{margin:0;background:#f7f8fa;color:#192434;font:17px/1.7 system-ui,-apple-system,sans-serif}main{max-width:1020px;margin:auto;padding:48px 28px 80px}nav{font-size:14px;display:flex;gap:22px;flex-wrap:wrap;border-bottom:1px solid #cad2dc;padding-bottom:18px}h1{font-size:clamp(30px,5vw,48px);line-height:1.15;letter-spacing:-.035em;margin:40px 0 18px}h2{font-size:25px;margin-top:44px;line-height:1.3}h3{font-size:21px}p,li{max-width:880px}a{color:#125ac4;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;margin:20px 0;background:white}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #d7dee7;vertical-align:top}th{background:#e9eef5}code{font-size:.85em;overflow-wrap:anywhere}pre{padding:16px;background:#e9eef5;overflow:auto}footer{border-top:1px solid #cad2dc;margin-top:50px;padding-top:16px;font-size:13px;color:#526173}.table-wrap{overflow-x:auto} @media(max-width:600px){main{padding:24px 16px 50px}body{font-size:16px}th,td{padding:8px;min-width:65px}}</style></head><body><main><nav><a href="index.html">Jev Korean pilot</a><a href="methodology.html">Methods</a><a href="korean-supplement.html">한국어</a><a href="results.zip">Download results</a></nav><h1 id="stage-2-report">Stage 2 report</h1>
+<p>Planned 200. Successful 200. Failed 0. Pending 0.</p>
+<p>Frozen manifest <code>3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61</code>.</p>
+<p>API call time 65.402 seconds. Recorded runner wall time 70.831 seconds. Attempts 201, retries 1. Input tokens 107,150, output tokens 10,400. Estimated successful-call cost $0.004500.</p>
+<p>Per-call latency includes network and SDK decoding at concurrency one. Runner wall time also includes initialization, disk writes, retries and report generation, and excludes human gaps. The first ten development calls preceded invocation timing instrumentation, so Stage 0 wall time is incomplete. Token charges use published pricing, not an invoice.</p>
+<p>Rounding-compatible distributions normalized for probability metrics: 3. Previously stopped local-validation records admitted by a preserved adjudication: 1. This is a disclosed analysis amendment after one five-option vector summed to 0.99 on a 0.01 grid. Original vectors and labels remain unchanged. See methodology for tolerance and sensitivity metrics.</p>
+<p>Korean medical exam knowledge, not a paired language comparison or evidence of clinical readiness. Historical official gold answers are scored as provided. Conservative media screening changes the test population.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Task / condition</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Accuracy (95% Wilson CI)</th>
+<th style="text-align: right;">Brier</th>
+<th style="text-align: right;">Log loss</th>
+<th style="text-align: right;">Median / p95 ms</th>
+<th style="text-align: right;">Cost USD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kormed / ko_en</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">82.0% (73.3%–88.3%)</td>
+<td style="text-align: right;">0.2543</td>
+<td style="text-align: right;">0.4544</td>
+<td style="text-align: right;">223 / 315</td>
+<td style="text-align: right;">0.002221</td>
+</tr>
+<tr>
+<td>kormed / ko_ko</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">80.0% (71.1%–86.7%)</td>
+<td style="text-align: right;">0.2553</td>
+<td style="text-align: right;">0.4562</td>
+<td style="text-align: right;">219 / 254</td>
+<td style="text-align: right;">0.002280</td>
+</tr>
+</tbody>
+</table></div>
+<p>Conditions name content language first, instruction language second. Brier is the sum across classes (range 0–2); log loss uses natural logarithms and clips zero gold probability to 1e-15. Metrics exclude API failures, which are counted above.</p>
+<h2 id="error-versus-coverage">Error versus coverage</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Task / condition</th>
+<th style="text-align: right;">50%</th>
+<th style="text-align: right;">75%</th>
+<th style="text-align: right;">100%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kormed/ko_en</td>
+<td style="text-align: right;">2.0% (50 retained)</td>
+<td style="text-align: right;">6.7% (75 retained)</td>
+<td style="text-align: right;">18.0% (100 retained)</td>
+</tr>
+<tr>
+<td>kormed/ko_ko</td>
+<td style="text-align: right;">2.0% (50 retained)</td>
+<td style="text-align: right;">6.7% (75 retained)</td>
+<td style="text-align: right;">20.0% (100 retained)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Coverage uses returned Choice confidence or absolute Noul distance from 0.5. Ties break by evaluation ID. These are descriptive rankings, not calibrated deployment thresholds.</p>
+<h2 id="paired-differences">Paired differences</h2>
+<ul>
+<li>kormed, ko_ko minus ko_en: -2.0 percentage points, paired bootstrap 95% interval [-5.0, +0.0]. ko_en-only correct 2; ko_ko-only correct 0.</li>
+</ul>
+<p>Small-sample intervals are exploratory. For authored minimal pairs, case-level bootstrap does not account for pair dependence.</p>
+<h2 id="highest-ranked-errors">Highest-ranked errors</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Evaluation</th>
+<th>Gold</th>
+<th>Prediction</th>
+<th style="text-align: right;">Ranking signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kormed-2024-1-74__ko_ko</td>
+<td>1</td>
+<td>4</td>
+<td style="text-align: right;">0.9300</td>
+</tr>
+<tr>
+<td>kormed-2024-1-74__ko_en</td>
+<td>1</td>
+<td>4</td>
+<td style="text-align: right;">0.9000</td>
+</tr>
+<tr>
+<td>kormed-2022-1-36__ko_ko</td>
+<td>3</td>
+<td>5</td>
+<td style="text-align: right;">0.8500</td>
+</tr>
+<tr>
+<td>kormed-2022-1-18__ko_en</td>
+<td>3</td>
+<td>1</td>
+<td style="text-align: right;">0.8100</td>
+</tr>
+<tr>
+<td>kormed-2022-1-18__ko_ko</td>
+<td>3</td>
+<td>1</td>
+<td style="text-align: right;">0.7700</td>
+</tr>
+<tr>
+<td>kormed-2022-1-36__ko_en</td>
+<td>3</td>
+<td>5</td>
+<td style="text-align: right;">0.7700</td>
+</tr>
+<tr>
+<td>kormed-2023-3-32__ko_ko</td>
+<td>5</td>
+<td>4</td>
+<td style="text-align: right;">0.6700</td>
+</tr>
+<tr>
+<td>kormed-2023-1-14__ko_en</td>
+<td>5</td>
+<td>4</td>
+<td style="text-align: right;">0.6500</td>
+</tr>
+<tr>
+<td>kormed-2023-1-79__ko_ko</td>
+<td>3</td>
+<td>4</td>
+<td style="text-align: right;">0.6400</td>
+</tr>
+<tr>
+<td>kormed-2023-1-79__ko_en</td>
+<td>3</td>
+<td>4</td>
+<td style="text-align: right;">0.6200</td>
+</tr>
+<tr>
+<td>kormed-2023-3-32__ko_en</td>
+<td>5</td>
+<td>4</td>
+<td style="text-align: right;">0.6200</td>
+</tr>
+<tr>
+<td>kormed-2024-1-25__ko_en</td>
+<td>1</td>
+<td>5</td>
+<td style="text-align: right;">0.6100</td>
+</tr>
+<tr>
+<td>kormed-2023-1-14__ko_ko</td>
+<td>5</td>
+<td>4</td>
+<td style="text-align: right;">0.6000</td>
+</tr>
+<tr>
+<td>kormed-2022-1-12__ko_en</td>
+<td>2</td>
+<td>5</td>
+<td style="text-align: right;">0.5700</td>
+</tr>
+<tr>
+<td>kormed-2022-1-12__ko_ko</td>
+<td>2</td>
+<td>5</td>
+<td style="text-align: right;">0.5600</td>
+</tr>
+<tr>
+<td>kormed-2024-1-32__ko_ko</td>
+<td>1</td>
+<td>2</td>
+<td style="text-align: right;">0.5500</td>
+</tr>
+<tr>
+<td>kormed-2022-3-71__ko_ko</td>
+<td>3</td>
+<td>1</td>
+<td style="text-align: right;">0.5400</td>
+</tr>
+<tr>
+<td>kormed-2024-1-32__ko_en</td>
+<td>1</td>
+<td>2</td>
+<td style="text-align: right;">0.5200</td>
+</tr>
+<tr>
+<td>kormed-2023-1-13__ko_en</td>
+<td>4</td>
+<td>5</td>
+<td style="text-align: right;">0.5100</td>
+</tr>
+<tr>
+<td>kormed-2023-1-13__ko_ko</td>
+<td>4</td>
+<td>5</td>
+<td style="text-align: right;">0.4900</td>
+</tr>
+</tbody>
+</table></div>
+<p>There are 3 cases with different predictions across conditions. Full error and disagreement lists are in the adjacent JSON report. Disagreement alone does not establish a translation defect.</p><footer>Early-access pilot · September 17, 2026 · Synthetic medical cases await clinician review.</footer></main></body></html>

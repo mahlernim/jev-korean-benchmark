@@ -1,0 +1,278 @@
+{
+  "stage": 0,
+  "generated_at": "2026-09-17T01:43:21.356979+00:00",
+  "manifest_hash": "3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61",
+  "planned": 36,
+  "successful": 36,
+  "failed": 0,
+  "pending": 0,
+  "failures": [],
+  "pending_ids": [],
+  "groups": {
+    "development_choice/en_en": {
+      "n": 6,
+      "correct": 6,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6096657120978346,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0,
+      "raw_gold_log_loss": 0.0,
+      "brier": 0.0,
+      "log_loss": 0.0,
+      "median_latency_ms": 246.62005000573117,
+      "p95_latency_ms": 674.0991249971557,
+      "input_tokens": 2214,
+      "cost_usd": 9.298800000000001e-05,
+      "coverage": {
+        "0.5": {
+          "n": 3,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 5,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "development_choice/ko_en": {
+      "n": 6,
+      "correct": 6,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6096657120978346,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0,
+      "raw_gold_log_loss": 0.0,
+      "brier": 0.0,
+      "log_loss": 0.0,
+      "median_latency_ms": 236.61059999722056,
+      "p95_latency_ms": 576.5272499775165,
+      "input_tokens": 2230,
+      "cost_usd": 9.366000000000002e-05,
+      "coverage": {
+        "0.5": {
+          "n": 3,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 5,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "development_choice/ko_ko": {
+      "n": 6,
+      "correct": 6,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6096657120978346,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.0,
+      "raw_gold_log_loss": 0.0,
+      "brier": 0.0,
+      "log_loss": 0.0,
+      "median_latency_ms": 219.4945499941241,
+      "p95_latency_ms": 317.89222499355674,
+      "input_tokens": 2374,
+      "cost_usd": 9.970800000000002e-05,
+      "coverage": {
+        "0.5": {
+          "n": 3,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 5,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "development_noul/en_en": {
+      "n": 6,
+      "correct": 6,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6096657120978346,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.016766666666666662,
+      "raw_gold_log_loss": 0.0697520523490651,
+      "brier": 0.016766666666666662,
+      "log_loss": 0.0697520523490651,
+      "median_latency_ms": 226.16339998785406,
+      "p95_latency_ms": 352.3197500180686,
+      "input_tokens": 1882,
+      "cost_usd": 7.904400000000001e-05,
+      "coverage": {
+        "0.5": {
+          "n": 3,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 5,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "development_noul/ko_en": {
+      "n": 6,
+      "correct": 6,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6096657120978346,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.008033333333333339,
+      "raw_gold_log_loss": 0.05049844077180954,
+      "brier": 0.008033333333333339,
+      "log_loss": 0.05049844077180954,
+      "median_latency_ms": 280.8925999997882,
+      "p95_latency_ms": 505.88869999774033,
+      "input_tokens": 1904,
+      "cost_usd": 7.9968e-05,
+      "coverage": {
+        "0.5": {
+          "n": 3,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 5,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    },
+    "development_noul/ko_ko": {
+      "n": 6,
+      "correct": 6,
+      "accuracy": 1.0,
+      "accuracy_ci95": [
+        0.6096657120978346,
+        1
+      ],
+      "rounded_distribution_count": 0,
+      "raw_vector_brier": 0.014733333333333341,
+      "raw_gold_log_loss": 0.07076595738322512,
+      "brier": 0.014733333333333341,
+      "log_loss": 0.07076595738322512,
+      "median_latency_ms": 244.6296000125585,
+      "p95_latency_ms": 281.30337499896996,
+      "input_tokens": 1982,
+      "cost_usd": 8.3244e-05,
+      "coverage": {
+        "0.5": {
+          "n": 3,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "0.75": {
+          "n": 5,
+          "errors": 0,
+          "error_rate": 0.0
+        },
+        "1.0": {
+          "n": 6,
+          "errors": 0,
+          "error_rate": 0.0
+        }
+      }
+    }
+  },
+  "runtime": {
+    "api_call_seconds": 10.42660269991029,
+    "recorded_invocation_wall_seconds": 7.897237500001211,
+    "attempts": 36,
+    "retries": 0,
+    "input_tokens": 12586,
+    "output_tokens": 1044,
+    "observed_cost_usd": 0.000528612,
+    "first_request_at": "2026-09-17T01:22:14.680021+00:00",
+    "last_request_at": "2026-09-17T01:23:28.075610+00:00"
+  },
+  "paired": {
+    "development_choice/ko_en-en_en": {
+      "n": 6,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "left_only_correct": 0,
+      "right_only_correct": 0
+    },
+    "development_choice/ko_ko-ko_en": {
+      "n": 6,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "left_only_correct": 0,
+      "right_only_correct": 0
+    },
+    "development_noul/ko_en-en_en": {
+      "n": 6,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "left_only_correct": 0,
+      "right_only_correct": 0
+    },
+    "development_noul/ko_ko-ko_en": {
+      "n": 6,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "left_only_correct": 0,
+      "right_only_correct": 0
+    }
+  },
+  "errors": [],
+  "condition_disagreements": []
+}

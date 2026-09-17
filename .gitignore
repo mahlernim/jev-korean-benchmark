@@ -1,0 +1,9 @@
+typesafe.env
+*.env
+.venv/
+__pycache__/
+.pytest_cache/
+data/
+runs/
+verification/
+drafts/

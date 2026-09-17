@@ -1,0 +1,31 @@
+{
+  "belebele": {
+    "en_rows": 900,
+    "ko_rows": 900,
+    "matched": 900,
+    "eligible_passages": 488,
+    "selected": 100
+  },
+  "pawsx": {
+    "en_rows": 2000,
+    "ko_rows": 2000,
+    "matched": 1989,
+    "eligible": 1972,
+    "selected": 100
+  },
+  "kormed": {
+    "source_rows": 435,
+    "eligible": 259,
+    "eligible_by_year": {
+      "2022": 90,
+      "2023": 86,
+      "2024": 83
+    },
+    "selected_by_year": {
+      "2022": 35,
+      "2023": 33,
+      "2024": 32
+    },
+    "selected": 100
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "stage": 4,
+  "generated_at": "2026-09-17T01:43:21.631663+00:00",
+  "manifest_hash": "3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61",
+  "planned": 80,
+  "successful": 80,
+  "failed": 0,
+  "pending": 0,
+  "failures": [],
+  "pending_ids": [],
+  "groups": {},
+  "runtime": {
+    "api_call_seconds": 17.842169300070964,
+    "recorded_invocation_wall_seconds": 19.334542199998396,
+    "attempts": 80,
+    "retries": 0,
+    "input_tokens": 38000,
+    "output_tokens": 3164,
+    "observed_cost_usd": 0.0015960000000000002,
+    "first_request_at": "2026-09-17T01:36:32.739196+00:00",
+    "last_request_at": "2026-09-17T01:36:50.854140+00:00"
+  },
+  "robustness": {
+    "belebele/repeat1": [
+      {
+        "eval_id": "belebele-9c20288f818f9034__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-e41332056136ccdd__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-66c76c721a3e9d34__ko_ko__repeat1",
+        "flip": true,
+        "total_variation": 0.1
+      },
+      {
+        "eval_id": "belebele-60ac40668df9494f__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-a96cbee62035e1c3__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.0
+      }
+    ],
+    "belebele/repeat2": [
+      {
+        "eval_id": "belebele-9c20288f818f9034__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-e41332056136ccdd__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-66c76c721a3e9d34__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.020000000000000018
+      },
+      {
+        "eval_id": "belebele-60ac40668df9494f__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-a96cbee62035e1c3__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.0
+      }
+    ],
+    "belebele/variant1": [
+      {
+        "eval_id": "belebele-9c20288f818f9034__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-e41332056136ccdd__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-66c76c721a3e9d34__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.20999999999999996
+      },
+      {
+        "eval_id": "belebele-60ac40668df9494f__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-a96cbee62035e1c3__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.0
+      }
+    ],
+    "belebele/variant2": [
+      {
+        "eval_id": "belebele-9c20288f818f9034__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-e41332056136ccdd__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-66c76c721a3e9d34__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.18787878787878787
+      },
+      {
+        "eval_id": "belebele-60ac40668df9494f__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "belebele-a96cbee62035e1c3__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.0
+      }
+    ],
+    "pawsx/repeat1": [
+      {
+        "eval_id": "pawsx-5309__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.010000000000000009
+      },
+      {
+        "eval_id": "pawsx-956__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "pawsx-1231__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.09000000000000008
+      },
+      {
+        "eval_id": "pawsx-2727__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.010000000000000009
+      },
+      {
+        "eval_id": "pawsx-7821__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.0
+      }
+    ],
+    "pawsx/repeat2": [
+      {
+        "eval_id": "pawsx-5309__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.020000000000000018
+      },
+      {
+        "eval_id": "pawsx-956__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.010000000000000009
+      },
+      {
+        "eval_id": "pawsx-1231__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.06000000000000005
+      },
+      {
+        "eval_id": "pawsx-2727__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.020000000000000018
+      },
+      {
+        "eval_id": "pawsx-7821__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.0
+      }
+    ],
+    "pawsx/variant1": [
+      {
+        "eval_id": "pawsx-5309__ko_ko__variant1",
+        "flip": true,
+        "total_variation": 0.23000000000000007
+      },
+      {
+        "eval_id": "pawsx-956__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.18000000000000002
+      },
+      {
+        "eval_id": "pawsx-1231__ko_ko__variant1",
+        "flip": true,
+        "total_variation": 0.2600000000000001
+      },
+      {
+        "eval_id": "pawsx-2727__ko_ko__variant1",
+        "flip": true,
+        "total_variation": 0.28
+      },
+      {
+        "eval_id": "pawsx-7821__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.26
+      }
+    ],
+    "pawsx/variant2": [
+      {
+        "eval_id": "pawsx-5309__ko_ko__variant2",
+        "flip": true,
+        "total_variation": 0.22000000000000006
+      },
+      {
+        "eval_id": "pawsx-956__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.17
+      },
+      {
+        "eval_id": "pawsx-1231__ko_ko__variant2",
+        "flip": true,
+        "total_variation": 0.27000000000000013
+      },
+      {
+        "eval_id": "pawsx-2727__ko_ko__variant2",
+        "flip": true,
+        "total_variation": 0.29000000000000004
+      },
+      {
+        "eval_id": "pawsx-7821__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.26
+      }
+    ],
+    "kormed/repeat1": [
+      {
+        "eval_id": "kormed-2024-2-63__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.020000000000000018
+      },
+      {
+        "eval_id": "kormed-2023-1-19__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.030000000000000013
+      },
+      {
+        "eval_id": "kormed-2023-1-20__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.010000000000000005
+      },
+      {
+        "eval_id": "kormed-2022-4-23__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "kormed-2023-1-13__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.04000000000000001
+      }
+    ],
+    "kormed/repeat2": [
+      {
+        "eval_id": "kormed-2024-2-63__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.010000000000000004
+      },
+      {
+        "eval_id": "kormed-2023-1-19__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.03999999999999995
+      },
+      {
+        "eval_id": "kormed-2023-1-20__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "kormed-2022-4-23__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "kormed-2023-1-13__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.02000000000000001
+      }
+    ],
+    "kormed/variant1": [
+      {
+        "eval_id": "kormed-2024-2-63__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.09999999999999999
+      },
+      {
+        "eval_id": "kormed-2023-1-19__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.06000000000000001
+      },
+      {
+        "eval_id": "kormed-2023-1-20__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.030000000000000013
+      },
+      {
+        "eval_id": "kormed-2022-4-23__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.030000000000000013
+      },
+      {
+        "eval_id": "kormed-2023-1-13__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.07999999999999997
+      }
+    ],
+    "kormed/variant2": [
+      {
+        "eval_id": "kormed-2024-2-63__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.13
+      },
+      {
+        "eval_id": "kormed-2023-1-19__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.04000000000000002
+      },
+      {
+        "eval_id": "kormed-2023-1-20__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.10000000000000005
+      },
+      {
+        "eval_id": "kormed-2022-4-23__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "kormed-2023-1-13__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.13999999999999999
+      }
+    ],
+    "medical_text/repeat1": [
+      {
+        "eval_id": "medical-experiencer-03__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-negation-05__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.010000000000000005
+      },
+      {
+        "eval_id": "medical-medication-02__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-evidence-05__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-temporality-05__ko_ko__repeat1",
+        "flip": false,
+        "total_variation": 0.0
+      }
+    ],
+    "medical_text/repeat2": [
+      {
+        "eval_id": "medical-experiencer-03__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-negation-05__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.010000000000000005
+      },
+      {
+        "eval_id": "medical-medication-02__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-evidence-05__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-temporality-05__ko_ko__repeat2",
+        "flip": false,
+        "total_variation": 0.0
+      }
+    ],
+    "medical_text/variant1": [
+      {
+        "eval_id": "medical-experiencer-03__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-negation-05__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.010000000000000005
+      },
+      {
+        "eval_id": "medical-medication-02__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-evidence-05__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-temporality-05__ko_ko__variant1",
+        "flip": false,
+        "total_variation": 0.01
+      }
+    ],
+    "medical_text/variant2": [
+      {
+        "eval_id": "medical-experiencer-03__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-negation-05__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.010000000000000005
+      },
+      {
+        "eval_id": "medical-medication-02__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-evidence-05__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.0
+      },
+      {
+        "eval_id": "medical-temporality-05__ko_ko__variant2",
+        "flip": false,
+        "total_variation": 0.010000000000000005
+      }
+    ]
+  }
+}

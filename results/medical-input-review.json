@@ -1,0 +1,8 @@
+{
+  "manifest_hash": "3f1b6dafd569fb6ea382356b45148e185a98f0c62a50da3c60865224558a7d61",
+  "reviewed_at": "2026-09-17T01:23:19.358720+00:00",
+  "reviewer": "Codex text completeness audit, not clinician review",
+  "all_selected_text_complete": true,
+  "selected_count": 100,
+  "notes": "Selected questions manually inspected for missing images/tables. Inline lab values and the death-certificate layout remain included. Historical law and public-health items use original gold answers. No label changes."
+}

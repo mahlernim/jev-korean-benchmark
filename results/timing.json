@@ -1,0 +1,44 @@
+[
+  {
+    "stage": 0,
+    "started_at": "2026-09-17T01:23:20.424851+00:00",
+    "finished_at": "2026-09-17T01:23:28.322087+00:00",
+    "wall_seconds": 7.897237500001211,
+    "definition": "Runner invocation wall time, including SDK initialization, requests, retries, local persistence and report generation; excludes preparation and human gaps"
+  },
+  {
+    "stage": 1,
+    "started_at": "2026-09-17T01:23:52.686411+00:00",
+    "finished_at": "2026-09-17T01:26:20.551360+00:00",
+    "wall_seconds": 147.86494969998603,
+    "definition": "Runner invocation wall time, including SDK initialization, requests, retries, local persistence and report generation; excludes preparation and human gaps"
+  },
+  {
+    "stage": 2,
+    "started_at": "2026-09-17T01:26:53.350152+00:00",
+    "finished_at": "2026-09-17T01:27:02.730094+00:00",
+    "wall_seconds": 9.379940499988152,
+    "definition": "Runner invocation wall time, including SDK initialization, requests, retries, local persistence and report generation; excludes preparation and human gaps"
+  },
+  {
+    "stage": 2,
+    "started_at": "2026-09-17T01:32:17.992871+00:00",
+    "finished_at": "2026-09-17T01:33:19.443831+00:00",
+    "wall_seconds": 61.45096030001878,
+    "definition": "Runner invocation wall time, including SDK initialization, requests, retries, local persistence and report generation; excludes preparation and human gaps"
+  },
+  {
+    "stage": 3,
+    "started_at": "2026-09-17T01:35:22.471227+00:00",
+    "finished_at": "2026-09-17T01:35:52.212394+00:00",
+    "wall_seconds": 29.741166699997848,
+    "definition": "Runner invocation wall time, including SDK initialization, requests, retries, local persistence and report generation; excludes preparation and human gaps"
+  },
+  {
+    "stage": 4,
+    "started_at": "2026-09-17T01:36:32.335708+00:00",
+    "finished_at": "2026-09-17T01:36:51.670247+00:00",
+    "wall_seconds": 19.334542199998396,
+    "definition": "Runner invocation wall time, including SDK initialization, requests, retries, local persistence and report generation; excludes preparation and human gaps"
+  }
+]
