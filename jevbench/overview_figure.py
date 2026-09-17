@@ -129,7 +129,6 @@ def main():
         suffix = '' if lang == 'en' else '.ko'
         save(build_dumbbell(lang), 'korean-check' + suffix)
         save(build_forest(lang), 'differences' + suffix)
-        save(build(lang), 'korean-check-bars' + suffix)
         save(build_order(lang), 'order-sensitivity' + suffix)
     print('Wrote korean-check and differences, both languages')
 

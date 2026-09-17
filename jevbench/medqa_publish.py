@@ -113,7 +113,7 @@ def publish():
     axes[1].set(xlabel='Median client latency (ms)',title='B   Latency, concurrency 4')
     axes[2].set(xlabel='Estimated USD, 100 questions',title='C   Observed usage cost')
     for ax in axes[1:]: ax.set_xlim(left=0); ax.locator_params(axis='x',nbins=4)
-    figures=ROOT/'docs/figures'
+    figures=ROOT/'results'/EXPERIMENT; figures.mkdir(parents=True,exist_ok=True)
     for ext in ('png','pdf','svg'): fig.savefig(figures/f'medqa-english.{ext}',dpi=300,bbox_inches='tight')
     plt.close(fig)
     svg=figures/'medqa-english.svg'
@@ -122,7 +122,7 @@ def publish():
     lines=['# Original-English MedQA comparison','',
         '## Abstract','',
         f"On 100 matched original-English four-option MedQA test questions, Jev scored {j['correct']}/100 and Luna-none scored {l['correct']}/100. Luna minus Jev was {d['difference']*100:+.0f} percentage points, with a paired 95% bootstrap interval from {d['ci95'][0]*100:+.0f} to {d['ci95'][1]*100:+.0f}. This is an exploratory benchmark estimate, not clinical validation or a controlled language comparison.",'',
-        '![Matched English MedQA accuracy, latency and cost](figures/medqa-english.png)','',
+        '![Matched English MedQA accuracy, latency and cost](medqa-english.png)','',
         '**Figure 1.** Both models receive the same 100 questions and four original options. Accuracy bars are Wilson 95% intervals. Latency and token cost are observed point estimates from four concurrent requests per provider. They do not describe the earlier sequential experiments.','',
         '## Data and methods','',
         '[MedQA](https://github.com/jind11/MedQA) contains original English USMLE-style questions. We used the four-option test split via a [pinned documented mirror](https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options). Source provenance, revision, SHA256, row IDs and selection rules are preserved in the downloadable evidence. Byte identity with the primary Google Drive release was not independently verified.','',

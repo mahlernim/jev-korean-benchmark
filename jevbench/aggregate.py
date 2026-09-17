@@ -118,7 +118,7 @@ def build():
     fig.text(.5,.02,'100 questions per cell. A: Wilson 95% intervals. B: paired bootstrap 95% intervals.\nMedical rows use different English and Korean exams; no paired medical language comparison.',ha='center',fontsize=9)
     fig.tight_layout(rect=(0,.08,1,.96))
     for ext in ('png','svg','pdf'):
-        path=ROOT/f'docs/figures/aggregate.{ext}'; fig.savefig(path,dpi=180)
+        path=ROOT/f'results/aggregate/aggregate.{ext}'; path.parent.mkdir(parents=True,exist_ok=True); fig.savefig(path,dpi=180)
         if ext=='svg': path.write_text('\n'.join(s.rstrip() for s in path.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
     plt.close(fig)
     table=['| Task | Language | Jev | Luna-none | Luna − Jev, pp (95% CI) |',
@@ -130,7 +130,7 @@ def build():
     overview=f"The equal-weight six-cell descriptive average is **Jev {a['jev']:.2%} and Luna-none {a['luna']:.2%}**. Luna minus Jev is {a['luna_minus_jev']*100:+.2f} percentage points (exploratory cluster-bootstrap 95% interval {a['difference_ci95'][0]*100:+.2f} to {a['difference_ci95'][1]*100:+.2f}). This summarizes this chosen battery, not general model ability or a medical language effect."
     general=f"Restricting the average to matched Belebele and PAWS-X gives Jev {g['jev']:.2%} and Luna-none {g['luna']:.2%}, a difference of {g['luna_minus_jev']*100:+.2f} points (95% interval {g['difference_ci95'][0]*100:+.2f} to {g['difference_ci95'][1]*100:+.2f})."
     lines=['# English and Korean benchmark overview','',overview,'',general,'',
-        '![Benchmark accuracy and paired model differences](figures/aggregate.png)','',*table,'',
+        '![Benchmark accuracy and paired model differences](aggregate.png)','',*table,'',
         '## Methods and interpretation','',
         'This is a retrospective aggregation of frozen results, with no additional model calls. Each cell uses 100 questions with the same items for both models. The primary display uses English instructions for English content and Korean instructions for Korean content. Therefore its general-task language differences combine content and instruction language. The earlier Korean-content, English-instruction condition is retained as a sensitivity analysis below.','',
         'The six cells have equal weight. With 100 answers per cell, this equals 518/600 correct for Jev and 520/600 for Luna. These are 400 unique source questions per model because the 100 Belebele and 100 PAWS-X questions each appear in two languages. A naive independent-binomial interval over 600 answers would ignore that dependence.','',

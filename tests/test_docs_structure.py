@@ -123,3 +123,29 @@ def test_korean_headings_keep_unicode_anchors():
     ids = re.findall(r'<h2 id="([^"]+)"', html)
     assert any(re.search(r'[가-힣]', i) for i in ids), 'Korean headings lost their anchors'
     assert '_1' not in ids, 'slugify fell back to positional ids'
+
+
+def test_no_orphaned_figures():
+    """docs/figures must contain only what the published pages reference."""
+    text = ''.join(p.read_text(encoding='utf-8') for p in DOCS.glob('*.md'))
+    text += (ROOT / 'README.md').read_text(encoding='utf-8')
+    referenced = set(re.findall(r'figures/([a-z0-9-]+)(?:\.ko)?\.(?:png|svg|pdf)', text))
+    present = {p.stem.replace('.ko', '') for p in (DOCS / 'figures').iterdir() if p.is_file()}
+    orphans = present - referenced
+    assert not orphans, f'{orphans} sit in docs/figures but no published page references them'
+
+
+def test_every_referenced_figure_exists():
+    text = ''.join(p.read_text(encoding='utf-8') for p in DOCS.glob('*.md'))
+    text += (ROOT / 'README.md').read_text(encoding='utf-8')
+    missing = [ref for ref in re.findall(r'figures/([a-z0-9.-]+\.(?:png|svg|pdf))', text)
+               if not (DOCS / 'figures' / ref).exists()]
+    assert not missing, missing
+
+
+def test_no_publisher_writes_figures_into_docs():
+    """Publisher figures belong beside their reports in results/."""
+    offenders = [f for f, text in sources().items()
+                 if "docs/figures" in text and f not in ('overview_figure.py', 'answer_shape.py',
+                                                         'efficiency.py', 'figures.py')]
+    assert not offenders, offenders

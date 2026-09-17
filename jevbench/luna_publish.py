@@ -87,8 +87,8 @@ def main():
     axes[2].set_xticks([.02,.04,.08],['0.02','0.04','0.08'])
     for ax in axes[1:]: ax.xaxis.set_minor_locator(NullLocator())
     for ext in ('png','svg','pdf'):
-        fig.savefig(ROOT/f'docs/figures/luna-comparison.{ext}',dpi=300,bbox_inches='tight')
-    svg=ROOT/'docs/figures/luna-comparison.svg'
+        fig.savefig(out/f'luna-comparison.{ext}',dpi=300,bbox_inches='tight')
+    svg=out/'luna-comparison.svg'
     svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
     plt.close(fig)
     lines=['# Jev versus Luna without reasoning','',
@@ -100,7 +100,7 @@ def main():
         'The API returned `gpt-5.6-luna`, without a dated snapshot. Requests specify `none`, and reported reasoning-token counts are audited. Sampling parameters were left at provider defaults and are retained in the raw responses. Calls run sequentially through httpx 0.28.1 with a 30-second timeout and at most two transient retries. Immutable intents prevent automatic resending of uncertain interrupted requests.','',
         'Jev timing wraps its SDK call and decoding. Luna timing wraps HTTP response decoding and answer validation, with a small additional local parsing component. Both include network latency and exclude disk writes. The runs occurred at different times and used different provider transports. These measurements describe the observed services, not architecture-only speed or server compute. Conditions were not randomly interleaved across providers.','',
         '## Results','',
-        '![Matched Korean-instruction accuracy, latency and cost](figures/luna-comparison.png)','',
+        '![Matched Korean-instruction accuracy, latency and cost](luna-comparison.png)','',
         '**Figure 1.** Korean content and Korean instructions, 100 matched cases per task. Bars show 95% Wilson accuracy intervals. Median latency and estimated token cost use the same successful cases. Latency and cost axes are logarithmic. Point estimates have no uncertainty bars in those panels and should not be interpreted as stable population ratios. Synthetic medical cases are excluded.','']
     for stage in (1,2,3,4):
         lines += [f'### Stage {stage}','']+(DIRECTORY/f'reports/stage-{stage}.md').read_text().splitlines()[2:]+['']

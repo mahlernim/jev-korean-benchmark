@@ -155,6 +155,27 @@ That has three practical consequences:
 
 This describes what each interface returns. It is not a claim about how either model works internally.
 
+<!-- efficiency-start -->
+## Speed and cost
+
+Jev answers faster and costs less on this workload, by a wide enough margin that it is worth weighing against the accuracy numbers above.
+
+![Observed speed and cost on the same questions](docs/figures/speed-cost.png)
+
+| Task | Jev median | Luna median | Jev per 1,000 | Luna per 1,000 |
+|---|---:|---:|---:|---:|
+| Belebele | 221 ms | 1085 ms | $0.026 | $0.072 |
+| PAWS-X | 224 ms | 1326 ms | $0.017 | $0.041 |
+| KorMedMCQA | 219 ms | 1032 ms | $0.023 | $0.061 |
+| MedQA † | 229 ms | 1111 ms | $0.023 | $0.067 |
+
+† measured at four concurrent requests per provider, so not comparable with the rows above
+
+Korean conditions except MedQA, which is English only. Cost per 1,000 calls scales the observed token charges; it is not a separate 1,000-call experiment, and it is an estimate from published prices rather than an invoice.
+
+The two providers ran at different times through different transports and were not interleaved, so provider load and date are confounders. These describe the observed services on the run dates, not architecture-only speed.
+<!-- efficiency-end -->
+
 ## How it compares with a mainstream LLM
 
 Across the four Korean-relevant cells the two are close, and neither is consistently ahead. Two things are worth pulling out.
@@ -360,6 +381,27 @@ Jev는 대화형 모델이 아니며, 위에서 본 내용의 상당 부분이 �
 - **측정할 수 있는 것.** Jev는 확률을 돌려주므로 보정(calibration)이 얼마나 잘 되어 있는지, 확신도가 높은 답만 받아들이면 정확도가 얼마나 오르는지 물을 수 있습니다. 결정만 돌려주는 응답은 그렇게 분석할 수 없으며, 이 저장소의 확신도 분석이 Jev에만 있고 Luna에는 없는 이유가 그것입니다.
 
 이는 각 인터페이스가 무엇을 돌려주는지에 대한 설명이며, 두 모델의 내부 동작에 대한 주장이 아닙니다.
+
+<!-- efficiency-ko-start -->
+## 속도와 비용
+
+이 작업에서 Jev는 더 빠르고 더 저렴하며, 그 차이가 충분히 커서 위의 정확도 수치와 함께 저울질할 가치가 있습니다.
+
+![동일 문항에서 관측된 속도와 비용](docs/figures/speed-cost.ko.png)
+
+| 과제 | Jev 중앙값 | Luna 중앙값 | Jev 1,000회 | Luna 1,000회 |
+|---|---:|---:|---:|---:|
+| Belebele | 221 ms | 1085 ms | $0.026 | $0.072 |
+| PAWS-X | 224 ms | 1326 ms | $0.017 | $0.041 |
+| KorMedMCQA | 219 ms | 1032 ms | $0.023 | $0.061 |
+| MedQA † | 229 ms | 1111 ms | $0.023 | $0.067 |
+
+† 공급자당 4개의 동시 요청으로 측정하여 위 항목들과 비교할 수 없음
+
+MedQA를 제외하면 모두 한국어 조건이며 MedQA는 영어만 있습니다. 1,000회당 비용은 관측된 토큰 요금을 비례 환산한 값으로, 별도의 1,000회 실험이 아니며 청구서가 아니라 공개 가격에 기반한 추정치입니다.
+
+두 공급자는 서로 다른 시점에 다른 전송 경로로 실행되었고 교차 배치되지 않았으므로 공급자 부하와 날짜가 교란 요인입니다. 이 값들은 실행일에 관측된 서비스를 기술할 뿐이며 아키텍처만의 속도가 아닙니다.
+<!-- efficiency-ko-end -->
 
 ## 주요 LLM과의 비교
 

@@ -318,6 +318,56 @@
 <li><strong>What you can measure.</strong> The probabilities are what make the coverage table above possible.</li>
 </ul>
 <p>This describes what each interface returns. It is not a claim about how either model works internally.</p>
+<!-- efficiency-start -->
+<h2 id="speed-and-cost">Speed and cost</h2>
+<p>Jev answers faster and costs less on this workload, by a wide enough margin that it is worth weighing against the accuracy numbers above.</p>
+<p><img alt="Observed speed and cost on the same questions" src="figures/speed-cost.png" /></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Task</th>
+<th style="text-align: right;">Jev median</th>
+<th style="text-align: right;">Luna median</th>
+<th style="text-align: right;">Jev per 1,000</th>
+<th style="text-align: right;">Luna per 1,000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Belebele</td>
+<td style="text-align: right;">221 ms</td>
+<td style="text-align: right;">1085 ms</td>
+<td style="text-align: right;">$0.026</td>
+<td style="text-align: right;">$0.072</td>
+</tr>
+<tr>
+<td>PAWS-X</td>
+<td style="text-align: right;">224 ms</td>
+<td style="text-align: right;">1326 ms</td>
+<td style="text-align: right;">$0.017</td>
+<td style="text-align: right;">$0.041</td>
+</tr>
+<tr>
+<td>KorMedMCQA</td>
+<td style="text-align: right;">219 ms</td>
+<td style="text-align: right;">1032 ms</td>
+<td style="text-align: right;">$0.023</td>
+<td style="text-align: right;">$0.061</td>
+</tr>
+<tr>
+<td>MedQA †</td>
+<td style="text-align: right;">229 ms</td>
+<td style="text-align: right;">1111 ms</td>
+<td style="text-align: right;">$0.023</td>
+<td style="text-align: right;">$0.067</td>
+</tr>
+</tbody>
+</table></div>
+<p>† measured at four concurrent requests per provider, so not comparable with the rows above</p>
+<p>Korean conditions except MedQA, which is English only. Cost per 1,000 calls scales the observed token charges; it is not a separate 1,000-call experiment, and it is an estimate from published prices rather than an invoice.</p>
+<p>The two providers ran at different times through different transports and were not interleaved, so provider load and date are confounders. These describe the observed services on the run dates, not architecture-only speed.</p>
+<!-- efficiency-end -->
+
 <h2 id="what-this-cannot-tell-you">What this cannot tell you</h2>
 <ul>
 <li><strong>Whether these numbers generalise.</strong> 100 questions per cell, one run, one account, one day. Intervals are wide and unadjusted for multiple comparisons.</li>
@@ -653,6 +703,56 @@
 <li><strong>측정할 수 있는 것.</strong> 위의 커버리지 표는 이 확률값이 있기에 가능합니다.</li>
 </ul>
 <p>이는 각 인터페이스가 무엇을 돌려주는지에 대한 설명이며, 두 모델의 내부 동작에 대한 주장이 아닙니다.</p>
+<!-- efficiency-ko-start -->
+<h2 id="속도와-비용">속도와 비용</h2>
+<p>이 작업에서 Jev는 더 빠르고 더 저렴하며, 그 차이가 충분히 커서 위의 정확도 수치와 함께 저울질할 가치가 있습니다.</p>
+<p><img alt="동일 문항에서 관측된 속도와 비용" src="figures/speed-cost.ko.png" /></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>과제</th>
+<th style="text-align: right;">Jev 중앙값</th>
+<th style="text-align: right;">Luna 중앙값</th>
+<th style="text-align: right;">Jev 1,000회</th>
+<th style="text-align: right;">Luna 1,000회</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Belebele</td>
+<td style="text-align: right;">221 ms</td>
+<td style="text-align: right;">1085 ms</td>
+<td style="text-align: right;">$0.026</td>
+<td style="text-align: right;">$0.072</td>
+</tr>
+<tr>
+<td>PAWS-X</td>
+<td style="text-align: right;">224 ms</td>
+<td style="text-align: right;">1326 ms</td>
+<td style="text-align: right;">$0.017</td>
+<td style="text-align: right;">$0.041</td>
+</tr>
+<tr>
+<td>KorMedMCQA</td>
+<td style="text-align: right;">219 ms</td>
+<td style="text-align: right;">1032 ms</td>
+<td style="text-align: right;">$0.023</td>
+<td style="text-align: right;">$0.061</td>
+</tr>
+<tr>
+<td>MedQA †</td>
+<td style="text-align: right;">229 ms</td>
+<td style="text-align: right;">1111 ms</td>
+<td style="text-align: right;">$0.023</td>
+<td style="text-align: right;">$0.067</td>
+</tr>
+</tbody>
+</table></div>
+<p>† 공급자당 4개의 동시 요청으로 측정하여 위 항목들과 비교할 수 없음</p>
+<p>MedQA를 제외하면 모두 한국어 조건이며 MedQA는 영어만 있습니다. 1,000회당 비용은 관측된 토큰 요금을 비례 환산한 값으로, 별도의 1,000회 실험이 아니며 청구서가 아니라 공개 가격에 기반한 추정치입니다.</p>
+<p>두 공급자는 서로 다른 시점에 다른 전송 경로로 실행되었고 교차 배치되지 않았으므로 공급자 부하와 날짜가 교란 요인입니다. 이 값들은 실행일에 관측된 서비스를 기술할 뿐이며 아키텍처만의 속도가 아닙니다.</p>
+<!-- efficiency-ko-end -->
+
 <h2 id="이-문서가-답할-수-없는-것">이 문서가 답할 수 없는 것</h2>
 <ul>
 <li><strong>이 수치가 일반화되는지.</strong> 셀당 100문항, 1회 실행, 단일 계정, 하루 동안의 결과입니다. 구간은 넓고 다중 비교 보정을 하지 않았습니다.</li>
