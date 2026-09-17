@@ -6,6 +6,34 @@ The scored public tasks use 100 Belebele questions, 100 PAWS-X pairs and 100 Kor
 
 ## Read the findings
 
+### Results at a glance
+
+| Task | Cases | English / English | Korean / English | Korean / Korean |
+|---|---:|---:|---:|---:|
+| Belebele reading | 100 | 97% | 95% | 96% |
+| PAWS-X equivalence | 100 | 80% | 75% | 76% |
+| KorMedMCQA doctor examination | 100 | Not tested | 82% | 80% |
+
+Conditions denote content / instruction language. No overall score is pooled. The medical examination has no matched English arm. Synthetic medical probes achieved 40/40 in each condition but remain unreviewed and are excluded from the primary medical score.
+
+![Task-specific accuracy with 95% Wilson intervals](docs/figures/accuracy.png)
+
+**Figure 1.** Points are observed accuracy and bars are 95% Wilson intervals, with 100 cases per point. Conditions reuse the same cases, so interval overlap is not a test of paired differences. Missing English medical results were not evaluated.
+
+![Paired content and instruction language differences](docs/figures/paired-differences.png)
+
+**Figure 2.** Paired differences with 95% percentile bootstrap intervals, 4,000 resamples and seed 20260917. Content effects hold English instructions fixed. Instruction effects hold Korean content fixed. Positive values favor Korean. These small-sample, unadjusted intervals are descriptive and do not establish equivalence.
+
+![Error versus coverage and client latency distributions](docs/figures/coverage-latency.png)
+
+**Figure 3.** Korean-instruction conditions, 100 cases per task. Left, observed error at three prespecified coverage levels, with connecting lines as visual guides. Cases are ranked by Choice confidence or Noul distance from 0.5, with ties broken by evaluation ID. Right, empirical cumulative distributions of successful-call latency on a logarithmic axis. Network and SDK decoding are included. Failed attempts and development calls are excluded from this panel.
+
+Across the whole pilot, estimated API cost was **$0.02056**, summed API attempt duration **262 seconds**, and successful-call median / p95 latency **221 / 306 ms**. Cost is based on reported usage, not an invoice. Total runner timing omits the first ten development calls. Reversing sentence order changed 3/5 PAWS-X predictions in a small prespecified robustness subset, which does not estimate a population flip rate.
+
+Download [vector figures and PDFs](docs/figures/). Rebuild figures without API calls using `python -m jevbench.figures`. Detailed methods, probability-normalization amendment, exclusions, metrics and individual errors are linked below.
+
+- [Existing Jev comparisons and proposed Luna-none extension](docs/comparison-design.md)
+
 - [Live web report](https://ahn-lab.org/jev-korean-benchmark/)
 - [English report](docs/report.md)
 - [Korean supplement](docs/korean-supplement.md)
