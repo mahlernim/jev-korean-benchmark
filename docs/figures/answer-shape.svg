@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" width="920" height="560" font-family="'DejaVu Sans', system-ui, -apple-system, sans-serif" role="img" aria-label="Two ways to return the same decision">
+<rect width="920" height="560" fill="#FFFFFF"/>
+<text x="28" y="40" font-size="20" fill="#12202E">Two ways to return the same decision</text>
+<text x="28" y="63" font-size="12.5" fill="#54626F">What each interface gives back when asked one multiple-choice question.</text>
+<rect x="28" y="80" width="864" height="34" rx="6" fill="#F4F6F9"/>
+<text x="44" y="102" font-size="13" fill="#12202E">&quot;Do these two sentences mean the same thing?&quot;</text>
+<text x="28" y="142" font-size="13.5" font-weight="bold" fill="#D55E00">A token-generating model (Luna)</text>
+<text x="28" y="162" font-size="11.5" fill="#54626F">Emits one token at a time. Each token is chosen, then fed back</text>
+<text x="28" y="178" font-size="11.5" fill="#54626F">in before the next one is chosen. The answer has to be parsed</text>
+<text x="28" y="194" font-size="11.5" fill="#54626F">out of the finished text.</text>
+<rect x="28" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="43" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t1</text>
+<path d="M58 233 L65 233" stroke="#D55E00" stroke-width="1.2" marker-end="url(#arrowL)"/>
+<rect x="68" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="83" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t2</text>
+<path d="M98 233 L105 233" stroke="#D55E00" stroke-width="1.2" marker-end="url(#arrowL)"/>
+<rect x="108" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="123" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t3</text>
+<path d="M138 233 L145 233" stroke="#D55E00" stroke-width="1.2" marker-end="url(#arrowL)"/>
+<rect x="148" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="163" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t4</text>
+<path d="M178 233 L185 233" stroke="#D55E00" stroke-width="1.2" marker-end="url(#arrowL)"/>
+<rect x="188" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="203" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t5</text>
+<path d="M218 233 L225 233" stroke="#D55E00" stroke-width="1.2" marker-end="url(#arrowL)"/>
+<rect x="228" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="243" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t6</text>
+<path d="M258 233 L265 233" stroke="#D55E00" stroke-width="1.2" marker-end="url(#arrowL)"/>
+<rect x="268" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="283" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t7</text>
+<path d="M298 233 L305 233" stroke="#D55E00" stroke-width="1.2" marker-end="url(#arrowL)"/>
+<rect x="308" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="323" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t8</text>
+<path d="M338 233 L345 233" stroke="#D55E00" stroke-width="1.2" marker-end="url(#arrowL)"/>
+<rect x="348" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="363" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t9</text>
+<path d="M378 233 L385 233" stroke="#D55E00" stroke-width="1.2" marker-end="url(#arrowL)"/>
+<rect x="388" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="403" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t10</text>
+<path d="M418 233 L425 233" stroke="#D55E00" stroke-width="1.2" marker-end="url(#arrowL)"/>
+<rect x="428" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="443" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t11</text>
+<path d="M458 233 L465 233" stroke="#D55E00" stroke-width="1.2" marker-end="url(#arrowL)"/>
+<rect x="468" y="220" width="30" height="26" rx="4" fill="#FFFFFF" stroke="#D55E00" stroke-width="1.3"/>
+<text x="483" y="238" font-size="10" fill="#D55E00" text-anchor="middle">t12</text>
+<path d="M483 246 C483 270, 43 270, 43 248" fill="none" stroke="#D55E00" stroke-width="1.1" stroke-dasharray="4 3" marker-end="url(#arrowL)"/>
+<text x="263" y="286" font-size="10.5" fill="#54626F" text-anchor="middle">about 12 output tokens per answer, billed for input and output</text>
+<text x="528" y="238" font-size="11.5" fill="#54626F">parse</text>
+<path d="M572 233 L580 233" stroke="#D55E00" stroke-width="1.4" marker-end="url(#arrowL)"/>
+<rect x="586" y="218" width="62" height="30" rx="5" fill="#D55E00"/>
+<text x="617" y="238" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">yes</text>
+<line x1="28" y1="286" x2="892" y2="286" stroke="#C8D2DC" stroke-width="1"/>
+<text x="28" y="312" font-size="13.5" font-weight="bold" fill="#0072B2">Jev</text>
+<text x="28" y="332" font-size="11.5" fill="#54626F">Returns a probability for every option at once, plus the option</text>
+<text x="28" y="348" font-size="11.5" fill="#54626F">with the highest probability. There is no rationale channel and</text>
+<text x="28" y="364" font-size="11.5" fill="#54626F">nothing to parse.</text>
+<text x="28" y="398" font-size="10.5" fill="#54626F">answer</text>
+<text x="86" y="423" font-size="11.5" fill="#12202E" text-anchor="end">yes</text>
+<rect x="96" y="408" width="308" height="20" rx="3" fill="#0072B2"/>
+<text x="412" y="423" font-size="11.5" fill="#12202E">0.81</text>
+<text x="86" y="453" font-size="11.5" fill="#12202E" text-anchor="end">no</text>
+<rect x="96" y="438" width="72" height="20" rx="3" fill="#9BB8CE"/>
+<text x="176" y="453" font-size="11.5" fill="#12202E">0.19</text>
+<path d="M540 422 L568 422" stroke="#0072B2" stroke-width="1.4" marker-end="url(#arrowJ)"/>
+<rect x="576" y="407" width="62" height="30" rx="5" fill="#0072B2"/>
+<text x="607" y="427" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">yes</text>
+<text x="648" y="427" font-size="10.5" fill="#54626F">confidence 0.81</text>
+<text x="28" y="482" font-size="10.5" fill="#54626F">0 output tokens, billed for input only</text>
+<text x="28" y="504" font-size="10.5" fill="#54626F">Median latency measured across 1,036 calls in this study</text>
+<rect x="150" y="514" width="119" height="10" rx="2" fill="#0072B2"/>
+<text x="144" y="523" font-size="10" fill="#12202E" text-anchor="end">Jev</text>
+<text x="276" y="523" font-size="10" fill="#54626F">221 ms</text>
+<rect x="150" y="530" width="600" height="10" rx="2" fill="#D55E00"/>
+<text x="144" y="539" font-size="10" fill="#12202E" text-anchor="end">Luna</text>
+<text x="757" y="539" font-size="10" fill="#54626F">1110 ms</text>
+<defs><marker id="arrowL" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#D55E00"/></marker><marker id="arrowJ" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#0072B2"/></marker></defs>
+</svg>
