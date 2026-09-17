@@ -45,7 +45,7 @@ def main():
            xticks=range(0, 101, 20), xlabel='Accuracy (%)', title='A   Task-specific accuracy and 95% Wilson intervals')
     ax.invert_yaxis(); ax.grid(axis='x', alpha=.18)
     ax.legend(title='Content / instruction language', loc='lower left', frameon=False, fontsize=9)
-    save(fig, 'accuracy')
+    plt.close(fig)  # superseded by korean-check
 
     fig, axes = plt.subplots(1, 2, figsize=(10, 4.3), layout='constrained')
     for ax, contrast, title in zip(axes,
@@ -62,7 +62,7 @@ def main():
                xlim=(-16, 16), ylim=(len(valid)-.5, -.5), title=title,
                xlabel='Korean minus English (percentage points)')
         ax.grid(axis='x', alpha=.18)
-    save(fig, 'paired-differences')
+    plt.close(fig)  # superseded by differences
 
     fig, axes = plt.subplots(1, 2, figsize=(10, 4.2), layout='constrained')
     for (task, label), color, marker in zip(tasks, ('#222222', '#0072B2', '#D55E00'), ('o', 's', '^')):

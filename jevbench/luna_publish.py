@@ -14,6 +14,8 @@ from .common import ROOT, canonical, digest, filehash, read
 from .luna import DIRECTORY, prepare, records, report
 from .report import quantile, wilson
 
+BREAK = chr(10)
+
 
 def main():
     m=prepare(); good=report(m)
@@ -85,8 +87,8 @@ def main():
     axes[2].set_xticks([.02,.04,.08],['0.02','0.04','0.08'])
     for ax in axes[1:]: ax.xaxis.set_minor_locator(NullLocator())
     for ext in ('png','svg','pdf'):
-        fig.savefig(ROOT/f'docs/figures/luna-comparison.{ext}',dpi=300,bbox_inches='tight')
-    svg=ROOT/'docs/figures/luna-comparison.svg'
+        fig.savefig(out/f'luna-comparison.{ext}',dpi=300,bbox_inches='tight')
+    svg=out/'luna-comparison.svg'
     svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
     plt.close(fig)
     lines=['# Jev versus Luna without reasoning','',
@@ -98,7 +100,7 @@ def main():
         'The API returned `gpt-5.6-luna`, without a dated snapshot. Requests specify `none`, and reported reasoning-token counts are audited. Sampling parameters were left at provider defaults and are retained in the raw responses. Calls run sequentially through httpx 0.28.1 with a 30-second timeout and at most two transient retries. Immutable intents prevent automatic resending of uncertain interrupted requests.','',
         'Jev timing wraps its SDK call and decoding. Luna timing wraps HTTP response decoding and answer validation, with a small additional local parsing component. Both include network latency and exclude disk writes. The runs occurred at different times and used different provider transports. These measurements describe the observed services, not architecture-only speed or server compute. Conditions were not randomly interleaved across providers.','',
         '## Results','',
-        '![Matched Korean-instruction accuracy, latency and cost](figures/luna-comparison.png)','',
+        '![Matched Korean-instruction accuracy, latency and cost](luna-comparison.png)','',
         '**Figure 1.** Korean content and Korean instructions, 100 matched cases per task. Bars show 95% Wilson accuracy intervals. Median latency and estimated token cost use the same successful cases. Latency and cost axes are logarithmic. Point estimates have no uncertainty bars in those panels and should not be interpreted as stable population ratios. Synthetic medical cases are excluded.','']
     for stage in (1,2,3,4):
         lines += [f'### Stage {stage}','']+(DIRECTORY/f'reports/stage-{stage}.md').read_text().splitlines()[2:]+['']
@@ -129,59 +131,9 @@ def main():
         'No pooled cross-task winner is defined. Public benchmark training exposure is unknown, and medical media screening changes the target population. No matched English medical examination arm exists. Neither synthetic performance nor exam accuracy establishes clinical readiness.','',
         'Complete response records remain immutable locally. The public export omits billing and account-related metadata, retaining original-record hashes, model answers, generation settings, usage, latency and scoring evidence. Benchmark input text is reconstructed from pinned upstream sources rather than redistributed here.','',
         'Luna returns decisions only. Brier scores, log loss and confidence-based coverage cannot be computed for Luna in this protocol. Fabricating one-hot probabilities or eliciting confidence after the fact would change the question being measured. A higher-reasoning experiment should be separately frozen and budgeted after reviewing these results, rather than replacing this run.','',
-        '[Original Jev report](index.html) · [Comparison rationale and literature](comparison-design.html) · [Medical benchmark context infographic](kormedmcqa-context.html) · [Public Luna evidence](https://github.com/mahlernim/jev-korean-benchmark/tree/main/results/luna-none-v1)']
-    (ROOT/'docs/luna-comparison.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
-    readme=ROOT/'README.md'
-    block=['<!-- luna-summary-start -->','## Luna-none comparison','',
-        'Luna was tested on the same 1,036 conditions with reasoning effort `none` and decision-only structured output. The table shows Korean content with Korean instructions, 100 cases per task.','',
-        '| Task | Jev | Luna none | Luna minus Jev, pp (95% paired interval) |',
-        '|---|---:|---:|---:|']
-    for task,label,stage in tasks:
-        g=read(DIRECTORY/f'reports/stage-{stage}.json')['groups'][task+'/ko_ko']
-        j=read(ROOT/f'results/stage-{stage}.json')['groups'][task+'/ko_ko']; d=g['paired']
-        block.append(f"| {label} | {j['accuracy']:.0%} | {g['accuracy']:.0%} | {d['difference']*100:+.0f} ({d['ci95'][0]*100:+.0f}, {d['ci95'][1]*100:+.0f}) |")
-    block+=['', '![Jev and Luna-none accuracy, latency and cost](docs/figures/luna-comparison.png)','',
-        '**Comparison figure.** Matched Korean-instruction cases. Accuracy bars are 95% Wilson intervals. Latency and cost use logarithmic axes and have no uncertainty intervals. Cost per 1,000 calls is a scaling of observed token charges, not a separate 1,000-call experiment. Different execution times and provider transports limit causal speed comparisons.','',
-        f"Across all stages, Luna used **${total['estimated_cost_usd']:.5f}** in estimated API charges and **{total['api_seconds']:.1f} seconds** of summed API attempt time. Successful-call median / p95 latency was **{total['median_ms']:.0f} / {total['p95_ms']:.0f} ms**. Jev's corresponding figures were $0.02056, 262.0 seconds and 221 / 306 ms. These are observed service measurements, not guaranteed performance. No higher-reasoning Luna condition has been run.",'',
-        '[Full comparison report](https://ahn-lab.org/jev-korean-benchmark/luna-comparison.html) · [Recorded Luna evidence](results/luna-none-v1/) · [Design and existing comparisons](docs/comparison-design.md) · [Medical benchmark context infographic](docs/kormedmcqa-context.md)','',
-        'The original Jev-only findings follow. Synthetic medical results remain unreviewed and exploratory.','<!-- luna-summary-end -->','']
-    text=readme.read_text(encoding='utf-8')
-    if '<!-- luna-summary-start -->' in text:
-        before,rest=text.split('<!-- luna-summary-start -->',1)
-        _,after=rest.split('<!-- luna-summary-end -->',1)
-        text=before+'\n'.join(block)+after.lstrip('\n')
-    else:
-        text=text.replace('## Read the findings','\n'.join(block)+'\n## Read the findings',1)
-    readme.write_text(text,encoding='utf-8')
-    ko_path=ROOT/'docs/korean-supplement.md'
-    ko_text=ko_path.read_text(encoding='utf-8')
-    ko_block=['<!-- luna-ko-start -->','## Luna none 후속 비교','',
-        '동일한 1,036개 평가 조건을 GPT-5.6 Luna의 추론 설정 `none`으로 실행했습니다. 아래는 한국어 본문과 한국어 지시문을 사용한 결과이며, 각 과제는 100문항입니다.','',
-        '| 평가 | Jev | Luna none |','|---|---:|---:|']
-    for task,label,stage in tasks:
-        g=read(DIRECTORY/f'reports/stage-{stage}.json')['groups'][task+'/ko_ko']
-        j=read(ROOT/f'results/stage-{stage}.json')['groups'][task+'/ko_ko']
-        ko_block.append(f"| {label} | {j['accuracy']:.0%} | {g['accuracy']:.0%} |")
-    ko_block+=['',f"Luna의 추정 API 비용은 ${total['estimated_cost_usd']:.5f}, 호출 시간의 합은 {total['api_seconds']:.1f}초였습니다. Jev는 각각 $0.02056, 262.0초였습니다. 실제 청구서와 대조한 금액은 아니며, 서로 다른 시점의 네트워크 및 서비스 상태가 포함됩니다.",'',
-        '일반 한국어 과제의 모델 간 차이는 불확실성이 컸습니다. 의사 시험에서는 Luna가 8%p 높았고, 대응 표본의 탐색적 95% 구간은 +2~+15%p였습니다. 다중 비교 보정을 하지 않은 작은 표본 결과이며 임상적 신뢰성을 입증하지 않습니다. 더 높은 추론 설정은 아직 평가하지 않았습니다.','',
-        '[전체 비교 보고서와 그림](luna-comparison.html) · [의학 벤치마크 비교 맥락](kormedmcqa-context.html)','',
-        '아래 내용은 최초 Jev 단독 평가 기록입니다.','<!-- luna-ko-end -->','']
-    if '<!-- luna-ko-start -->' in ko_text:
-        before,rest=ko_text.split('<!-- luna-ko-start -->',1); _,after=rest.split('<!-- luna-ko-end -->',1)
-        ko_text=before+'\n'.join(ko_block)+after.lstrip('\n')
-    else:
-        ko_text=ko_text.replace('## 주요 결과','\n'.join(ko_block)+'\n## 주요 결과',1)
-    ko_path.write_text(ko_text,encoding='utf-8')
-    design=ROOT/'docs/comparison-design.md'
-    design.write_text(design.read_text(encoding='utf-8').replace(
-        'This is a proposed extension. No Luna measurements are included in the current results.',
-        'This records the rationale prepared before the Luna run. The [completed Luna-none comparison](luna-comparison.html) is reported separately.'),encoding='utf-8')
-    original=ROOT/'docs/report.md'
-    original_text=original.read_text(encoding='utf-8')
-    link='A subsequent [Luna-none comparison](luna-comparison.html) evaluates the same cases. This page preserves the original Jev-only pilot.\n\n'
-    if link not in original_text:
-        heading,rest=original_text.split('\n\n',1)
-        original.write_text(heading+'\n\n'+link+rest,encoding='utf-8')
+        '[Sample check](https://ahn-lab.org/jev-korean-benchmark/index.html) · [Comparator protocol](https://ahn-lab.org/jev-korean-benchmark/methodology.html) · [Public Luna evidence](https://github.com/mahlernim/jev-korean-benchmark/tree/main/results/luna-none-v1)']
+    # Detailed report kept as regenerable evidence; narrative pages are hand-written.
+    (out/'report.md').write_text(BREAK.join(lines)+BREAK,encoding='utf-8')
     from .publish import render_web
     render_web()
     write('checksums.json',{p.name:filehash(p) for p in sorted(out.iterdir()) if p.is_file() and p.name!='checksums.json'})

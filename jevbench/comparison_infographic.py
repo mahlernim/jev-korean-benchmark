@@ -59,7 +59,7 @@ def main():
     for i,(label,url) in enumerate(sources):
         fig.text(.045,.078-i*.020,label,fontsize=8,color='#526173',url=url)
     fig.text(.955,.038,'Checked 17 Sep 2026',ha='right',fontsize=8,color='#526173')
-    out=ROOT/'docs'/'figures'
+    out=ROOT/'results'/'aggregate'; out.mkdir(parents=True,exist_ok=True)
     for ext in ('png','svg','pdf'):
         fig.savefig(out/f'kormedmcqa-context.{ext}',dpi=200,facecolor='white')
     plt.close(fig)
