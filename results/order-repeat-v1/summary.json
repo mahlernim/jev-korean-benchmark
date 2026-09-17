@@ -1,0 +1,40 @@
+{
+  "experiment": "order-repeat-v1",
+  "generated_at": "2026-09-17T08:41:35.699871+00:00",
+  "manifest_hash": "356f3172deb89ebfadbe8172a8b5d7ec5159223ae15ad715ef11e358ceeaca26",
+  "source_manifest_hash": "09a17e774616ea65248ad8e2ce6fc5eb5ef578dcfb9bba8b097807ebfc051542",
+  "successful": 200,
+  "planned": 200,
+  "estimated_cost_usd": 0.0032022480000000004,
+  "cells": {
+    "jev/en_en": {
+      "condition": "en_en",
+      "n": 100,
+      "flips": 2,
+      "flip_rate": 0.02,
+      "flip_ci95": [
+        0.00550196755016235,
+        0.07001179072854388
+      ],
+      "mean_total_variation": 0.012200000000000003,
+      "flipped_case_ids": [
+        "pawsx-5772",
+        "pawsx-6969"
+      ]
+    },
+    "jev/ko_ko": {
+      "condition": "ko_ko",
+      "n": 100,
+      "flips": 1,
+      "flip_rate": 0.01,
+      "flip_ci95": [
+        0.0017674320641406505,
+        0.054486196178705315
+      ],
+      "mean_total_variation": 0.010700000000000003,
+      "flipped_case_ids": [
+        "pawsx-7036"
+      ]
+    }
+  }
+}

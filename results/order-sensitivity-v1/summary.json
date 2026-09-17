@@ -1,0 +1,124 @@
+{
+  "experiment": "order-sensitivity-v1",
+  "generated_at": "2026-09-17T08:41:59.387334+00:00",
+  "manifest_hash": "09a17e774616ea65248ad8e2ce6fc5eb5ef578dcfb9bba8b097807ebfc051542",
+  "successful": 800,
+  "planned": 800,
+  "estimated_cost_usd": 0.021770896,
+  "cells": {
+    "jev/en_en": {
+      "role": "jev",
+      "condition": "en_en",
+      "n": 100,
+      "flips": 14,
+      "flip_rate": 0.14,
+      "flip_ci95": [
+        0.08526343659939134,
+        0.22137188210963837
+      ],
+      "mean_total_variation": 0.1011,
+      "wrong_to_right": 12,
+      "right_to_wrong": 2,
+      "accuracy": {
+        "original": {
+          "correct": 79,
+          "n": 100
+        },
+        "reversed": {
+          "correct": 89,
+          "n": 100
+        }
+      }
+    },
+    "jev/ko_ko": {
+      "role": "jev",
+      "condition": "ko_ko",
+      "n": 100,
+      "flips": 13,
+      "flip_rate": 0.13,
+      "flip_ci95": [
+        0.07757167427240512,
+        0.20980351440076428
+      ],
+      "mean_total_variation": 0.1174,
+      "wrong_to_right": 6,
+      "right_to_wrong": 7,
+      "accuracy": {
+        "original": {
+          "correct": 75,
+          "n": 100
+        },
+        "reversed": {
+          "correct": 74,
+          "n": 100
+        }
+      }
+    },
+    "luna/en_en": {
+      "role": "luna",
+      "condition": "en_en",
+      "n": 100,
+      "flips": 11,
+      "flip_rate": 0.11,
+      "flip_ci95": [
+        0.06254196357064568,
+        0.18631296503080313
+      ],
+      "mean_total_variation": null,
+      "wrong_to_right": 9,
+      "right_to_wrong": 2,
+      "accuracy": {
+        "original": {
+          "correct": 81,
+          "n": 100
+        },
+        "reversed": {
+          "correct": 88,
+          "n": 100
+        }
+      }
+    },
+    "luna/ko_ko": {
+      "role": "luna",
+      "condition": "ko_ko",
+      "n": 100,
+      "flips": 21,
+      "flip_rate": 0.21,
+      "flip_ci95": [
+        0.141656540619153,
+        0.29979968834089865
+      ],
+      "mean_total_variation": null,
+      "wrong_to_right": 10,
+      "right_to_wrong": 11,
+      "accuracy": {
+        "original": {
+          "correct": 74,
+          "n": 100
+        },
+        "reversed": {
+          "correct": 73,
+          "n": 100
+        }
+      }
+    }
+  },
+  "korean_minus_english_flip_rate": {
+    "jev": {
+      "n": 100,
+      "difference": -0.01,
+      "ci95": [
+        -0.09,
+        0.07
+      ]
+    },
+    "luna": {
+      "n": 100,
+      "difference": 0.1,
+      "ci95": [
+        -0.01,
+        0.2
+      ]
+    }
+  }
+}
