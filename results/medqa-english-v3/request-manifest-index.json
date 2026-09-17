@@ -1,0 +1,1617 @@
+{
+  "experiment": "medqa-english-v3",
+  "source_manifest_hash": "879f273ec4938fae6e53e0a8553be71edbb9d40757445501155c3a1ed945d121",
+  "requests": [
+    {
+      "eval_id": "jev__medqa-us-test-0297__en_en",
+      "case_id": "medqa-us-test-0297",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "bad338612be89dc7154990375f90ed30eb2e5d41211bbf696b634d27d30d4b65"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0297__en_en",
+      "case_id": "medqa-us-test-0297",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "79b052223bd4fe62c22e245a8fc9df9bf27d57b730181a05235a2f2bf3c02cb2"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0712__en_en",
+      "case_id": "medqa-us-test-0712",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "e84f4b870d67ba8218feeabd053a38ed5b2b229b9e9294cecd55cdd6f7fb57b8"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0712__en_en",
+      "case_id": "medqa-us-test-0712",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "447865138fae0201fc854466e76ba8531701d0340099da807791c7956b752116"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0593__en_en",
+      "case_id": "medqa-us-test-0593",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "ad4faedbeb8598272982234f8c5104eeba926b53837cb4c00cd70e41702390bf"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0593__en_en",
+      "case_id": "medqa-us-test-0593",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "6e36001b6bc0f9f3630fd35fc3bf874c368586b8dce41896829343aaf9dc30a4"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1264__en_en",
+      "case_id": "medqa-us-test-1264",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "43a47eb8cb9f0e457c1179c01b49cb7c54e08021206ac129d7d8da88e15ef805"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1264__en_en",
+      "case_id": "medqa-us-test-1264",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "a1f0a1f82eef4fd89111889670667e2e660cc4beb1bf9b1ee3dab51e7a086d8a"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0539__en_en",
+      "case_id": "medqa-us-test-0539",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "1733656309f36d1f4fc33d843e66ca9ae9e919901533968cd256796307ff3370"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0539__en_en",
+      "case_id": "medqa-us-test-0539",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "b7f7446dade9091fb6e352f9cd20b6c4341200f456b7088ec475bdb8d4e261bc"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0010__en_en",
+      "case_id": "medqa-us-test-0010",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "43f36b9ed6f1e18c73834955b21aeba8e3f8566241d65f1b1a601b0218f5c08c"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0010__en_en",
+      "case_id": "medqa-us-test-0010",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "08a7e4d2068f2e9c62e712f8ba897c3f7f030f6c9b1006f67f2a96141d7a6482"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0323__en_en",
+      "case_id": "medqa-us-test-0323",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "fc2e5c03b94c780cb6c14e1a3bbff1adc6f70fe9c4497d11c12d91395edfba40"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0323__en_en",
+      "case_id": "medqa-us-test-0323",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "e651440a4c5f7cba15185bbf2ee8cc063f2c2581274575cf64efdc69b1ba6d99"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0854__en_en",
+      "case_id": "medqa-us-test-0854",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "ff30518ae467eb4ea8540e79d268b920b0bfa8bfc90f08d9309b290418ca3652"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0854__en_en",
+      "case_id": "medqa-us-test-0854",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "f7462fbd725b087f7e628a290650533bb2eeed68d97aca2e1cdcabf9b8eec03f"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1252__en_en",
+      "case_id": "medqa-us-test-1252",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "94cf629351a09502bfdbdf36ddcac00790b23a1092a5cf709779f2bc8272c734"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1252__en_en",
+      "case_id": "medqa-us-test-1252",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "70efbefdb64e728a40f561ff22c95edc36c36d22442f77c86fbea2a1837fcf47"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0754__en_en",
+      "case_id": "medqa-us-test-0754",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "e2cee8ea77cd3fe6abe4b7ef1f57b0b3d3526e83ff49e7b75746946eac00abac"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0754__en_en",
+      "case_id": "medqa-us-test-0754",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "6d8ffcfeb6715a794c42eed10ff82ef50971f0bbb14ecad8592512fa68be99b4"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1238__en_en",
+      "case_id": "medqa-us-test-1238",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "50fe347891f54ab60b200b6bd1379d5d1d5126f426ddbe495229cf046255ae1e"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1238__en_en",
+      "case_id": "medqa-us-test-1238",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "8c56be02b07650059c7fe49b2ae57fb4d9494021e1fe06c5ffc8140e3dd35331"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1182__en_en",
+      "case_id": "medqa-us-test-1182",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "388661a906b56ad03220fdb3f9425a0a225d840c5448c9f1cc6670269eb1a336"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1182__en_en",
+      "case_id": "medqa-us-test-1182",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "4a36f6f7651e7be71d98ad57137f0a1df50404de63994d880c7fb900bcdf11b0"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0474__en_en",
+      "case_id": "medqa-us-test-0474",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "235f33790e1d5549c3095ef22ea58af8ec7903fe90abd88ceed15daebb7a7a10"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0474__en_en",
+      "case_id": "medqa-us-test-0474",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "adea6a6ae4d1e3160e2dcd5859ed296a5d35c9a6cd7bad338046edcea36d2322"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0487__en_en",
+      "case_id": "medqa-us-test-0487",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "82a0826924d3bc8f10ba225a63d2aabe935758014036a377a9421c9a91fac04f"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0487__en_en",
+      "case_id": "medqa-us-test-0487",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "186dcd1a6d85d64878d585e213361795da4589e8d609e2f509813e0f0ad9f0ea"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1096__en_en",
+      "case_id": "medqa-us-test-1096",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "7da4d4a1cc6ad77da3c6490ad7d8c2628bac25e22761027e37c96651adfa1de9"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1096__en_en",
+      "case_id": "medqa-us-test-1096",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "a84be4e53b74b27e9c272770162b52afc4926c9daa578d8ffb87113f54871b52"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0906__en_en",
+      "case_id": "medqa-us-test-0906",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "c72ba8111bcd9dc5fe2f3956d6533a3e5f2c8dc64471cc190167efeaeb39b488"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0906__en_en",
+      "case_id": "medqa-us-test-0906",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "b4f88de65ca2084d3059d2249b047065c85c996d9c57b46f4f7762c6357aa9c6"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0048__en_en",
+      "case_id": "medqa-us-test-0048",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "1b9f9bfad31a73eddc95d39b374c21e1e2dcda039a15abac0ee785888666900d"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0048__en_en",
+      "case_id": "medqa-us-test-0048",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "a9fe5cb3c4fac879674cad16c3103c5e1ba647ab53a9cffa66a1c4b565b38802"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0856__en_en",
+      "case_id": "medqa-us-test-0856",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "448cd423797858bb04e7249bdf2347f6c029b8659523717fb618442857a7bfa4"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0856__en_en",
+      "case_id": "medqa-us-test-0856",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "ea4c931ed3ac258d97209b47ca23bfec8aef2c8b1b8135277ea7191f84e014bc"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0094__en_en",
+      "case_id": "medqa-us-test-0094",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "2c2f9da37a7ad7ce2ed619a41433dd1e30f578cc44516cced37c5bd12a96f378"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0094__en_en",
+      "case_id": "medqa-us-test-0094",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "19040aadc49954b49226d962964668a0006be083819466f1209501cfd4a899c1"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0344__en_en",
+      "case_id": "medqa-us-test-0344",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "713f86107c768ab232d93ad99b85ccae93fa03b2007e031b36b4ecf9106da182"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0344__en_en",
+      "case_id": "medqa-us-test-0344",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "03ff05f0279c7c32d96941ac81cacafa7e1f380a338497be3ea3a3c5f694a85d"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0282__en_en",
+      "case_id": "medqa-us-test-0282",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "607d34da07af816893edc143502e972932b292f540611b3e0e9f5c541ad8ec3e"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0282__en_en",
+      "case_id": "medqa-us-test-0282",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "5a26532afbb5734289f90f93cc91df9d77301eb4c9ead812902d54552a29b30f"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0665__en_en",
+      "case_id": "medqa-us-test-0665",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "40fbc2018ca411e02364bddc171d15274c13508247e24c6dceab739476f82880"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0665__en_en",
+      "case_id": "medqa-us-test-0665",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "5487489c6dda452abe7387953abf6dd6460b5a0bec716b4a4931f85820ca50d0"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0056__en_en",
+      "case_id": "medqa-us-test-0056",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "9c4eec37b15d9019d733fca404096a4f704957ce17864bfdb71726e0de9e5b8d"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0056__en_en",
+      "case_id": "medqa-us-test-0056",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "d0e54e45b80d1b103eb064cceb71c6e5b0c8a9d4b70a0c10043e408146f9107f"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1127__en_en",
+      "case_id": "medqa-us-test-1127",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "0f8ac2fdcde83c06cc29e331e83f70fbea653910c8e68d7409288ff1f2c8024f"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1127__en_en",
+      "case_id": "medqa-us-test-1127",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "8add034bbdf70bd272b624b7a1ebcdccbd414bcc469b8b4d983084a8093d2b91"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0002__en_en",
+      "case_id": "medqa-us-test-0002",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "2425c45cc9e605f5936450906aa5be6aefb6b3d8c66557516e81a25bd86b3663"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0002__en_en",
+      "case_id": "medqa-us-test-0002",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "2725ad18d47b8b2f47510a3dc0aaae31c15ca575d79c3dad16be2846f32ae649"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1124__en_en",
+      "case_id": "medqa-us-test-1124",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "e40658c2d6d85a0dd030ca20bc3177f01895f99a50966ab16b5f655e71f84a89"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1124__en_en",
+      "case_id": "medqa-us-test-1124",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "28cf94bca317852b08d0ffd01f49accd1368e977814073fd54f2af704158f5fb"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1199__en_en",
+      "case_id": "medqa-us-test-1199",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "4f5f2075be2bd9a978138b3ad6ca809e15ee243d573f08cc602910f5ded755b3"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1199__en_en",
+      "case_id": "medqa-us-test-1199",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "db4020a2e58777dacee5bef513c6c08cdbef81813c6ea56014af757e8ca25127"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0368__en_en",
+      "case_id": "medqa-us-test-0368",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "1eac85394e351fdec422412b9703cd7ef9538f866175be9c35fda31bbba9db2b"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0368__en_en",
+      "case_id": "medqa-us-test-0368",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "1d11fbdfe2eca8e869465ec9d8d8ea7b0b90df3506e68976e63defbe74ccfd38"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0789__en_en",
+      "case_id": "medqa-us-test-0789",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "d472d2516c23255b4f4edc422867ce45567114c53cbc4bfd38da3eefb52e440f"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0789__en_en",
+      "case_id": "medqa-us-test-0789",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "97c2b492da529a157155ef3b2fb9d0e2ec413124b7a190136c58f68905743d37"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0579__en_en",
+      "case_id": "medqa-us-test-0579",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "0aea3014ffae794420edc366b5e8e05815d54000dfc9e8caf749b011ec8dbc18"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0579__en_en",
+      "case_id": "medqa-us-test-0579",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "3ef086414fdfa0dad2d90b775db744201eb96dad0c954db89e05016bfe00d1a2"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0500__en_en",
+      "case_id": "medqa-us-test-0500",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "709aeb84406f215d0dd588962e66a857b9a6dce6dfa52c7a3e171fbdb2311075"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0500__en_en",
+      "case_id": "medqa-us-test-0500",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "550d204fccbad72a0df3b5ae1972f12925b581c76f541c07320527e8ac00221a"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0456__en_en",
+      "case_id": "medqa-us-test-0456",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "1971887b1b6ca0fe9e32fd966102e151155a99b3f73644fd01ea70a3c92fdf91"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0456__en_en",
+      "case_id": "medqa-us-test-0456",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "da639090645f77862e14eda5eebc06c13216d387e7472371e34f0b4d4b243783"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0949__en_en",
+      "case_id": "medqa-us-test-0949",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "7a47726303803afd9ff861f3920e1b58f636f7a88c7589074e98440cebc070f9"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0949__en_en",
+      "case_id": "medqa-us-test-0949",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "1f6a497006aabc3d90f2de7decbdbdd6cb5bb24281bea8f2a0c8e47648bd9352"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1065__en_en",
+      "case_id": "medqa-us-test-1065",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "ef9d0bba83802036bdd4e88bbda414313d39800f4e921672e37da60457b8bb61"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1065__en_en",
+      "case_id": "medqa-us-test-1065",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "42d670988244ecef9319180c8cb00fc735f136427839d6799ba40e614b1924fc"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0452__en_en",
+      "case_id": "medqa-us-test-0452",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "ebc4b79ea41d752acb8f2056f5fe8b87dbce807b5c690c60b9a98e24acd02d92"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0452__en_en",
+      "case_id": "medqa-us-test-0452",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "47ea8a45781adbd6d957b3cb5f2e6bd8fa395088dd03d205216fb5fcf586f8b3"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0096__en_en",
+      "case_id": "medqa-us-test-0096",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "ab02994ee17b484ab2e5ea3bbe2755cb951fd00e451f500c8ad6167eae9b2e40"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0096__en_en",
+      "case_id": "medqa-us-test-0096",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "659b663942ececdc8947fb800373be121d141c24c18dbc7cecd86eb8acec6a11"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0878__en_en",
+      "case_id": "medqa-us-test-0878",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "1308547dc247d246dcde7532196f9f8c84894f5e4aa8ddf3220a0f62bc363d19"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0878__en_en",
+      "case_id": "medqa-us-test-0878",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "ebfac18a368b286a033df6ce89a2061a1dbba366fe9b088681dde189ff55012c"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1142__en_en",
+      "case_id": "medqa-us-test-1142",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "26d2327e3288dcffcdd4de7baae86f9104da3beebe5bd0da0b6d4af86fc9478b"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1142__en_en",
+      "case_id": "medqa-us-test-1142",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "972431bb7c48b575197e921ce5c07bdcc45aae25d910301e030c04d6fc0a36e8"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0551__en_en",
+      "case_id": "medqa-us-test-0551",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "c65d6c462b570ccfabeed43f7332e75ce956405c86cf18b2deb3f4c5ea34d97c"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0551__en_en",
+      "case_id": "medqa-us-test-0551",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "38d51f185158002e13409b99db4ea8dfc1d11fef07d2b1719e41595bb9f2c6b0"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0490__en_en",
+      "case_id": "medqa-us-test-0490",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "dd1914c5e4b36eedd7073692816ebab539fb48b39d21a903d30ae186a309e809"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0490__en_en",
+      "case_id": "medqa-us-test-0490",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "faeda3546f3c081080596a8b26623242b270b020a741fe692e1366dc0760f00b"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0722__en_en",
+      "case_id": "medqa-us-test-0722",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "92ceceb4ca634f6be656fa589e3c04d3f8528e153ffbfa268d24130ba1e5428e"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0722__en_en",
+      "case_id": "medqa-us-test-0722",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "a649f76b02a5791b5de6eafdc25f66f03baacbc3fdbe1aa631613b9099b75200"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1210__en_en",
+      "case_id": "medqa-us-test-1210",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "96353453ad1c6b2decde502efd0d8e58fd91663b5ec6b5033adbc41e3cd681b9"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1210__en_en",
+      "case_id": "medqa-us-test-1210",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "4bbfa6254a8996874a9e9236d953c9c0b1be9153dd188da0356462cdb0279858"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0702__en_en",
+      "case_id": "medqa-us-test-0702",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "58688b1a59212a5962ba9469a53b155ad1811d5bdd8a8ac38a2d4e4446dfeb0d"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0702__en_en",
+      "case_id": "medqa-us-test-0702",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "4fe781383c2657a4aee63778c92a8208913f14000ab237c796bbb9871d8e6a80"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0245__en_en",
+      "case_id": "medqa-us-test-0245",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "3304368a0d8dbf776f123236a4702d78dbe90a40a6b2c3d350f20a12f2f4595b"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0245__en_en",
+      "case_id": "medqa-us-test-0245",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "f2ff0d45fe72dc3af05e308aabe04a0da6fdb4703cead1bda27a7b3f2b0981f9"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1121__en_en",
+      "case_id": "medqa-us-test-1121",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "267e5688404e2875a39b58d3521df826f1f622f89e4466bc63c9f0a0f08e8ed5"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1121__en_en",
+      "case_id": "medqa-us-test-1121",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "93b65e42ba92a7f1f010d03baf084bb32ef61d051ad50bbe084ffe3313f1329d"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0087__en_en",
+      "case_id": "medqa-us-test-0087",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "602259666ffa14c38017002d112392920bb241df1689fc656fbc6b29a8846742"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0087__en_en",
+      "case_id": "medqa-us-test-0087",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "feea8fa1dbe81dc277bd6843939374da6bc72394a41ea8b135ef63dfefad4af9"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0231__en_en",
+      "case_id": "medqa-us-test-0231",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "76bd4915db29c76b73902a3f3e6271fe2e9be5a78dfa73af6daf69bfeadc6e3d"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0231__en_en",
+      "case_id": "medqa-us-test-0231",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "683d7c65354edd7018566c6236d7fe74a88ef80208760d27c8593f4cd3d02366"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0142__en_en",
+      "case_id": "medqa-us-test-0142",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "de07a5d4c69c7180fde5eb1f4914734a5b14234afbf133d8b878e46b071a8266"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0142__en_en",
+      "case_id": "medqa-us-test-0142",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "85f9096c1b93f3b6266dfe83dfbe640c53a41c2fdea4bd4bea15ff6bb5905533"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0636__en_en",
+      "case_id": "medqa-us-test-0636",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "7bc2586b0c5ebd16b6cf5f7a98c0e1f2a3b00f448253fe6fa8d69e485b82e74d"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0636__en_en",
+      "case_id": "medqa-us-test-0636",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "b810cc04cba9a1bd61c55dd6b029bacb596e9b98265209640816c5d96b7d59ee"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0067__en_en",
+      "case_id": "medqa-us-test-0067",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "9f0ef83ad88ad632a9184ecad7e8502a9ede6c07617562cf046e755b62696fd4"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0067__en_en",
+      "case_id": "medqa-us-test-0067",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "2f98080f31f50ab03c4e765e55899620b8e94b68e7955b90c28d183f3dd80f39"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1250__en_en",
+      "case_id": "medqa-us-test-1250",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "4af30f56829d34be1620fdb5256573851ea1216048ab65669a21dfbdaca7577e"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1250__en_en",
+      "case_id": "medqa-us-test-1250",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "6d27397cfd30917f4a5896d26e2e2ebee79b240ac6e67aa53241aa3a6faaab5e"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0620__en_en",
+      "case_id": "medqa-us-test-0620",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "c70384a2c1db2af4d6b49e5e88130db2be601f1a4b9ec9f6be782935e4386a6b"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0620__en_en",
+      "case_id": "medqa-us-test-0620",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "7461c11af789472b102cf5d94a475435ac05a443ff5e37be47f2af58c731f220"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0223__en_en",
+      "case_id": "medqa-us-test-0223",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "4b6a4620a3be73949d91f9df4f237ffa2f103b4b7a0eb7897a3ce44700a61eb3"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0223__en_en",
+      "case_id": "medqa-us-test-0223",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "7036fc3e507b0834e5d0cccb1c52699f15b614a19dc3168792ac81e31346f929"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1270__en_en",
+      "case_id": "medqa-us-test-1270",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "5763e67ca400f6f5374e9e970c92bff5c7ad667609706d8d9cbb5b60642f4475"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1270__en_en",
+      "case_id": "medqa-us-test-1270",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "16145648f63e797cc7dbef5de49d9bcf9d42b45521533432e46f7897eb30e3fa"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0460__en_en",
+      "case_id": "medqa-us-test-0460",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "b791af96cfa04e775ee4bd0106e8eeb0dbeae149c752739b9373061f50dacfad"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0460__en_en",
+      "case_id": "medqa-us-test-0460",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "15dbf50e81e7f7d99e42cfb51d8549aca8064fa750600724ff2e00fc4c41dc69"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1008__en_en",
+      "case_id": "medqa-us-test-1008",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "1f190cdfbeef6c1eddfd3c8075010426ed12e80f8370b3d093bd5ede40e7dfc9"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1008__en_en",
+      "case_id": "medqa-us-test-1008",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "fd96e392bd2f61a57ab6b57dd1c3931500e4c1e582e65a6829112837e15cc6b7"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1075__en_en",
+      "case_id": "medqa-us-test-1075",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "d467b309ff8c96464b84d13b8655c9c040b67356151fa68306aba023a146785f"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1075__en_en",
+      "case_id": "medqa-us-test-1075",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "d88b049eff1036b5a9ae4bf2aeff1bac356c4dd21fa3123f56b958486ce18b37"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0298__en_en",
+      "case_id": "medqa-us-test-0298",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "ed563bea8f2d8589107062f1f87e7f3218ace0d390144dc68251b38d89f79614"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0298__en_en",
+      "case_id": "medqa-us-test-0298",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "912d523b758b5a3019837aa6feb4d7f85500ddf011818be9ca695952014a9a64"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0012__en_en",
+      "case_id": "medqa-us-test-0012",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "c6ab0af4347f08c8743f1943b384ce4ee9d48cf0df68d1b44bb9d4615ea3f4fa"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0012__en_en",
+      "case_id": "medqa-us-test-0012",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "06d3d48e5672f2461a9804c1323154b2ec65385cc98653ffb4a49712da06e338"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0691__en_en",
+      "case_id": "medqa-us-test-0691",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "a12831fe14f52ee5b1f31c075bf2c3ed7a44f92f81a795979fa1d9a2f3bd14a9"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0691__en_en",
+      "case_id": "medqa-us-test-0691",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "f43fc6eba3dda2bf15d058ae60ef73f3d35738b83621fd3e6f584bfbc2f72671"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1113__en_en",
+      "case_id": "medqa-us-test-1113",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "9b7f42050fb1f7185ee7842dd6627f02ddbf85192e41d21cec991854d919e198"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1113__en_en",
+      "case_id": "medqa-us-test-1113",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "c70db5314ad272ca280eb2df36bb0e5ab1a29afa5a0b001c9b1cfcb4526cce73"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0248__en_en",
+      "case_id": "medqa-us-test-0248",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "1e87bc4dd0511a0b731f0fceddb6f05f1d3e83ee0c0b208a46c9f61c8da1424c"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0248__en_en",
+      "case_id": "medqa-us-test-0248",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "7706e2aab083fa7dd4c76de8be7afb6ed0f06cf115a6fcec6097cd3008147808"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0182__en_en",
+      "case_id": "medqa-us-test-0182",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "5d811cf912b3d120e0132185bbfa496bbbfa263b9145b7db8a5bc5f070c00100"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0182__en_en",
+      "case_id": "medqa-us-test-0182",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "97274b6042442a45a0e95e7b7bafe89532b0b4dbbef9854a6af43525a38aacb9"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0361__en_en",
+      "case_id": "medqa-us-test-0361",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "f6306f96646d992b65d029995f1f1d19e28b830b31336c713d899dc2414ee156"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0361__en_en",
+      "case_id": "medqa-us-test-0361",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "ba840ea143602dc41dacd96e74eabe0b90a2fd2446e999abc66e9df979aadaa0"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0874__en_en",
+      "case_id": "medqa-us-test-0874",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "fedd4f80dc1c9a448a37576edff0e279548347a8731f20deb136cf3d47307cc2"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0874__en_en",
+      "case_id": "medqa-us-test-0874",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "bbc50e5825d591fe7504ef0ccf6f9d6893158e29d86d95aa8ef1fe633a357d29"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0838__en_en",
+      "case_id": "medqa-us-test-0838",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "20e842bb2cb5af9b4628a29c326a948dfa6c027ee09fac570cb76edbcf309a61"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0838__en_en",
+      "case_id": "medqa-us-test-0838",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "e58686c6a51d65eff3e0625c9a139e0e37f9196f894a0a0610679258ec04f4b2"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0285__en_en",
+      "case_id": "medqa-us-test-0285",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "f43751975a290ea4c4c6a243377243eafab8dc72427082a18fa6e9ff1298f73b"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0285__en_en",
+      "case_id": "medqa-us-test-0285",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "698b6c46d03d6715522a41fff2bbdeb7a7c4b81e395a506c1f787dbd94bd92dc"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1137__en_en",
+      "case_id": "medqa-us-test-1137",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "82752514c036e42436497c39fbf3b56c834e0e8285e855b01fa52e48a286185f"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1137__en_en",
+      "case_id": "medqa-us-test-1137",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "1f6bf0b735d7574db5c81d1dc8c38471317b340b50ead998dfd17937ca26848b"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0158__en_en",
+      "case_id": "medqa-us-test-0158",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "0ab103a94aa75cb5b8e045d671ed80d2f64cd2d40bb3763272034ebddd85cdf9"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0158__en_en",
+      "case_id": "medqa-us-test-0158",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "5c1d5927dda6b87818ac0f7a6fdea1cfc9ff76c5d1fb30e44c534ffb4bce0640"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0403__en_en",
+      "case_id": "medqa-us-test-0403",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "0518b3021c6eee89d7962defe15daa0cf5512d9b673dcf50b2fffa4a728f7188"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0403__en_en",
+      "case_id": "medqa-us-test-0403",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "ed0a943c4e459cc102d55aa70ea0c59dc19e5683beb9d91a23db6ab6767a7fdd"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0489__en_en",
+      "case_id": "medqa-us-test-0489",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "1ba290bbce9f415bd82497570415898cfbec9d9c4e52800e0cfe0d9326936917"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0489__en_en",
+      "case_id": "medqa-us-test-0489",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "9e98e5db5a5a654d8ae73909486ba7edcd279f53a26bfca7c2a5c97e215a1689"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0229__en_en",
+      "case_id": "medqa-us-test-0229",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "6ca906207dfd2f8da6ef45267303ce367d976133fe3d20536d4f01408e61a57c"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0229__en_en",
+      "case_id": "medqa-us-test-0229",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "f784d9c86d5f2a032c41df4796b2af07723f96ba731329b6b51cc001aef46dc9"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0860__en_en",
+      "case_id": "medqa-us-test-0860",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "b8f9c599b6b5be6c36191abacbcfcdd21d6c4ab5de2034d7e1a1ba3161bbe90c"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0860__en_en",
+      "case_id": "medqa-us-test-0860",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "0d6e269df42a421f58bf102f04f317fadc0f03720f991031107a3d4303ea7629"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1253__en_en",
+      "case_id": "medqa-us-test-1253",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "976e003e9f0c57a5e8fc5785150ca39afb8199986ed383e7bd4fb7470694d5bb"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1253__en_en",
+      "case_id": "medqa-us-test-1253",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "3d1b54dd79d5980d119f77e88734ab6bb46a9c5a413a2ed46496fd878249a39a"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1030__en_en",
+      "case_id": "medqa-us-test-1030",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "740961845f01329c2120c58b54c575f5a6d8b4e50eda3a4a2ace4ce9c2e0d50f"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1030__en_en",
+      "case_id": "medqa-us-test-1030",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "a82f06cdd3cce55beb3e9377c3d90d57e095eef4f5917934c33087e2ef0015c3"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1176__en_en",
+      "case_id": "medqa-us-test-1176",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "482a6717ccd80eaa0cb28ac5fe651806d9e71da35e1b3c2fbe1eafa614e403a3"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1176__en_en",
+      "case_id": "medqa-us-test-1176",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "406e9237166bac4460cbdd9aa7fa42415e3ec0ecd4805ae10462ba6318ea6118"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1258__en_en",
+      "case_id": "medqa-us-test-1258",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "a50b095710997268bb19a2db1effe3494c27ac53e769c2daedd43c3f21e56609"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1258__en_en",
+      "case_id": "medqa-us-test-1258",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "a020c7411ff6726871b8b78d037e5c95c0b8ab938fc31bbd9748b81ff9d45aee"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0119__en_en",
+      "case_id": "medqa-us-test-0119",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "9721bb66ffc787b23d79554c12aab8db4e57c81b0d502956d2b9893e834e0e7d"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0119__en_en",
+      "case_id": "medqa-us-test-0119",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "3066fa75d8c5d03f6489e38cca1a91fe4f57f0a7eb7445bc8d81b573a0b3caa8"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0898__en_en",
+      "case_id": "medqa-us-test-0898",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "db81f7c0efc9418b19a972bb6ebf775ebebba27706f5d86c8b6139d34c6a0512"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0898__en_en",
+      "case_id": "medqa-us-test-0898",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "51a00997639057930cc0b6aa6e79f63dcdfeb1221a71142a2594958c3526a6d3"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1013__en_en",
+      "case_id": "medqa-us-test-1013",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "e32105e0f13a4762231e8db0a2791e4a3eecdfb7ac9f794f3d7e334aed2dfb26"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1013__en_en",
+      "case_id": "medqa-us-test-1013",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "688f6ebeed919022abef9a32ed10dcedbf1612f26c36c661cf8492fc40273d9f"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0320__en_en",
+      "case_id": "medqa-us-test-0320",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "da8526d2e5518aec816eb1497412811e0e7ebf76713dc5a18af18558a84d4e8d"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0320__en_en",
+      "case_id": "medqa-us-test-0320",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "243420ec2e2021c3acdd71cc82662e71d859e72f4a6b495d56cf67a24e13c18a"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0893__en_en",
+      "case_id": "medqa-us-test-0893",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "6af337246d44b25c4d863d476620d63943dd46e2550e0019b5191e5697476aab"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0893__en_en",
+      "case_id": "medqa-us-test-0893",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "0a2f4541ff11a0a9a66802403663bcc82e392c92543f4e77a2c079f1cfd613e3"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0629__en_en",
+      "case_id": "medqa-us-test-0629",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "9d81378ea4054af9b6ef92ab50b14230e01977484b3a646dfd40dfbe87abce4e"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0629__en_en",
+      "case_id": "medqa-us-test-0629",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "e4157221aedcadafcdec6d38af7cbcdf214be0c88a19899e23b106a250756d87"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0307__en_en",
+      "case_id": "medqa-us-test-0307",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "80d38216f5492c6d9c7bc8f0fab322265e2be430c71a6bf93c7147b695caef64"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0307__en_en",
+      "case_id": "medqa-us-test-0307",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "fa240b3f5565c8c5e1b31ff58491eff7ec8e579435fb0a6a089f5ffc51aa347c"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1068__en_en",
+      "case_id": "medqa-us-test-1068",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "333600a349878b3acae7ff4888e3bc74fd65a3b51b64997619f88b3dd626f166"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1068__en_en",
+      "case_id": "medqa-us-test-1068",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "f894cbe1243d1f532ddfdb06d3c95d22df7881ef54da9836745f28ed7fb143b0"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-1062__en_en",
+      "case_id": "medqa-us-test-1062",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "4e0e39ec44ad5fa9b5ecd4a21749647c91d227ef76798475904525cfba6332d7"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-1062__en_en",
+      "case_id": "medqa-us-test-1062",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "b98a110f1fb7aecf3d7be938d9d085b36adda5a09a0917853a97cfa57dcaa3c0"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0327__en_en",
+      "case_id": "medqa-us-test-0327",
+      "provider": "jev",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "6359c596edcbfef2c1d482713a109a63de987519b8d7a5f721effc3cf8b1b295"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0327__en_en",
+      "case_id": "medqa-us-test-0327",
+      "provider": "luna",
+      "gold": "A",
+      "kind": "choice",
+      "request_hash": "287a7531d672ef4c86bc9bcca92b44a504cedba45123af10e91a5c13ba486fbb"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0875__en_en",
+      "case_id": "medqa-us-test-0875",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "150db7829e47a5d64cfdfdeb62dcd0c4fd633a84b5f36da906d7405780ed3889"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0875__en_en",
+      "case_id": "medqa-us-test-0875",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "d12632e8f10811244c38c8b5dbdfd2a500c18a79050addc878086277abfe824c"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0656__en_en",
+      "case_id": "medqa-us-test-0656",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "3904cbd5329baee27743282221a7aa5d08c9a513df08ff7f73a8ac6832ea5450"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0656__en_en",
+      "case_id": "medqa-us-test-0656",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "303bf4bb134837d43e025562a084ad53ad2739fed9c99a6e83a16197ea3fe398"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0325__en_en",
+      "case_id": "medqa-us-test-0325",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "ad53e255e89d85a1b777261cd17bdbbffb3e88890621d394269a99d553079045"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0325__en_en",
+      "case_id": "medqa-us-test-0325",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "ed91947b0357bf7a59542fb926ff5c1f0e34155162844547cc13007454769dc4"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0829__en_en",
+      "case_id": "medqa-us-test-0829",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "35481b42cc36ea03b8373b1450c178e3df33513e7c088d01a8d5f3f21bd94d1e"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0829__en_en",
+      "case_id": "medqa-us-test-0829",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "08ddc0a94ee85026763d9d272360914d9a6c0d5a847b4b38ef1bbbe7ed55dd93"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0747__en_en",
+      "case_id": "medqa-us-test-0747",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "529c37abe0c036d88cb89f8fff9d6331eadf34a2f931079a1571661dbfabc329"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0747__en_en",
+      "case_id": "medqa-us-test-0747",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "05af3767912321a643989e73684fde577de7ccdd004b59a6883b20dbb50e4050"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0062__en_en",
+      "case_id": "medqa-us-test-0062",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "da97316524716ef71a0c6abc1db6574b131d72d6df1fc212d7efa1d42ed1cef7"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0062__en_en",
+      "case_id": "medqa-us-test-0062",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "18e187aaefe08196c3583affc75211e3b5f1c350e03b56505fde6562abb0d81b"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0033__en_en",
+      "case_id": "medqa-us-test-0033",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "b8926baf9439bac20663823eedacabb26cd6e787a0146bf6f8dc4b8614ba0163"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0033__en_en",
+      "case_id": "medqa-us-test-0033",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "f7e1b217ce5f097d1435ac4a971831197d2835ec6e8fbd87c763f786a84fc5db"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0705__en_en",
+      "case_id": "medqa-us-test-0705",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "9f515e770fdb094966d2c4bde9cb03629c326a66ccba5b7181a74851216d62cb"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0705__en_en",
+      "case_id": "medqa-us-test-0705",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "9f061d3c991d81e658125de2e4b8e19802da454d5f7eda08b9e3d69f09914956"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0566__en_en",
+      "case_id": "medqa-us-test-0566",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "88eaa371d56b0f49c32ce2d1b0100330abfdacca1cf63f9e102b76c7ea2bdbb1"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0566__en_en",
+      "case_id": "medqa-us-test-0566",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "b478b040674735725eac1a1ed2f5d389db53aca01d03c0b5c3eebbc477cf7686"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0179__en_en",
+      "case_id": "medqa-us-test-0179",
+      "provider": "jev",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "9c9f29bbf9798a70292282d0b1f14ef9290863ed1ad925bc826854137229b64f"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0179__en_en",
+      "case_id": "medqa-us-test-0179",
+      "provider": "luna",
+      "gold": "C",
+      "kind": "choice",
+      "request_hash": "466899ed225fada2a08fc1a303d641490580dd0f3b6c4674c1884a1caea1e1c4"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0569__en_en",
+      "case_id": "medqa-us-test-0569",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "e475e98232af77be298d4f61bf4f8681a02863a2a0ec616ddfbab1e6fdb12e69"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0569__en_en",
+      "case_id": "medqa-us-test-0569",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "26f134a039e8d7516e6e65bd7a011f49be0bc8a42eebd57eff9e5619f1c6d179"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0703__en_en",
+      "case_id": "medqa-us-test-0703",
+      "provider": "jev",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "077b0447689d33f18bbe6c6eb2b0991bc7bd7b3b71e252794c1e0179657aa462"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0703__en_en",
+      "case_id": "medqa-us-test-0703",
+      "provider": "luna",
+      "gold": "D",
+      "kind": "choice",
+      "request_hash": "123dfaaa8c33a91f9fea2e6e70d0191dfbfce1a24158ee13be50765dfd1026fb"
+    },
+    {
+      "eval_id": "jev__medqa-us-test-0187__en_en",
+      "case_id": "medqa-us-test-0187",
+      "provider": "jev",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "77de5bd2a13f3c3e4373cb13009af5dd2c7418c3b0a8dbf4df240965909e91c8"
+    },
+    {
+      "eval_id": "luna__medqa-us-test-0187__en_en",
+      "case_id": "medqa-us-test-0187",
+      "provider": "luna",
+      "gold": "B",
+      "kind": "choice",
+      "request_hash": "b4ddc5c8acb617301666a3c22d1eb369ebf15ca4b31fbd9cc37341019887e743"
+    }
+  ],
+  "concurrency_per_provider": 4,
+  "budget_usd": 0.25,
+  "max_retries": 2,
+  "timeout_seconds": 30,
+  "prices_per_million": {
+    "jev_input": 0.042,
+    "luna_input": 0.2,
+    "luna_cached_input": 0.02,
+    "luna_output": 1.2
+  },
+  "sha256": "9cc7215f043b7841997b8f8353c980ac60647e535d098c4553656b3f638d7d26"
+}

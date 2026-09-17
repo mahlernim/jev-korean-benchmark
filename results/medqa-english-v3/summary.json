@@ -1,0 +1,80 @@
+{
+  "planned": 200,
+  "successful": 200,
+  "providers": {
+    "jev": {
+      "planned": 100,
+      "successful": 100,
+      "terminal_failures": 0,
+      "pending": 0,
+      "correct": 89,
+      "accuracy": 0.89,
+      "ci95": [
+        0.8136870349691969,
+        0.9374580364293543
+      ],
+      "valid_response_accuracy": 0.89,
+      "attempts": 100,
+      "estimated_cost_usd": 0.0023045400000000003,
+      "ledger_usd": 0.0023045400000000003,
+      "api_seconds": 28.76881710003363,
+      "median_ms": 228.69880001235288,
+      "p95_ms": 663.8510400094674,
+      "input_tokens": 54870,
+      "output_tokens": 4500,
+      "cached_tokens": 0,
+      "reasoning_tokens": 0,
+      "models": [
+        "jev-1.13.0"
+      ],
+      "active_spans_seconds": 7.504123,
+      "successful_per_active_second": 13.326007582764834
+    },
+    "luna": {
+      "planned": 100,
+      "successful": 100,
+      "terminal_failures": 0,
+      "pending": 0,
+      "correct": 84,
+      "accuracy": 0.84,
+      "ci95": [
+        0.7557973061072976,
+        0.8990471151119521
+      ],
+      "valid_response_accuracy": 0.84,
+      "attempts": 100,
+      "estimated_cost_usd": 0.0066756,
+      "ledger_usd": 0.0066756,
+      "api_seconds": 129.60425040009432,
+      "median_ms": 1110.622100008186,
+      "p95_ms": 2378.1423650099896,
+      "input_tokens": 26178,
+      "output_tokens": 1200,
+      "cached_tokens": 0,
+      "reasoning_tokens": 0,
+      "models": [
+        "gpt-5.6-luna"
+      ],
+      "active_spans_seconds": 33.521205,
+      "successful_per_active_second": 2.983186314453791
+    }
+  },
+  "paired_valid": {
+    "n": 100,
+    "difference": -0.05,
+    "ci95": [
+      -0.11,
+      0.0
+    ],
+    "left_only_correct": 7,
+    "right_only_correct": 2
+  },
+  "paired_table": {
+    "both_correct": 82,
+    "jev_only_correct": 7,
+    "luna_only_correct": 2,
+    "both_incorrect": 9
+  },
+  "exact_mcnemar_p": 0.1796875,
+  "combined_invocation_wall_seconds": 33.843314799974905
+}

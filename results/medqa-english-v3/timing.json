@@ -1,0 +1,34 @@
+[
+  {
+    "started_at": "2026-09-17T03:09:51.193660+00:00",
+    "finished_at": "2026-09-17T03:09:54.609631+00:00",
+    "wall_seconds": 3.4159652999951504,
+    "scheduled": 10,
+    "concurrency_per_provider": 4,
+    "max_total_concurrency": 8,
+    "client_close_errors": [],
+    "runner_sha256": "66399227eacefe227260fa7ca56521a4e1a34e3b5da0652b6931049e0303a3c9",
+    "request_manifest_hash": "9cc7215f043b7841997b8f8353c980ac60647e535d098c4553656b3f638d7d26",
+    "transport": {
+      "jev": "typesafe-sdk 0.6.0",
+      "luna": "httpx 0.28.1"
+    },
+    "timing_definition": "Latency includes provider call, decoding and validation; excludes client construction, dispatch wait and persistence. Dispatch wait includes queueing, client initialization and admission. Invocation wall includes client initialization, retry delays, persistence and client closure. Up to eight admitted requests may finish after a fatal stop."
+  },
+  {
+    "started_at": "2026-09-17T03:10:11.001902+00:00",
+    "finished_at": "2026-09-17T03:10:41.429253+00:00",
+    "wall_seconds": 30.427349499979755,
+    "scheduled": 190,
+    "concurrency_per_provider": 4,
+    "max_total_concurrency": 8,
+    "client_close_errors": [],
+    "runner_sha256": "66399227eacefe227260fa7ca56521a4e1a34e3b5da0652b6931049e0303a3c9",
+    "request_manifest_hash": "9cc7215f043b7841997b8f8353c980ac60647e535d098c4553656b3f638d7d26",
+    "transport": {
+      "jev": "typesafe-sdk 0.6.0",
+      "luna": "httpx 0.28.1"
+    },
+    "timing_definition": "Latency includes provider call, decoding and validation; excludes client construction, dispatch wait and persistence. Dispatch wait includes queueing, client initialization and admission. Invocation wall includes client initialization, retry delays, persistence and client closure. Up to eight admitted requests may finish after a fatal stop."
+  }
+]

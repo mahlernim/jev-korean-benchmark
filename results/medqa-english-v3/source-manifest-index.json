@@ -1,0 +1,2270 @@
+{
+  "schema_version": 1,
+  "experiment": "medqa-english-v3",
+  "created_at": "2026-09-17T03:07:39.946745+00:00",
+  "seed": 20260917,
+  "model": "jev-latest",
+  "price_per_million_input_usd": 0.042,
+  "budget_usd": 0.25,
+  "concurrency_per_provider": 4,
+  "sources": {
+    "medqa": {
+      "repository": "GBaker/MedQA-USMLE-4-options",
+      "revision": "0fb93dd23a7339b6dcd27e241cb9b5eca62d4d18",
+      "filename": "phrases_no_exclude_test.jsonl",
+      "download_url": "https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options/resolve/0fb93dd23a7339b6dcd27e241cb9b5eca62d4d18/phrases_no_exclude_test.jsonl",
+      "sha256": "c3b905ccfa66152dc25afbcb2c10e86c0bdb208824f0658fcdb2c040f60a2beb",
+      "rows": 1273,
+      "language": "original English",
+      "split": "test",
+      "variant": "USMLE four options",
+      "retrieved_at": "2026-09-17T03:07:39.617846+00:00",
+      "primary_source": "https://github.com/jind11/MedQA",
+      "paper": "https://arxiv.org/abs/2009.13081",
+      "mirror_card": "https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options/blob/0fb93dd23a7339b6dcd27e241cb9b5eca62d4d18/README.md",
+      "provenance": "Mirror card attributes Jin et al. Primary repository documents official random train/dev/test splits and a four-option US version. Mirror test file has 1,273 rows. Byte identity with the primary Google Drive archive has not been independently verified.",
+      "license": "Mirror card declares CC-BY-4.0; primary code repository uses MIT. These declarations do not independently establish rights to all underlying examination text. Public artifacts therefore omit question and option text."
+    }
+  },
+  "exclusions": [
+    {
+      "case_id": "medqa-us-test-0009",
+      "row_index": 9,
+      "reason": "possible_unavailable_media:photograph"
+    },
+    {
+      "case_id": "medqa-us-test-0011",
+      "row_index": 11,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0018",
+      "row_index": 18,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0031",
+      "row_index": 31,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0034",
+      "row_index": 34,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0045",
+      "row_index": 45,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0074",
+      "row_index": 74,
+      "reason": "possible_unavailable_media:photograph"
+    },
+    {
+      "case_id": "medqa-us-test-0077",
+      "row_index": 77,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0084",
+      "row_index": 84,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0095",
+      "row_index": 95,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0102",
+      "row_index": 102,
+      "reason": "unresolved_source_defect: question stem ends as incomplete continuation"
+    },
+    {
+      "case_id": "medqa-us-test-0111",
+      "row_index": 111,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0114",
+      "row_index": 114,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0116",
+      "row_index": 116,
+      "reason": "possible_unavailable_media:photograph"
+    },
+    {
+      "case_id": "medqa-us-test-0123",
+      "row_index": 123,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0126",
+      "row_index": 126,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0135",
+      "row_index": 135,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0139",
+      "row_index": 139,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0140",
+      "row_index": 140,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0146",
+      "row_index": 146,
+      "reason": "possible_unavailable_media:see image"
+    },
+    {
+      "case_id": "medqa-us-test-0160",
+      "row_index": 160,
+      "reason": "possible_unavailable_media:picture"
+    },
+    {
+      "case_id": "medqa-us-test-0205",
+      "row_index": 205,
+      "reason": "possible_unavailable_media:Figure C"
+    },
+    {
+      "case_id": "medqa-us-test-0220",
+      "row_index": 220,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0232",
+      "row_index": 232,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0233",
+      "row_index": 233,
+      "reason": "possible_unavailable_media:image A"
+    },
+    {
+      "case_id": "medqa-us-test-0251",
+      "row_index": 251,
+      "reason": "possible_unavailable_media:Image A"
+    },
+    {
+      "case_id": "medqa-us-test-0256",
+      "row_index": 256,
+      "reason": "possible_unavailable_media:see image"
+    },
+    {
+      "case_id": "medqa-us-test-0264",
+      "row_index": 264,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0270",
+      "row_index": 270,
+      "reason": "possible_unavailable_media:Figure 1"
+    },
+    {
+      "case_id": "medqa-us-test-0274",
+      "row_index": 274,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0276",
+      "row_index": 276,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0311",
+      "row_index": 311,
+      "reason": "possible_unavailable_media:photomicrograph"
+    },
+    {
+      "case_id": "medqa-us-test-0330",
+      "row_index": 330,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0331",
+      "row_index": 331,
+      "reason": "possible_unavailable_media:pictured below"
+    },
+    {
+      "case_id": "medqa-us-test-0336",
+      "row_index": 336,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0340",
+      "row_index": 340,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0365",
+      "row_index": 365,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0373",
+      "row_index": 373,
+      "reason": "possible_unavailable_media:photograph"
+    },
+    {
+      "case_id": "medqa-us-test-0397",
+      "row_index": 397,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0406",
+      "row_index": 406,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0411",
+      "row_index": 411,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0415",
+      "row_index": 415,
+      "reason": "possible_unavailable_media:table below"
+    },
+    {
+      "case_id": "medqa-us-test-0448",
+      "row_index": 448,
+      "reason": "possible_unavailable_media:picture"
+    },
+    {
+      "case_id": "medqa-us-test-0454",
+      "row_index": 454,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0457",
+      "row_index": 457,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0467",
+      "row_index": 467,
+      "reason": "possible_unavailable_media:photomicrograph"
+    },
+    {
+      "case_id": "medqa-us-test-0469",
+      "row_index": 469,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0470",
+      "row_index": 470,
+      "reason": "possible_unavailable_media:see image"
+    },
+    {
+      "case_id": "medqa-us-test-0475",
+      "row_index": 475,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0484",
+      "row_index": 484,
+      "reason": "possible_unavailable_media:photograph"
+    },
+    {
+      "case_id": "medqa-us-test-0485",
+      "row_index": 485,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0518",
+      "row_index": 518,
+      "reason": "possible_unavailable_media:photograph"
+    },
+    {
+      "case_id": "medqa-us-test-0521",
+      "row_index": 521,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0525",
+      "row_index": 525,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0535",
+      "row_index": 535,
+      "reason": "possible_unavailable_media:Table 1"
+    },
+    {
+      "case_id": "medqa-us-test-0537",
+      "row_index": 537,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0546",
+      "row_index": 546,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0557",
+      "row_index": 557,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0572",
+      "row_index": 572,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0575",
+      "row_index": 575,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0581",
+      "row_index": 581,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0587",
+      "row_index": 587,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0603",
+      "row_index": 603,
+      "reason": "possible_unavailable_media:photograph"
+    },
+    {
+      "case_id": "medqa-us-test-0616",
+      "row_index": 616,
+      "reason": "possible_unavailable_media:Image A"
+    },
+    {
+      "case_id": "medqa-us-test-0622",
+      "row_index": 622,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0633",
+      "row_index": 633,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0635",
+      "row_index": 635,
+      "reason": "unresolved_source_defect: references unavailable laboratory reports, ECG and chest radiograph"
+    },
+    {
+      "case_id": "medqa-us-test-0640",
+      "row_index": 640,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0644",
+      "row_index": 644,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0653",
+      "row_index": 653,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0657",
+      "row_index": 657,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0668",
+      "row_index": 668,
+      "reason": "possible_unavailable_media:photograph"
+    },
+    {
+      "case_id": "medqa-us-test-0670",
+      "row_index": 670,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0676",
+      "row_index": 676,
+      "reason": "possible_unavailable_media:photomicrograph"
+    },
+    {
+      "case_id": "medqa-us-test-0682",
+      "row_index": 682,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0683",
+      "row_index": 683,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0685",
+      "row_index": 685,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0709",
+      "row_index": 709,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0711",
+      "row_index": 711,
+      "reason": "possible_unavailable_media:see image"
+    },
+    {
+      "case_id": "medqa-us-test-0716",
+      "row_index": 716,
+      "reason": "possible_unavailable_media:photograph"
+    },
+    {
+      "case_id": "medqa-us-test-0725",
+      "row_index": 725,
+      "reason": "possible_unavailable_media:photograph"
+    },
+    {
+      "case_id": "medqa-us-test-0727",
+      "row_index": 727,
+      "reason": "possible_unavailable_media:photomicrograph"
+    },
+    {
+      "case_id": "medqa-us-test-0730",
+      "row_index": 730,
+      "reason": "possible_unavailable_media:image below"
+    },
+    {
+      "case_id": "medqa-us-test-0739",
+      "row_index": 739,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0758",
+      "row_index": 758,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0761",
+      "row_index": 761,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0785",
+      "row_index": 785,
+      "reason": "possible_unavailable_media:photomicrograph"
+    },
+    {
+      "case_id": "medqa-us-test-0793",
+      "row_index": 793,
+      "reason": "possible_unavailable_media:see image"
+    },
+    {
+      "case_id": "medqa-us-test-0794",
+      "row_index": 794,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0821",
+      "row_index": 821,
+      "reason": "possible_unavailable_media:photomicrograph"
+    },
+    {
+      "case_id": "medqa-us-test-0824",
+      "row_index": 824,
+      "reason": "unresolved_source_defect: stem asks a virus property while options name viruses"
+    },
+    {
+      "case_id": "medqa-us-test-0830",
+      "row_index": 830,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0835",
+      "row_index": 835,
+      "reason": "possible_unavailable_media:photomicrograph"
+    },
+    {
+      "case_id": "medqa-us-test-0861",
+      "row_index": 861,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0871",
+      "row_index": 871,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0877",
+      "row_index": 877,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0881",
+      "row_index": 881,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0910",
+      "row_index": 910,
+      "reason": "possible_unavailable_media:image below"
+    },
+    {
+      "case_id": "medqa-us-test-0927",
+      "row_index": 927,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0935",
+      "row_index": 935,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0945",
+      "row_index": 945,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-0960",
+      "row_index": 960,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0972",
+      "row_index": 972,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-0977",
+      "row_index": 977,
+      "reason": "possible_unavailable_media:figure A"
+    },
+    {
+      "case_id": "medqa-us-test-0979",
+      "row_index": 979,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-0989",
+      "row_index": 989,
+      "reason": "possible_unavailable_media:shown below"
+    },
+    {
+      "case_id": "medqa-us-test-1002",
+      "row_index": 1002,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-1020",
+      "row_index": 1020,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-1032",
+      "row_index": 1032,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-1060",
+      "row_index": 1060,
+      "reason": "possible_unavailable_media:photomicrograph"
+    },
+    {
+      "case_id": "medqa-us-test-1064",
+      "row_index": 1064,
+      "reason": "possible_unavailable_media:picture"
+    },
+    {
+      "case_id": "medqa-us-test-1079",
+      "row_index": 1079,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-1095",
+      "row_index": 1095,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-1110",
+      "row_index": 1110,
+      "reason": "possible_unavailable_media:photomicrograph"
+    },
+    {
+      "case_id": "medqa-us-test-1129",
+      "row_index": 1129,
+      "reason": "possible_unavailable_media:Table 1"
+    },
+    {
+      "case_id": "medqa-us-test-1141",
+      "row_index": 1141,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-1143",
+      "row_index": 1143,
+      "reason": "possible_unavailable_media:pedigree"
+    },
+    {
+      "case_id": "medqa-us-test-1163",
+      "row_index": 1163,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-1177",
+      "row_index": 1177,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-1186",
+      "row_index": 1186,
+      "reason": "possible_unavailable_media:shown in"
+    },
+    {
+      "case_id": "medqa-us-test-1197",
+      "row_index": 1197,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-1201",
+      "row_index": 1201,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-1202",
+      "row_index": 1202,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-1211",
+      "row_index": 1211,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-1230",
+      "row_index": 1230,
+      "reason": "unresolved_source_defect: inconsistent temperature units"
+    },
+    {
+      "case_id": "medqa-us-test-1237",
+      "row_index": 1237,
+      "reason": "possible_unavailable_media:photomicrograph"
+    },
+    {
+      "case_id": "medqa-us-test-1248",
+      "row_index": 1248,
+      "reason": "possible_unavailable_media:shown"
+    },
+    {
+      "case_id": "medqa-us-test-1259",
+      "row_index": 1259,
+      "reason": "possible_unavailable_media:shown"
+    }
+  ],
+  "audit": {
+    "source_rows": 1273,
+    "eligible_rows": 1145,
+    "excluded_rows": 128,
+    "selected_rows": 100,
+    "sampling": "Retain v2 item order and all 98 rows except source indices 102 and 635. Form replacement pool from v2 eligible rows in original source order, excluding all v1/v2 selected indices and all recorded blocking defects. random.Random(20260917).sample(pool,2) assigns draws in order to removed indices 102,635 in their original slots.",
+    "media_screen": "\\b(?:figure|fig\\.|image|photograph|micrograph|illustration|diagram|table)\\s*(?:\\d|[A-D]\\b)|\\b(?:shown|depicted|pictured|illustrated)\\s+(?:below|above|here|in)|\\b(?:following|accompanying|provided|attached)\\s+(?:image|figure|photograph|micrograph|diagram|table)|\\b(?:image|figure|photograph|micrograph|diagram|table)\\s+(?:below|above|shown|provided)|\\b(?:shown|photograph|photomicrograph|micrograph|picture|pedigree)\\b|\\bsee\\s+(?:the\\s+)?(?:image|figure|diagram|table)\\b|!\\[|<img\\b",
+    "independent_input_review": "pending",
+    "comparison_scope": "Original English MedQA benchmark. Not matched to Korean licensing questions, so differences between datasets cannot isolate a language effect."
+  },
+  "deviations": {
+    "rejected_experiment": "medqa-english-v1",
+    "rejected_manifest_hash": "abeb315ca8d92fd5bfd5fc47ae08982db9480ef900af012119db59118bd36fef",
+    "reason": "Independent pre-inference review found missing-media references missed by the initial screen and two unresolved source defects. No scored API calls occurred for v1. The v1 files are preserved.",
+    "revised_screen": "Expanded screening applied to all 1,273 source rows before resampling, plus two explicit source-defect exclusions. Conservative false positives can exclude text-complete items and cause selection bias.",
+    "prior_review_sha256": "432a8c4d53f5b33ecc9b381d3995f2b11f6a4201d521a013d7695b9b19adb311",
+    "prior_review_flags": [
+      {
+        "case_id": "medqa-us-test-0009",
+        "kind": "unavailable_media",
+        "severity": "blocking",
+        "note": "Nail photograph explicitly shown, but neither photograph nor nail morphology is supplied in text."
+      },
+      {
+        "case_id": "medqa-us-test-0311",
+        "kind": "unavailable_media",
+        "severity": "blocking",
+        "note": "Biopsy photomicrograph explicitly shown without histologic findings in text. Cannot certify complete source information."
+      },
+      {
+        "case_id": "medqa-us-test-1143",
+        "kind": "unavailable_media",
+        "severity": "blocking",
+        "note": "Family pedigree chart explicitly shown but absent. Text does not reproduce complete pedigree relationships."
+      },
+      {
+        "case_id": "medqa-us-test-0095",
+        "kind": "unavailable_media",
+        "severity": "blocking",
+        "note": "Renal ultrasound results are described as shown, but neither image nor ultrasound findings are supplied."
+      },
+      {
+        "case_id": "medqa-us-test-0711",
+        "kind": "unavailable_media_reference",
+        "severity": "blocking_for_strict_text_only",
+        "note": "Explicit see-image reference. Extensive skin findings appear in text, but equivalence to the missing image cannot be verified."
+      },
+      {
+        "case_id": "medqa-us-test-1064",
+        "kind": "unavailable_media_reference",
+        "severity": "blocking_for_strict_text_only",
+        "note": "Explicit reference to picture of swollen hand. History and laboratory result are supplied, but image equivalence cannot be verified."
+      },
+      {
+        "case_id": "medqa-us-test-0146",
+        "kind": "unavailable_media_reference",
+        "severity": "blocking_for_strict_text_only",
+        "note": "Explicit see-image reference for skin findings. Text describes lesions, but completeness relative to the missing image cannot be verified."
+      },
+      {
+        "case_id": "medqa-us-test-1230",
+        "kind": "source_typography",
+        "severity": "nonblocking_flag",
+        "note": "Temperature is written 39.1 degrees C (102.4 degrees C), an internally inconsistent unit conversion. Preserve original text and flag, do not silently correct."
+      },
+      {
+        "case_id": "medqa-us-test-0971",
+        "kind": "source_internal_inconsistency",
+        "severity": "nonblocking_flag",
+        "note": "Opening states open cholecystectomy, whereas examination refers to laparoscopic incisions. Full question/options are present, but source wording conflicts."
+      },
+      {
+        "case_id": "medqa-us-test-1006",
+        "kind": "source_terminology",
+        "severity": "nonblocking_flag",
+        "note": "Source says thyroglobulin-stimulating immunoglobulins and anti-thyroglobin antibodies. Suspected terminology errors retained without correction. Clinical validity requires separate review."
+      },
+      {
+        "case_id": "medqa-us-test-0824",
+        "kind": "option_semantic_mismatch",
+        "severity": "requires_source_or_clinician_review",
+        "note": "Question asks which receptors are affected, while the four options are gp120, gp160, p24, and reverse transcriptase. Flag question/option semantic mismatch without solving or altering the item."
+      },
+      {
+        "case_id": "medqa-us-test-0703",
+        "kind": "source_units_omitted",
+        "severity": "nonblocking_flag",
+        "note": "AST 100 and ALT 40 have no units. Values are present and the lab list is not visibly truncated."
+      },
+      {
+        "case_id": "medqa-us-test-0628",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option. Wording otherwise appears complete; preserve verbatim."
+      },
+      {
+        "case_id": "medqa-us-test-0002",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option. Wording otherwise appears complete; preserve verbatim."
+      },
+      {
+        "case_id": "medqa-us-test-0350",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option. Wording otherwise appears complete; preserve verbatim."
+      },
+      {
+        "case_id": "medqa-us-test-0432",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option. Wording otherwise appears complete; preserve verbatim."
+      },
+      {
+        "case_id": "medqa-us-test-0130",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option. Wording otherwise appears complete; preserve verbatim."
+      },
+      {
+        "case_id": "medqa-us-test-1200",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option. Wording otherwise appears complete; preserve verbatim."
+      },
+      {
+        "case_id": "medqa-us-test-0344",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option. Wording otherwise appears complete; preserve verbatim."
+      },
+      {
+        "case_id": "medqa-us-test-0384",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option. Wording otherwise appears complete; preserve verbatim."
+      },
+      {
+        "case_id": "medqa-us-test-0030",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option. Wording otherwise appears complete; preserve verbatim."
+      }
+    ],
+    "manual_exclusions": {
+      "824": "unresolved_source_defect: stem asks a virus property while options name viruses",
+      "1230": "unresolved_source_defect: inconsistent temperature units",
+      "102": "unresolved_source_defect: question stem ends as incomplete continuation",
+      "635": "unresolved_source_defect: references unavailable laboratory reports, ECG and chest radiograph"
+    },
+    "v2_rejected_manifest_hash": "3918ddd8d454553a086f8a57927240c9871f7bad19ceb415b685e2affed593b3",
+    "v2_review_sha256": "fdd7e1599845b10dd5e9f38d523cb5e5c16463458999e180532b584050d02902",
+    "v2_review_flags": [
+      {
+        "case_id": "medqa-us-test-0102",
+        "kind": "possibly_incomplete_stem",
+        "severity": "blocking",
+        "note": "Stem begins The patient is given prophylactic labetalol and magnesium sulfate without introducing the patient or clinical context. Appears to be a continuation fragment. Completeness cannot be certified even if supplied treatment/findings suggest an answer."
+      },
+      {
+        "case_id": "medqa-us-test-0635",
+        "kind": "unavailable_test_reports",
+        "severity": "blocking",
+        "note": "States patient brought lab reports and An electrocardiogram (ECG) and a chest X-ray are found, but provides no results or description. Cannot establish whether omitted reports/images contain additional source information."
+      },
+      {
+        "case_id": "medqa-us-test-0245",
+        "kind": "source_units",
+        "severity": "nonblocking_flag",
+        "note": "Arterial blood gas list gives HCO3- 22 mm Hg. Suspected incorrect unit retained unchanged."
+      },
+      {
+        "case_id": "medqa-us-test-1176",
+        "kind": "source_units",
+        "severity": "nonblocking_flag",
+        "note": "Hemoglobin reported as 8.2 mg/dl. Suspected unit error retained unchanged."
+      },
+      {
+        "case_id": "medqa-us-test-0703",
+        "kind": "source_units_omitted",
+        "severity": "nonblocking_flag",
+        "note": "AST 100 and ALT 40 have no units. Values are present and laboratory list is not visibly truncated."
+      },
+      {
+        "case_id": "medqa-us-test-0860",
+        "kind": "source_units_unspecified",
+        "severity": "nonblocking_flag",
+        "note": "IV fluids amount is described as 4 units without a volume definition. Preserve source wording."
+      },
+      {
+        "case_id": "medqa-us-test-1096",
+        "kind": "source_typography",
+        "severity": "nonblocking_flag",
+        "note": "Patient described as a 7-year-old woman. Age and presentation are otherwise supplied. Preserve source wording."
+      },
+      {
+        "case_id": "medqa-us-test-0298",
+        "kind": "source_anatomical_wording",
+        "severity": "nonblocking_flag",
+        "note": "Radiograph described as left lower leg, with findings located in femoral metaphysis. Potential anatomical wording inconsistency retained unchanged."
+      },
+      {
+        "case_id": "medqa-us-test-0094",
+        "kind": "source_anatomical_wording",
+        "severity": "nonblocking_flag",
+        "note": "Single stab wound first located just below clavicle, later at 4th intercostal space. Preserve source wording and flag location inconsistency."
+      },
+      {
+        "case_id": "medqa-us-test-0229",
+        "kind": "flattened_table",
+        "severity": "nonblocking_flag",
+        "note": "Two-day laboratory table rendered as text with single entries for thyroid tests. Header and numerical entries are present, but blank cells are implicit. No silent reformatting."
+      },
+      {
+        "case_id": "medqa-us-test-0297",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+      },
+      {
+        "case_id": "medqa-us-test-1264",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+      },
+      {
+        "case_id": "medqa-us-test-0754",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+      },
+      {
+        "case_id": "medqa-us-test-0094",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+      },
+      {
+        "case_id": "medqa-us-test-0344",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+      },
+      {
+        "case_id": "medqa-us-test-0002",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+      },
+      {
+        "case_id": "medqa-us-test-0245",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+      },
+      {
+        "case_id": "medqa-us-test-1250",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+      },
+      {
+        "case_id": "medqa-us-test-0158",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+      },
+      {
+        "case_id": "medqa-us-test-1176",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+      },
+      {
+        "case_id": "medqa-us-test-1258",
+        "kind": "source_formatting",
+        "severity": "nonblocking_flag",
+        "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+      }
+    ],
+    "v3_reason": "Gold-blinded input review found two unresolved defects in v2. Preserve 98 items and replace only these two before any scored API calls. Nonblocking original unit wording remains unchanged and is disclosed in review flags. This is AI-assisted completeness review, not clinician gold-label review.",
+    "replacement_rule": "Retain v2 item order and all 98 rows except source indices 102 and 635. Form replacement pool from v2 eligible rows in original source order, excluding all v1/v2 selected indices and all recorded blocking defects. random.Random(20260917).sample(pool,2) assigns draws in order to removed indices 102,635 in their original slots.",
+    "replacement_pool_size": 969,
+    "replacements": [
+      {
+        "removed_row_index": 102,
+        "replacement_row_index": 838,
+        "replacement_case_id": "medqa-us-test-0838"
+      },
+      {
+        "removed_row_index": 635,
+        "replacement_row_index": 179,
+        "replacement_case_id": "medqa-us-test-0179"
+      }
+    ]
+  },
+  "evaluations": [
+    {
+      "eval_id": "medqa-us-test-0297__en_en",
+      "case_id": "medqa-us-test-0297",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 297,
+      "source_row_hash": "c3ef3e8eec3f403e06d1119f4ac33528377ac65c889263297aa9daabe2c26a7c",
+      "request_hash": "bad338612be89dc7154990375f90ed30eb2e5d41211bbf696b634d27d30d4b65"
+    },
+    {
+      "eval_id": "medqa-us-test-0712__en_en",
+      "case_id": "medqa-us-test-0712",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 712,
+      "source_row_hash": "f9fa254f66e53339832bd7cc97ff7e2d32b818dac7684de4d59cffe9980b0626",
+      "request_hash": "e84f4b870d67ba8218feeabd053a38ed5b2b229b9e9294cecd55cdd6f7fb57b8"
+    },
+    {
+      "eval_id": "medqa-us-test-0593__en_en",
+      "case_id": "medqa-us-test-0593",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 593,
+      "source_row_hash": "fbfd0c8c1423084f7b87c2b37ff938fbc8da4c72df37d1a50f3b26b1a40bae08",
+      "request_hash": "ad4faedbeb8598272982234f8c5104eeba926b53837cb4c00cd70e41702390bf"
+    },
+    {
+      "eval_id": "medqa-us-test-1264__en_en",
+      "case_id": "medqa-us-test-1264",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 1264,
+      "source_row_hash": "8282fc3b79458c0c11109982b536ecca321a356465f3afc87c09582adc46e6fe",
+      "request_hash": "43a47eb8cb9f0e457c1179c01b49cb7c54e08021206ac129d7d8da88e15ef805"
+    },
+    {
+      "eval_id": "medqa-us-test-0539__en_en",
+      "case_id": "medqa-us-test-0539",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 539,
+      "source_row_hash": "75cbda3fc53c2024df5083842365ab9526a9c01bc80ec36da00ac132cca29cd7",
+      "request_hash": "1733656309f36d1f4fc33d843e66ca9ae9e919901533968cd256796307ff3370"
+    },
+    {
+      "eval_id": "medqa-us-test-0010__en_en",
+      "case_id": "medqa-us-test-0010",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 10,
+      "source_row_hash": "7b23275d2e79bbb8989d747a16f6e0778b4a8e2b704df8aff7391defd027a570",
+      "request_hash": "43f36b9ed6f1e18c73834955b21aeba8e3f8566241d65f1b1a601b0218f5c08c"
+    },
+    {
+      "eval_id": "medqa-us-test-0323__en_en",
+      "case_id": "medqa-us-test-0323",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 323,
+      "source_row_hash": "cdcec78461136e94a9287e3231bdb6e960ec4afc8c49d276ebd71a628d6dc72b",
+      "request_hash": "fc2e5c03b94c780cb6c14e1a3bbff1adc6f70fe9c4497d11c12d91395edfba40"
+    },
+    {
+      "eval_id": "medqa-us-test-0854__en_en",
+      "case_id": "medqa-us-test-0854",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 854,
+      "source_row_hash": "c42f983b2ae6fd8b7080acdab73280671e879097198aa698fda9d3c5294787e4",
+      "request_hash": "ff30518ae467eb4ea8540e79d268b920b0bfa8bfc90f08d9309b290418ca3652"
+    },
+    {
+      "eval_id": "medqa-us-test-1252__en_en",
+      "case_id": "medqa-us-test-1252",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 1252,
+      "source_row_hash": "9cf0e9fe8fb206a15729244687eec1d968b102d0d339a92fb9978b9ba698452a",
+      "request_hash": "94cf629351a09502bfdbdf36ddcac00790b23a1092a5cf709779f2bc8272c734"
+    },
+    {
+      "eval_id": "medqa-us-test-0754__en_en",
+      "case_id": "medqa-us-test-0754",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 754,
+      "source_row_hash": "11accfd4891ce456299ada5620762c0e6d4a7d199b78e06c9ec935fd20f25c50",
+      "request_hash": "e2cee8ea77cd3fe6abe4b7ef1f57b0b3d3526e83ff49e7b75746946eac00abac"
+    },
+    {
+      "eval_id": "medqa-us-test-1238__en_en",
+      "case_id": "medqa-us-test-1238",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 1238,
+      "source_row_hash": "35547bdc60e2f79101c24ab8cd42f5ccfcb937e767bac1d40c20e6ebe251af9c",
+      "request_hash": "50fe347891f54ab60b200b6bd1379d5d1d5126f426ddbe495229cf046255ae1e"
+    },
+    {
+      "eval_id": "medqa-us-test-1182__en_en",
+      "case_id": "medqa-us-test-1182",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 1182,
+      "source_row_hash": "62bc3ec662a4ef1d1932bac9e1759697829321793cbedfe0df52978d1ab88e48",
+      "request_hash": "388661a906b56ad03220fdb3f9425a0a225d840c5448c9f1cc6670269eb1a336"
+    },
+    {
+      "eval_id": "medqa-us-test-0474__en_en",
+      "case_id": "medqa-us-test-0474",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 474,
+      "source_row_hash": "25719de953bc7ca2cec1448df094903d2a433e7cd294e43bec5bc8bc572d30b5",
+      "request_hash": "235f33790e1d5549c3095ef22ea58af8ec7903fe90abd88ceed15daebb7a7a10"
+    },
+    {
+      "eval_id": "medqa-us-test-0487__en_en",
+      "case_id": "medqa-us-test-0487",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 487,
+      "source_row_hash": "5d9f637bdc6bbaadaa688b7360947437eb56b93e29abfca07f6d1549f30e8411",
+      "request_hash": "82a0826924d3bc8f10ba225a63d2aabe935758014036a377a9421c9a91fac04f"
+    },
+    {
+      "eval_id": "medqa-us-test-1096__en_en",
+      "case_id": "medqa-us-test-1096",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 1096,
+      "source_row_hash": "a978f526c097472b6f49c9682af755abf8a736dfac387e08cf41d23d28fa6af5",
+      "request_hash": "7da4d4a1cc6ad77da3c6490ad7d8c2628bac25e22761027e37c96651adfa1de9"
+    },
+    {
+      "eval_id": "medqa-us-test-0906__en_en",
+      "case_id": "medqa-us-test-0906",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 906,
+      "source_row_hash": "2fdfe53348e11c39ab4480237091df9ac654bde92d45a8f579ef2266372f42da",
+      "request_hash": "c72ba8111bcd9dc5fe2f3956d6533a3e5f2c8dc64471cc190167efeaeb39b488"
+    },
+    {
+      "eval_id": "medqa-us-test-0048__en_en",
+      "case_id": "medqa-us-test-0048",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 48,
+      "source_row_hash": "3f9ee85ceb9be202738130fa821e212c4b07eba87e26d5625065615a50c878cd",
+      "request_hash": "1b9f9bfad31a73eddc95d39b374c21e1e2dcda039a15abac0ee785888666900d"
+    },
+    {
+      "eval_id": "medqa-us-test-0856__en_en",
+      "case_id": "medqa-us-test-0856",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 856,
+      "source_row_hash": "fcfbb660b8f69059f9dc91900232005079012b71dbf56215a41ed3dc7a1ade68",
+      "request_hash": "448cd423797858bb04e7249bdf2347f6c029b8659523717fb618442857a7bfa4"
+    },
+    {
+      "eval_id": "medqa-us-test-0094__en_en",
+      "case_id": "medqa-us-test-0094",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 94,
+      "source_row_hash": "d4b554255c7da4bfd3686c2f7eb82ba830ce36ac5c00027c2f658375e30aa44c",
+      "request_hash": "2c2f9da37a7ad7ce2ed619a41433dd1e30f578cc44516cced37c5bd12a96f378"
+    },
+    {
+      "eval_id": "medqa-us-test-0344__en_en",
+      "case_id": "medqa-us-test-0344",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 344,
+      "source_row_hash": "9ec9f106b813bb0fa0c2c7f628bb5e8891c5ed0baf1770bad6a42516154f0826",
+      "request_hash": "713f86107c768ab232d93ad99b85ccae93fa03b2007e031b36b4ecf9106da182"
+    },
+    {
+      "eval_id": "medqa-us-test-0282__en_en",
+      "case_id": "medqa-us-test-0282",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 282,
+      "source_row_hash": "570c4144a81b4d9f40243de50eb6fccdd33594d1e3bf0be8f5d90463d32e2f43",
+      "request_hash": "607d34da07af816893edc143502e972932b292f540611b3e0e9f5c541ad8ec3e"
+    },
+    {
+      "eval_id": "medqa-us-test-0665__en_en",
+      "case_id": "medqa-us-test-0665",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 665,
+      "source_row_hash": "c8cb2929d93498393c89fcdaa57290f42e88c90f2b687314d0ca50e6771bf576",
+      "request_hash": "40fbc2018ca411e02364bddc171d15274c13508247e24c6dceab739476f82880"
+    },
+    {
+      "eval_id": "medqa-us-test-0056__en_en",
+      "case_id": "medqa-us-test-0056",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 56,
+      "source_row_hash": "c1681284a01fe40a6ab3f29ce7d9510e29e295905b596993d7a691397ce9f8e0",
+      "request_hash": "9c4eec37b15d9019d733fca404096a4f704957ce17864bfdb71726e0de9e5b8d"
+    },
+    {
+      "eval_id": "medqa-us-test-1127__en_en",
+      "case_id": "medqa-us-test-1127",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 1127,
+      "source_row_hash": "457ee96aac7ecea77aa29ba44a0aef79624928803c784fdbeb4bb04a79b51cf1",
+      "request_hash": "0f8ac2fdcde83c06cc29e331e83f70fbea653910c8e68d7409288ff1f2c8024f"
+    },
+    {
+      "eval_id": "medqa-us-test-0002__en_en",
+      "case_id": "medqa-us-test-0002",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 2,
+      "source_row_hash": "eb1578d40e2e4259b34e8c38afe93d255373abfefbfd4378c40016f05b1b42d9",
+      "request_hash": "2425c45cc9e605f5936450906aa5be6aefb6b3d8c66557516e81a25bd86b3663"
+    },
+    {
+      "eval_id": "medqa-us-test-1124__en_en",
+      "case_id": "medqa-us-test-1124",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 1124,
+      "source_row_hash": "4f04d39de810746e3fb8fbead1d421db9a66e9e71aa2e972d364f2b564c5b600",
+      "request_hash": "e40658c2d6d85a0dd030ca20bc3177f01895f99a50966ab16b5f655e71f84a89"
+    },
+    {
+      "eval_id": "medqa-us-test-1199__en_en",
+      "case_id": "medqa-us-test-1199",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 1199,
+      "source_row_hash": "f5077a49f793b762c5c352dc921c9a2e042a29060cd01e07899462439f812d87",
+      "request_hash": "4f5f2075be2bd9a978138b3ad6ca809e15ee243d573f08cc602910f5ded755b3"
+    },
+    {
+      "eval_id": "medqa-us-test-0368__en_en",
+      "case_id": "medqa-us-test-0368",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 368,
+      "source_row_hash": "02d09cc71b37d6d54e01aa1132a425e9fe1bcd953edd594254f27ee9d4735a55",
+      "request_hash": "1eac85394e351fdec422412b9703cd7ef9538f866175be9c35fda31bbba9db2b"
+    },
+    {
+      "eval_id": "medqa-us-test-0789__en_en",
+      "case_id": "medqa-us-test-0789",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 789,
+      "source_row_hash": "7c44739f6f714d22d63d6ccc1193d21b189350e80eba3dadf1efd4724eb00fa1",
+      "request_hash": "d472d2516c23255b4f4edc422867ce45567114c53cbc4bfd38da3eefb52e440f"
+    },
+    {
+      "eval_id": "medqa-us-test-0579__en_en",
+      "case_id": "medqa-us-test-0579",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 579,
+      "source_row_hash": "aabdaa3aa14ee8c75bdde9ad91f4561812a70d4889f39d9d6d662386fc582c4c",
+      "request_hash": "0aea3014ffae794420edc366b5e8e05815d54000dfc9e8caf749b011ec8dbc18"
+    },
+    {
+      "eval_id": "medqa-us-test-0500__en_en",
+      "case_id": "medqa-us-test-0500",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 500,
+      "source_row_hash": "382be2d62d28158af6e9d609507a94c6934b599331c5f3c0547197b2d9967a07",
+      "request_hash": "709aeb84406f215d0dd588962e66a857b9a6dce6dfa52c7a3e171fbdb2311075"
+    },
+    {
+      "eval_id": "medqa-us-test-0456__en_en",
+      "case_id": "medqa-us-test-0456",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 456,
+      "source_row_hash": "416480b96c869a53eb286c89e85b81022761694b7d2f3cb2fde43aa551e63c80",
+      "request_hash": "1971887b1b6ca0fe9e32fd966102e151155a99b3f73644fd01ea70a3c92fdf91"
+    },
+    {
+      "eval_id": "medqa-us-test-0949__en_en",
+      "case_id": "medqa-us-test-0949",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 949,
+      "source_row_hash": "e0403c9f70d64e83dc4016ed6d180b9ab95a4817945c3ecd236a5ee785d513e8",
+      "request_hash": "7a47726303803afd9ff861f3920e1b58f636f7a88c7589074e98440cebc070f9"
+    },
+    {
+      "eval_id": "medqa-us-test-1065__en_en",
+      "case_id": "medqa-us-test-1065",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 1065,
+      "source_row_hash": "b4ad3199fc271a599046194fa8754274224916f3642860f3e0f3535890965632",
+      "request_hash": "ef9d0bba83802036bdd4e88bbda414313d39800f4e921672e37da60457b8bb61"
+    },
+    {
+      "eval_id": "medqa-us-test-0452__en_en",
+      "case_id": "medqa-us-test-0452",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 452,
+      "source_row_hash": "e761ef4aec66b974bbcfecdbe146f529e8792aa53c3347599a54cdab1e7ef14c",
+      "request_hash": "ebc4b79ea41d752acb8f2056f5fe8b87dbce807b5c690c60b9a98e24acd02d92"
+    },
+    {
+      "eval_id": "medqa-us-test-0096__en_en",
+      "case_id": "medqa-us-test-0096",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 96,
+      "source_row_hash": "ec09ac3b736101cb076b7cb834bd95cbd6f6c903025609ecc4b6e0ef7135b3e3",
+      "request_hash": "ab02994ee17b484ab2e5ea3bbe2755cb951fd00e451f500c8ad6167eae9b2e40"
+    },
+    {
+      "eval_id": "medqa-us-test-0878__en_en",
+      "case_id": "medqa-us-test-0878",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 878,
+      "source_row_hash": "fb5fd9d747fe84417be1da453023105c8c311f40d39b48e985d8e82758a6f4c1",
+      "request_hash": "1308547dc247d246dcde7532196f9f8c84894f5e4aa8ddf3220a0f62bc363d19"
+    },
+    {
+      "eval_id": "medqa-us-test-1142__en_en",
+      "case_id": "medqa-us-test-1142",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 1142,
+      "source_row_hash": "f103e7ca576352f5e93e062e8f5e274d4f276e8e383077123ce684b1343fdf46",
+      "request_hash": "26d2327e3288dcffcdd4de7baae86f9104da3beebe5bd0da0b6d4af86fc9478b"
+    },
+    {
+      "eval_id": "medqa-us-test-0551__en_en",
+      "case_id": "medqa-us-test-0551",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 551,
+      "source_row_hash": "97f83733970b12ba3fe8e792c95c3baba5e261a24db13cb8dcb3655fd932bb7f",
+      "request_hash": "c65d6c462b570ccfabeed43f7332e75ce956405c86cf18b2deb3f4c5ea34d97c"
+    },
+    {
+      "eval_id": "medqa-us-test-0490__en_en",
+      "case_id": "medqa-us-test-0490",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 490,
+      "source_row_hash": "36ca9ba9b15d6f38fd5c17f13832789b55cbc3255d86d3840b66121b2a8b28bf",
+      "request_hash": "dd1914c5e4b36eedd7073692816ebab539fb48b39d21a903d30ae186a309e809"
+    },
+    {
+      "eval_id": "medqa-us-test-0722__en_en",
+      "case_id": "medqa-us-test-0722",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 722,
+      "source_row_hash": "4acb8802277f65ea782fd2269cb0a015b2888da603ad606cce7ff992340020ca",
+      "request_hash": "92ceceb4ca634f6be656fa589e3c04d3f8528e153ffbfa268d24130ba1e5428e"
+    },
+    {
+      "eval_id": "medqa-us-test-1210__en_en",
+      "case_id": "medqa-us-test-1210",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 1210,
+      "source_row_hash": "e5882eae76aedf01fe317b0b5fa26e1e12d6774473108a04c1a0f2439e7d90ab",
+      "request_hash": "96353453ad1c6b2decde502efd0d8e58fd91663b5ec6b5033adbc41e3cd681b9"
+    },
+    {
+      "eval_id": "medqa-us-test-0702__en_en",
+      "case_id": "medqa-us-test-0702",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 702,
+      "source_row_hash": "bcb60ead2c35e1ca860f04be4ffca8bfbc9e65047b058b82e812096f2b2dbd3e",
+      "request_hash": "58688b1a59212a5962ba9469a53b155ad1811d5bdd8a8ac38a2d4e4446dfeb0d"
+    },
+    {
+      "eval_id": "medqa-us-test-0245__en_en",
+      "case_id": "medqa-us-test-0245",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 245,
+      "source_row_hash": "2f7c41bd5b4cb2f673a60b6fded711470f13fb7602441f7ea253e866fa763d6d",
+      "request_hash": "3304368a0d8dbf776f123236a4702d78dbe90a40a6b2c3d350f20a12f2f4595b"
+    },
+    {
+      "eval_id": "medqa-us-test-1121__en_en",
+      "case_id": "medqa-us-test-1121",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 1121,
+      "source_row_hash": "6b106f92ab216adba4d5f67bdcc4c8d88176c1ae31522eebd7186b35099602f0",
+      "request_hash": "267e5688404e2875a39b58d3521df826f1f622f89e4466bc63c9f0a0f08e8ed5"
+    },
+    {
+      "eval_id": "medqa-us-test-0087__en_en",
+      "case_id": "medqa-us-test-0087",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 87,
+      "source_row_hash": "36ac3764284fc17bc32697bef7f7416e3152c4f11d777e5698f0b2b86daf8cc2",
+      "request_hash": "602259666ffa14c38017002d112392920bb241df1689fc656fbc6b29a8846742"
+    },
+    {
+      "eval_id": "medqa-us-test-0231__en_en",
+      "case_id": "medqa-us-test-0231",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 231,
+      "source_row_hash": "295587801c8f2f11f13b7d18d3275101f9978528d3ebf5ef0af5ef99bb47085c",
+      "request_hash": "76bd4915db29c76b73902a3f3e6271fe2e9be5a78dfa73af6daf69bfeadc6e3d"
+    },
+    {
+      "eval_id": "medqa-us-test-0142__en_en",
+      "case_id": "medqa-us-test-0142",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 142,
+      "source_row_hash": "72aed9eeec4414a67bfb9cbf9f21a6246ded173ac4f31446a651353ff218aa3b",
+      "request_hash": "de07a5d4c69c7180fde5eb1f4914734a5b14234afbf133d8b878e46b071a8266"
+    },
+    {
+      "eval_id": "medqa-us-test-0636__en_en",
+      "case_id": "medqa-us-test-0636",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 636,
+      "source_row_hash": "99fa73a5cea333277072ccc72c5f46d5f69770abbba5ed86b35e0d5641ae2c9b",
+      "request_hash": "7bc2586b0c5ebd16b6cf5f7a98c0e1f2a3b00f448253fe6fa8d69e485b82e74d"
+    },
+    {
+      "eval_id": "medqa-us-test-0067__en_en",
+      "case_id": "medqa-us-test-0067",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 67,
+      "source_row_hash": "6111ea7b6335f65e64c75a1c40823d5e0eeddf114907efcde4cf7d9605cc9e77",
+      "request_hash": "9f0ef83ad88ad632a9184ecad7e8502a9ede6c07617562cf046e755b62696fd4"
+    },
+    {
+      "eval_id": "medqa-us-test-1250__en_en",
+      "case_id": "medqa-us-test-1250",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 1250,
+      "source_row_hash": "57d4fc95f774fa748c97e76048d32d8aed420a0e9baa657f3aa7089187c6e8ee",
+      "request_hash": "4af30f56829d34be1620fdb5256573851ea1216048ab65669a21dfbdaca7577e"
+    },
+    {
+      "eval_id": "medqa-us-test-0620__en_en",
+      "case_id": "medqa-us-test-0620",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 620,
+      "source_row_hash": "28e1286b372102110af12f34a9b7afa00c60d4d154787b626edf9833cc5c5f8c",
+      "request_hash": "c70384a2c1db2af4d6b49e5e88130db2be601f1a4b9ec9f6be782935e4386a6b"
+    },
+    {
+      "eval_id": "medqa-us-test-0223__en_en",
+      "case_id": "medqa-us-test-0223",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 223,
+      "source_row_hash": "072ee508f642a793156cb42eb415529b2c6277b971160e1bc73c05200f926910",
+      "request_hash": "4b6a4620a3be73949d91f9df4f237ffa2f103b4b7a0eb7897a3ce44700a61eb3"
+    },
+    {
+      "eval_id": "medqa-us-test-1270__en_en",
+      "case_id": "medqa-us-test-1270",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 1270,
+      "source_row_hash": "d0ce4f7c59645b769694ec972a6d946536aa0cd78dacdfefc83061c283c87402",
+      "request_hash": "5763e67ca400f6f5374e9e970c92bff5c7ad667609706d8d9cbb5b60642f4475"
+    },
+    {
+      "eval_id": "medqa-us-test-0460__en_en",
+      "case_id": "medqa-us-test-0460",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 460,
+      "source_row_hash": "7f9e6991e98b75a3b27e4b644a9e720a688306ce182059d1b0bb96b50543041b",
+      "request_hash": "b791af96cfa04e775ee4bd0106e8eeb0dbeae149c752739b9373061f50dacfad"
+    },
+    {
+      "eval_id": "medqa-us-test-1008__en_en",
+      "case_id": "medqa-us-test-1008",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 1008,
+      "source_row_hash": "974a86bbd03b12c188fac0082ad3c2c706c8a97452d9d4c21e6c108ed76585d3",
+      "request_hash": "1f190cdfbeef6c1eddfd3c8075010426ed12e80f8370b3d093bd5ede40e7dfc9"
+    },
+    {
+      "eval_id": "medqa-us-test-1075__en_en",
+      "case_id": "medqa-us-test-1075",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 1075,
+      "source_row_hash": "cd30d64ead263174b138a7fbd52ffa15f49eb1d8474eb6de56eb31fc86d4d11d",
+      "request_hash": "d467b309ff8c96464b84d13b8655c9c040b67356151fa68306aba023a146785f"
+    },
+    {
+      "eval_id": "medqa-us-test-0298__en_en",
+      "case_id": "medqa-us-test-0298",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 298,
+      "source_row_hash": "2f8cb110ee44e3964d5a269b7768a8cfa2fc2f16dd333a167fc4abace1583b03",
+      "request_hash": "ed563bea8f2d8589107062f1f87e7f3218ace0d390144dc68251b38d89f79614"
+    },
+    {
+      "eval_id": "medqa-us-test-0012__en_en",
+      "case_id": "medqa-us-test-0012",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 12,
+      "source_row_hash": "95c5691ec3e7859b7328d5835c0a8d01fd03571b7fed2fe40256299e560062f3",
+      "request_hash": "c6ab0af4347f08c8743f1943b384ce4ee9d48cf0df68d1b44bb9d4615ea3f4fa"
+    },
+    {
+      "eval_id": "medqa-us-test-0691__en_en",
+      "case_id": "medqa-us-test-0691",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 691,
+      "source_row_hash": "7e2641002e2219078fe6da2cfced3200e6fed959039663763f3afeae74235b1c",
+      "request_hash": "a12831fe14f52ee5b1f31c075bf2c3ed7a44f92f81a795979fa1d9a2f3bd14a9"
+    },
+    {
+      "eval_id": "medqa-us-test-1113__en_en",
+      "case_id": "medqa-us-test-1113",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 1113,
+      "source_row_hash": "816a3acc9cf364e5aa6ca5725aa6fbfcd8a006f6676e676551be57a7fc41d153",
+      "request_hash": "9b7f42050fb1f7185ee7842dd6627f02ddbf85192e41d21cec991854d919e198"
+    },
+    {
+      "eval_id": "medqa-us-test-0248__en_en",
+      "case_id": "medqa-us-test-0248",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 248,
+      "source_row_hash": "b3adf08551c4506d3eb184cdef0ce1e3dabc0018277041adb99076a6348bb963",
+      "request_hash": "1e87bc4dd0511a0b731f0fceddb6f05f1d3e83ee0c0b208a46c9f61c8da1424c"
+    },
+    {
+      "eval_id": "medqa-us-test-0182__en_en",
+      "case_id": "medqa-us-test-0182",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 182,
+      "source_row_hash": "b04229a8e1ec07d3bdaaa28d8771d93e92569a0d8349d44137d6fad793ca48f7",
+      "request_hash": "5d811cf912b3d120e0132185bbfa496bbbfa263b9145b7db8a5bc5f070c00100"
+    },
+    {
+      "eval_id": "medqa-us-test-0361__en_en",
+      "case_id": "medqa-us-test-0361",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 361,
+      "source_row_hash": "6345c39727da7ce61fc64ddb890f578fbf15566bc676dc945fd3a5151d1e5dfe",
+      "request_hash": "f6306f96646d992b65d029995f1f1d19e28b830b31336c713d899dc2414ee156"
+    },
+    {
+      "eval_id": "medqa-us-test-0874__en_en",
+      "case_id": "medqa-us-test-0874",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 874,
+      "source_row_hash": "ac48474aeff0628c45f6713e0b5a0950ff5fb37dfe6919e6f68d7d28c7691173",
+      "request_hash": "fedd4f80dc1c9a448a37576edff0e279548347a8731f20deb136cf3d47307cc2"
+    },
+    {
+      "eval_id": "medqa-us-test-0838__en_en",
+      "case_id": "medqa-us-test-0838",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 838,
+      "source_row_hash": "ce54ce29d1e7752a455e5ccf2a80c2694cfafc7e6c4f83320a4f74cf27e00f9a",
+      "request_hash": "20e842bb2cb5af9b4628a29c326a948dfa6c027ee09fac570cb76edbcf309a61"
+    },
+    {
+      "eval_id": "medqa-us-test-0285__en_en",
+      "case_id": "medqa-us-test-0285",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 285,
+      "source_row_hash": "e9ad99254628259c6e95671436eb902ddd4fe92a82ba822a70e9d032b7b40b0e",
+      "request_hash": "f43751975a290ea4c4c6a243377243eafab8dc72427082a18fa6e9ff1298f73b"
+    },
+    {
+      "eval_id": "medqa-us-test-1137__en_en",
+      "case_id": "medqa-us-test-1137",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 1137,
+      "source_row_hash": "a4891cd0e30990a2ea7ed20a452ba2f7b6b42059f13eb503cf0a837afd3b9e34",
+      "request_hash": "82752514c036e42436497c39fbf3b56c834e0e8285e855b01fa52e48a286185f"
+    },
+    {
+      "eval_id": "medqa-us-test-0158__en_en",
+      "case_id": "medqa-us-test-0158",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 158,
+      "source_row_hash": "d269dfa519120f373c1b69df36653a276413d412b193bc1cc54431d77a5d83ba",
+      "request_hash": "0ab103a94aa75cb5b8e045d671ed80d2f64cd2d40bb3763272034ebddd85cdf9"
+    },
+    {
+      "eval_id": "medqa-us-test-0403__en_en",
+      "case_id": "medqa-us-test-0403",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 403,
+      "source_row_hash": "d386322a02613063037cf695d7e010f04e2bb3d989516f05743f3eccf669173d",
+      "request_hash": "0518b3021c6eee89d7962defe15daa0cf5512d9b673dcf50b2fffa4a728f7188"
+    },
+    {
+      "eval_id": "medqa-us-test-0489__en_en",
+      "case_id": "medqa-us-test-0489",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 489,
+      "source_row_hash": "1493f143de1629f7923dbebf9175a759cb4a173a0bd794b437ccff832854bd61",
+      "request_hash": "1ba290bbce9f415bd82497570415898cfbec9d9c4e52800e0cfe0d9326936917"
+    },
+    {
+      "eval_id": "medqa-us-test-0229__en_en",
+      "case_id": "medqa-us-test-0229",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 229,
+      "source_row_hash": "a5f2800d4c96e27b5b9bdd155c04456b64a213b539c886658bf59842106db415",
+      "request_hash": "6ca906207dfd2f8da6ef45267303ce367d976133fe3d20536d4f01408e61a57c"
+    },
+    {
+      "eval_id": "medqa-us-test-0860__en_en",
+      "case_id": "medqa-us-test-0860",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 860,
+      "source_row_hash": "25dedbb345d437f61c3d60d7d4951a5ce6242332a0c1755db3932564762d4fd2",
+      "request_hash": "b8f9c599b6b5be6c36191abacbcfcdd21d6c4ab5de2034d7e1a1ba3161bbe90c"
+    },
+    {
+      "eval_id": "medqa-us-test-1253__en_en",
+      "case_id": "medqa-us-test-1253",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 1253,
+      "source_row_hash": "03b7cd3a82f13f6007df28c12ec7842e1c5428bd500c5fa74ef5c9c788f24bef",
+      "request_hash": "976e003e9f0c57a5e8fc5785150ca39afb8199986ed383e7bd4fb7470694d5bb"
+    },
+    {
+      "eval_id": "medqa-us-test-1030__en_en",
+      "case_id": "medqa-us-test-1030",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 1030,
+      "source_row_hash": "cb89b8d50451093f85c7731c8d68e5e6ee1421c57e1895f7af806e6e3d7b9efd",
+      "request_hash": "740961845f01329c2120c58b54c575f5a6d8b4e50eda3a4a2ace4ce9c2e0d50f"
+    },
+    {
+      "eval_id": "medqa-us-test-1176__en_en",
+      "case_id": "medqa-us-test-1176",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 1176,
+      "source_row_hash": "927830429ccd31b6e2cb936928e956a279a1513cb20643bd8458572209304303",
+      "request_hash": "482a6717ccd80eaa0cb28ac5fe651806d9e71da35e1b3c2fbe1eafa614e403a3"
+    },
+    {
+      "eval_id": "medqa-us-test-1258__en_en",
+      "case_id": "medqa-us-test-1258",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 1258,
+      "source_row_hash": "6a756aadb0d6b8d803020daf7a41c372acb524183bd870b98210f1acaa614d8e",
+      "request_hash": "a50b095710997268bb19a2db1effe3494c27ac53e769c2daedd43c3f21e56609"
+    },
+    {
+      "eval_id": "medqa-us-test-0119__en_en",
+      "case_id": "medqa-us-test-0119",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 119,
+      "source_row_hash": "5e1c4a737248c6ca8c0574bcec4bd608ef61effb1556893d1618db625fcb4aa6",
+      "request_hash": "9721bb66ffc787b23d79554c12aab8db4e57c81b0d502956d2b9893e834e0e7d"
+    },
+    {
+      "eval_id": "medqa-us-test-0898__en_en",
+      "case_id": "medqa-us-test-0898",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 898,
+      "source_row_hash": "5ab84981c891d78a8d78b42bdc0cbb6563a2e32d7765b4cffc0f8c6d46da1920",
+      "request_hash": "db81f7c0efc9418b19a972bb6ebf775ebebba27706f5d86c8b6139d34c6a0512"
+    },
+    {
+      "eval_id": "medqa-us-test-1013__en_en",
+      "case_id": "medqa-us-test-1013",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 1013,
+      "source_row_hash": "b7b09db198fa261e52a6243086eecc53473bdb289b8069bc1f4c691f0fb8df9a",
+      "request_hash": "e32105e0f13a4762231e8db0a2791e4a3eecdfb7ac9f794f3d7e334aed2dfb26"
+    },
+    {
+      "eval_id": "medqa-us-test-0320__en_en",
+      "case_id": "medqa-us-test-0320",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 320,
+      "source_row_hash": "74636a17312a0ccc32c43b023cb806bafbce1791d3fcb051acdd3b5148864e30",
+      "request_hash": "da8526d2e5518aec816eb1497412811e0e7ebf76713dc5a18af18558a84d4e8d"
+    },
+    {
+      "eval_id": "medqa-us-test-0893__en_en",
+      "case_id": "medqa-us-test-0893",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 893,
+      "source_row_hash": "2ff32d150ce6f5eed1a27c8591bdb280c7324a57c675f42efddfe6df00e5f451",
+      "request_hash": "6af337246d44b25c4d863d476620d63943dd46e2550e0019b5191e5697476aab"
+    },
+    {
+      "eval_id": "medqa-us-test-0629__en_en",
+      "case_id": "medqa-us-test-0629",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 629,
+      "source_row_hash": "975f9672b41c87426fd5981cb1e73dd22808855c04225d19216d7fbdb67a4588",
+      "request_hash": "9d81378ea4054af9b6ef92ab50b14230e01977484b3a646dfd40dfbe87abce4e"
+    },
+    {
+      "eval_id": "medqa-us-test-0307__en_en",
+      "case_id": "medqa-us-test-0307",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 307,
+      "source_row_hash": "647ef314b56746abbd94b56613de79b70fa800e64496133039fd9f2f3275d563",
+      "request_hash": "80d38216f5492c6d9c7bc8f0fab322265e2be430c71a6bf93c7147b695caef64"
+    },
+    {
+      "eval_id": "medqa-us-test-1068__en_en",
+      "case_id": "medqa-us-test-1068",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 1068,
+      "source_row_hash": "e68b08022f85089fcccd90508b766fb6f036458df4f7a79cbf4c08d3ea9aae92",
+      "request_hash": "333600a349878b3acae7ff4888e3bc74fd65a3b51b64997619f88b3dd626f166"
+    },
+    {
+      "eval_id": "medqa-us-test-1062__en_en",
+      "case_id": "medqa-us-test-1062",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 1062,
+      "source_row_hash": "d1085a1d9ca90ed4a94e6cf873715da0c10f6ac2584841a7890b14c7b0198cae",
+      "request_hash": "4e0e39ec44ad5fa9b5ecd4a21749647c91d227ef76798475904525cfba6332d7"
+    },
+    {
+      "eval_id": "medqa-us-test-0327__en_en",
+      "case_id": "medqa-us-test-0327",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "A",
+      "review_status": "public_gold",
+      "source_row_index": 327,
+      "source_row_hash": "5575f4f59aebb5ae242606e9e876872fd32a502fde1cbae9412f9eafd573985b",
+      "request_hash": "6359c596edcbfef2c1d482713a109a63de987519b8d7a5f721effc3cf8b1b295"
+    },
+    {
+      "eval_id": "medqa-us-test-0875__en_en",
+      "case_id": "medqa-us-test-0875",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 875,
+      "source_row_hash": "93024790b07abbb6033da4ba2b118b0c053f986d40d2a8486cecc78618d3e850",
+      "request_hash": "150db7829e47a5d64cfdfdeb62dcd0c4fd633a84b5f36da906d7405780ed3889"
+    },
+    {
+      "eval_id": "medqa-us-test-0656__en_en",
+      "case_id": "medqa-us-test-0656",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 656,
+      "source_row_hash": "e6350c60a86279dd9a9a35b3388481882f3b1d3d824f5f598d0ea61870ed4079",
+      "request_hash": "3904cbd5329baee27743282221a7aa5d08c9a513df08ff7f73a8ac6832ea5450"
+    },
+    {
+      "eval_id": "medqa-us-test-0325__en_en",
+      "case_id": "medqa-us-test-0325",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 325,
+      "source_row_hash": "f8680fff739d1e1079b77a9d466e898e342f2b3a72c0777e32799e27013d21c1",
+      "request_hash": "ad53e255e89d85a1b777261cd17bdbbffb3e88890621d394269a99d553079045"
+    },
+    {
+      "eval_id": "medqa-us-test-0829__en_en",
+      "case_id": "medqa-us-test-0829",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 829,
+      "source_row_hash": "207937935afc9eed767c89485a07cbca83e84b0d63e06ee3ede370f7407c70df",
+      "request_hash": "35481b42cc36ea03b8373b1450c178e3df33513e7c088d01a8d5f3f21bd94d1e"
+    },
+    {
+      "eval_id": "medqa-us-test-0747__en_en",
+      "case_id": "medqa-us-test-0747",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 747,
+      "source_row_hash": "0828023c5b167e75cc9b6163547212cee1f095855b49c3bed65a954729fdbcf2",
+      "request_hash": "529c37abe0c036d88cb89f8fff9d6331eadf34a2f931079a1571661dbfabc329"
+    },
+    {
+      "eval_id": "medqa-us-test-0062__en_en",
+      "case_id": "medqa-us-test-0062",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 62,
+      "source_row_hash": "a086405a050bf30b8c3f5ec518f0ae98d8869c55ef78b1d4a40d89d1bf3dd62d",
+      "request_hash": "da97316524716ef71a0c6abc1db6574b131d72d6df1fc212d7efa1d42ed1cef7"
+    },
+    {
+      "eval_id": "medqa-us-test-0033__en_en",
+      "case_id": "medqa-us-test-0033",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 33,
+      "source_row_hash": "72fb68315fed221c04b8f0497c5d63649ac3138d374ef721563a727006cf114c",
+      "request_hash": "b8926baf9439bac20663823eedacabb26cd6e787a0146bf6f8dc4b8614ba0163"
+    },
+    {
+      "eval_id": "medqa-us-test-0705__en_en",
+      "case_id": "medqa-us-test-0705",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 705,
+      "source_row_hash": "4111d454dac0070b602464dc0acef6790a20b93dbf863d1446f2e9821473195d",
+      "request_hash": "9f515e770fdb094966d2c4bde9cb03629c326a66ccba5b7181a74851216d62cb"
+    },
+    {
+      "eval_id": "medqa-us-test-0566__en_en",
+      "case_id": "medqa-us-test-0566",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 566,
+      "source_row_hash": "d42b7384b0b3b20b941db6b6e83d535ba1cec90a719fc1a289c464d2745b003e",
+      "request_hash": "88eaa371d56b0f49c32ce2d1b0100330abfdacca1cf63f9e102b76c7ea2bdbb1"
+    },
+    {
+      "eval_id": "medqa-us-test-0179__en_en",
+      "case_id": "medqa-us-test-0179",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "C",
+      "review_status": "public_gold",
+      "source_row_index": 179,
+      "source_row_hash": "986b175c84bf0154d68599880f1ed044357da041351bf0563675d2511e06fc06",
+      "request_hash": "9c9f29bbf9798a70292282d0b1f14ef9290863ed1ad925bc826854137229b64f"
+    },
+    {
+      "eval_id": "medqa-us-test-0569__en_en",
+      "case_id": "medqa-us-test-0569",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 569,
+      "source_row_hash": "3e9d05b2ec114b074662586b6422b7f020d2afc91e3a666dcd6169aae3abf499",
+      "request_hash": "e475e98232af77be298d4f61bf4f8681a02863a2a0ec616ddfbab1e6fdb12e69"
+    },
+    {
+      "eval_id": "medqa-us-test-0703__en_en",
+      "case_id": "medqa-us-test-0703",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "D",
+      "review_status": "public_gold",
+      "source_row_index": 703,
+      "source_row_hash": "d57d8925cd87782ea43172e4b8c608b9280dd834181ff42721082abf9f65a73e",
+      "request_hash": "077b0447689d33f18bbe6c6eb2b0991bc7bd7b3b71e252794c1e0179657aa462"
+    },
+    {
+      "eval_id": "medqa-us-test-0187__en_en",
+      "case_id": "medqa-us-test-0187",
+      "stage": 0,
+      "task": "medqa",
+      "condition": "en_en",
+      "kind": "choice",
+      "gold": "B",
+      "review_status": "public_gold",
+      "source_row_index": 187,
+      "source_row_hash": "3be261137b3d55e460247d682ff811221ef5ce33093c4b8e71794140e26eca75",
+      "request_hash": "77de5bd2a13f3c3e4373cb13009af5dd2c7418c3b0a8dbf4df240965909e91c8"
+    }
+  ],
+  "sha256": "879f273ec4938fae6e53e0a8553be71edbb9d40757445501155c3a1ed945d121"
+}

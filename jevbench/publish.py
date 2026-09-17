@@ -216,9 +216,11 @@ def build_narrative(manifest,attempts):
     ko_path=docs/'korean-supplement.md'
     if ko_path.exists():
         existing_ko=ko_path.read_text(encoding='utf-8')
-        if '<!-- luna-ko-start -->' in existing_ko and '<!-- luna-ko-end -->' in existing_ko:
-            block='<!-- luna-ko-start -->'+existing_ko.split('<!-- luna-ko-start -->',1)[1].split('<!-- luna-ko-end -->',1)[0]+'<!-- luna-ko-end -->\n\n'
-            ko=ko.replace('## 주요 결과',block+'## 주요 결과',1)
+        for name in ('aggregate', 'medqa', 'luna'):
+            start, end = f'<!-- {name}-ko-start -->', f'<!-- {name}-ko-end -->'
+            if start in existing_ko and end in existing_ko:
+                block=start+existing_ko.split(start,1)[1].split(end,1)[0]+end+'\n\n'
+                ko=ko.replace('## 주요 결과',block+'## 주요 결과',1)
     ko_path.write_text(ko,encoding='utf-8')
     (docs/'clinician-review.md').write_text((ROOT/'data'/manifest['experiment']/'clinician_review.md').read_text(encoding='utf-8').rstrip()+'\n',encoding='utf-8')
 

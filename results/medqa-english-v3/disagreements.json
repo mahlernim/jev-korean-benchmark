@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "medqa-us-test-0906",
+    "gold": "D",
+    "jev": "A",
+    "luna": "B"
+  },
+  {
+    "case_id": "medqa-us-test-0856",
+    "gold": "C",
+    "jev": "A",
+    "luna": "B"
+  },
+  {
+    "case_id": "medqa-us-test-0665",
+    "gold": "B",
+    "jev": "D",
+    "luna": "C"
+  },
+  {
+    "case_id": "medqa-us-test-0500",
+    "gold": "B",
+    "jev": "A",
+    "luna": "B"
+  },
+  {
+    "case_id": "medqa-us-test-0096",
+    "gold": "A",
+    "jev": "A",
+    "luna": "D"
+  },
+  {
+    "case_id": "medqa-us-test-1142",
+    "gold": "A",
+    "jev": "A",
+    "luna": "B"
+  },
+  {
+    "case_id": "medqa-us-test-0231",
+    "gold": "A",
+    "jev": "A",
+    "luna": "C"
+  },
+  {
+    "case_id": "medqa-us-test-1250",
+    "gold": "A",
+    "jev": "A",
+    "luna": "C"
+  },
+  {
+    "case_id": "medqa-us-test-0691",
+    "gold": "B",
+    "jev": "B",
+    "luna": "A"
+  },
+  {
+    "case_id": "medqa-us-test-0874",
+    "gold": "D",
+    "jev": "A",
+    "luna": "D"
+  },
+  {
+    "case_id": "medqa-us-test-1030",
+    "gold": "A",
+    "jev": "A",
+    "luna": "C"
+  },
+  {
+    "case_id": "medqa-us-test-1062",
+    "gold": "A",
+    "jev": "A",
+    "luna": "B"
+  }
+]

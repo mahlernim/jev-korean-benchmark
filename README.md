@@ -1,9 +1,43 @@
 # Jev Korean and medical evaluation
 
+<!-- aggregate-summary-start -->
+## English/Korean × Jev/Luna-none
+
+| Task | Language | Jev | Luna-none | Luna − Jev, pp (95% CI) |
+|---|---|---:|---:|---:|
+| Belebele | English | 97/100 | 98/100 | +1 (-3, +6) |
+| Belebele | Korean | 96/100 | 95/100 | -1 (-5, +3) |
+| PAWS-X | English | 80/100 | 83/100 | +3 (-3, +10) |
+| PAWS-X | Korean | 76/100 | 72/100 | -4 (-14, +5) |
+| MedQA | English | 89/100 | 84/100 | -5 (-11, +0) |
+| KorMedMCQA | Korean | 80/100 | 88/100 | +8 (+2, +15) |
+
+The equal-weight six-cell descriptive average is **Jev 86.33% and Luna-none 86.67%**. Luna minus Jev is +0.33 percentage points (exploratory cluster-bootstrap 95% interval -2.83 to +3.17). This summarizes this chosen battery, not general model ability or a medical language effect.
+
+Restricting the average to matched Belebele and PAWS-X gives Jev 87.25% and Luna-none 87.00%, a difference of -0.25 points (95% interval -4.25 to +3.75).
+
+![Six-cell benchmark overview](docs/figures/aggregate.png)
+
+Each cell has 100 questions. The general tasks are bilingual matched items; the medical rows are different exams. Error bars show 95% intervals. Timing remains separated by concurrency protocol.
+
+[Detailed aggregate methods and results](https://ahn-lab.org/jev-korean-benchmark/aggregate.html) · [Reproducible data](results/aggregate/summary.json)
+<!-- aggregate-summary-end -->
+
 A small, reproducible early-access evaluation of TypeSafe Jev. English reporting with a Korean supplement. The experiment measures general Korean understanding, Korean medical examination knowledge, and exploratory interpretation of synthetic medical notes separately.
 
 The scored public tasks use 100 Belebele questions, 100 PAWS-X pairs and 100 KorMedMCQA doctor questions. There are 36 development calls, 120 exploratory synthetic medical calls and 80 robustness calls, for 1,036 planned calls overall. These are repeated conditions on 340 scored source cases, not 1,036 independent questions.
 
+<!-- medqa-summary-start -->
+## Original-English medical QA
+
+On 100 original-English MedQA test questions, **Jev scored 89% and Luna-none 84%**. Luna minus Jev was -5 percentage points (paired 95% interval -11 to +0). These are different questions from the Korean medical benchmark and cannot isolate a language effect.
+
+![Original-English MedQA comparison](docs/figures/medqa-english.png)
+
+**Figure.** One hundred matched questions per model. Accuracy bars show Wilson 95% intervals. Latency and cost are point estimates under four concurrent requests per provider. Parallel batch time is not comparable with the earlier sequential timings.
+
+[Full English MedQA report](https://ahn-lab.org/jev-korean-benchmark/medqa-english.html) · [Frozen evidence](results/medqa-english-v3/)
+<!-- medqa-summary-end -->
 <!-- luna-summary-start -->
 ## Luna-none comparison
 
@@ -74,6 +108,15 @@ uv pip install --python .venv/Scripts/python.exe -r requirements.txt
 For live calls, put a `TYPESAFE_API_KEY` or `TYPESAFE_KEY` assignment in local `typesafe.env`. This file is ignored by Git. Never commit credentials. The live runner reads this file directly, disables SDK retries, and implements two logged retries of transient failures itself.
 
 ## Commands
+
+The original-English MedQA extension uses 100 frozen questions and four concurrent requests per provider. Reconstruct its inputs and restore the published results without model calls using these commands.
+
+```powershell
+.venv/Scripts/python.exe -X utf8 -m jevbench.medqa_prepare
+.venv/Scripts/python.exe -X utf8 -m jevbench.medqa_publish --restore
+```
+
+Its live runner is `python -m jevbench.medqa_run`, with `--limit 10` for the initial usage check and successful calls preserved on resume. The completed experiment is immutable. New inference or changed settings requires a new experiment. Generate its report with `python -m jevbench.medqa_publish`.
 
 The separate Luna comparison runner uses an `OPENAI_API_KEY` assignment in the same ignored `typesafe.env`. Its fixed experiment is `luna-none-v1`, with explicit reasoning effort `none`, decision-only structured output, sequential requests and a $0.25 estimated-cost ceiling. Successful requests are preserved on resume. Run stages in order and inspect each generated stage report before continuing.
 

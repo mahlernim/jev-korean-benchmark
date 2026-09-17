@@ -1,0 +1,248 @@
+{
+  "manifest_hash": "879f273ec4938fae6e53e0a8553be71edbb9d40757445501155c3a1ed945d121",
+  "all_selected_text_complete": true,
+  "reviewer": "AI-assisted independent input-completeness review",
+  "reviewed_count": 100,
+  "reviewed_case_ids": [
+    "medqa-us-test-0297",
+    "medqa-us-test-0712",
+    "medqa-us-test-0593",
+    "medqa-us-test-1264",
+    "medqa-us-test-0539",
+    "medqa-us-test-0010",
+    "medqa-us-test-0323",
+    "medqa-us-test-0854",
+    "medqa-us-test-1252",
+    "medqa-us-test-0754",
+    "medqa-us-test-1238",
+    "medqa-us-test-1182",
+    "medqa-us-test-0474",
+    "medqa-us-test-0487",
+    "medqa-us-test-1096",
+    "medqa-us-test-0906",
+    "medqa-us-test-0048",
+    "medqa-us-test-0856",
+    "medqa-us-test-0094",
+    "medqa-us-test-0344",
+    "medqa-us-test-0282",
+    "medqa-us-test-0665",
+    "medqa-us-test-0056",
+    "medqa-us-test-1127",
+    "medqa-us-test-0002",
+    "medqa-us-test-1124",
+    "medqa-us-test-1199",
+    "medqa-us-test-0368",
+    "medqa-us-test-0789",
+    "medqa-us-test-0579",
+    "medqa-us-test-0500",
+    "medqa-us-test-0456",
+    "medqa-us-test-0949",
+    "medqa-us-test-1065",
+    "medqa-us-test-0452",
+    "medqa-us-test-0096",
+    "medqa-us-test-0878",
+    "medqa-us-test-1142",
+    "medqa-us-test-0551",
+    "medqa-us-test-0490",
+    "medqa-us-test-0722",
+    "medqa-us-test-1210",
+    "medqa-us-test-0702",
+    "medqa-us-test-0245",
+    "medqa-us-test-1121",
+    "medqa-us-test-0087",
+    "medqa-us-test-0231",
+    "medqa-us-test-0142",
+    "medqa-us-test-0636",
+    "medqa-us-test-0067",
+    "medqa-us-test-1250",
+    "medqa-us-test-0620",
+    "medqa-us-test-0223",
+    "medqa-us-test-1270",
+    "medqa-us-test-0460",
+    "medqa-us-test-1008",
+    "medqa-us-test-1075",
+    "medqa-us-test-0298",
+    "medqa-us-test-0012",
+    "medqa-us-test-0691",
+    "medqa-us-test-1113",
+    "medqa-us-test-0248",
+    "medqa-us-test-0182",
+    "medqa-us-test-0361",
+    "medqa-us-test-0874",
+    "medqa-us-test-0838",
+    "medqa-us-test-0285",
+    "medqa-us-test-1137",
+    "medqa-us-test-0158",
+    "medqa-us-test-0403",
+    "medqa-us-test-0489",
+    "medqa-us-test-0229",
+    "medqa-us-test-0860",
+    "medqa-us-test-1253",
+    "medqa-us-test-1030",
+    "medqa-us-test-1176",
+    "medqa-us-test-1258",
+    "medqa-us-test-0119",
+    "medqa-us-test-0898",
+    "medqa-us-test-1013",
+    "medqa-us-test-0320",
+    "medqa-us-test-0893",
+    "medqa-us-test-0629",
+    "medqa-us-test-0307",
+    "medqa-us-test-1068",
+    "medqa-us-test-1062",
+    "medqa-us-test-0327",
+    "medqa-us-test-0875",
+    "medqa-us-test-0656",
+    "medqa-us-test-0325",
+    "medqa-us-test-0829",
+    "medqa-us-test-0747",
+    "medqa-us-test-0062",
+    "medqa-us-test-0033",
+    "medqa-us-test-0705",
+    "medqa-us-test-0566",
+    "medqa-us-test-0179",
+    "medqa-us-test-0569",
+    "medqa-us-test-0703",
+    "medqa-us-test-0187"
+  ],
+  "reviewed_at": "2026-09-17T03:09:09.948030+00:00",
+  "input_audit_sha256": "30ca2fbc5cac4be221fec2d37aea5c9a6bd6d2fbd1c8ae408bc3b39879e73c0a",
+  "flags": [
+    {
+      "case_id": "medqa-us-test-0245",
+      "kind": "source_units",
+      "severity": "nonblocking_flag",
+      "note": "Arterial blood gas list gives HCO3- 22 mm Hg. Suspected incorrect unit retained unchanged."
+    },
+    {
+      "case_id": "medqa-us-test-1176",
+      "kind": "source_units",
+      "severity": "nonblocking_flag",
+      "note": "Hemoglobin reported as 8.2 mg/dl. Suspected unit error retained unchanged."
+    },
+    {
+      "case_id": "medqa-us-test-0703",
+      "kind": "source_units_omitted",
+      "severity": "nonblocking_flag",
+      "note": "AST 100 and ALT 40 have no units. Values are present and laboratory list is not visibly truncated."
+    },
+    {
+      "case_id": "medqa-us-test-0860",
+      "kind": "source_units_unspecified",
+      "severity": "nonblocking_flag",
+      "note": "IV fluids amount is described as 4 units without a volume definition. Preserve source wording."
+    },
+    {
+      "case_id": "medqa-us-test-1096",
+      "kind": "source_typography",
+      "severity": "nonblocking_flag",
+      "note": "Patient described as a 7-year-old woman. Age and presentation are otherwise supplied. Preserve source wording."
+    },
+    {
+      "case_id": "medqa-us-test-0298",
+      "kind": "source_anatomical_wording",
+      "severity": "nonblocking_flag",
+      "note": "Radiograph described as left lower leg, with findings located in femoral metaphysis. Potential anatomical wording inconsistency retained unchanged."
+    },
+    {
+      "case_id": "medqa-us-test-0094",
+      "kind": "source_anatomical_wording",
+      "severity": "nonblocking_flag",
+      "note": "Single stab wound first located just below clavicle, later at 4th intercostal space. Preserve source wording and flag location inconsistency."
+    },
+    {
+      "case_id": "medqa-us-test-0229",
+      "kind": "flattened_table",
+      "severity": "nonblocking_flag",
+      "note": "Two-day laboratory table rendered as text with single entries for thyroid tests. Header and numerical entries are present, but blank cells are implicit. No silent reformatting."
+    },
+    {
+      "case_id": "medqa-us-test-0297",
+      "kind": "source_formatting",
+      "severity": "nonblocking_flag",
+      "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+    },
+    {
+      "case_id": "medqa-us-test-1264",
+      "kind": "source_formatting",
+      "severity": "nonblocking_flag",
+      "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+    },
+    {
+      "case_id": "medqa-us-test-0754",
+      "kind": "source_formatting",
+      "severity": "nonblocking_flag",
+      "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+    },
+    {
+      "case_id": "medqa-us-test-0094",
+      "kind": "source_formatting",
+      "severity": "nonblocking_flag",
+      "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+    },
+    {
+      "case_id": "medqa-us-test-0344",
+      "kind": "source_formatting",
+      "severity": "nonblocking_flag",
+      "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+    },
+    {
+      "case_id": "medqa-us-test-0002",
+      "kind": "source_formatting",
+      "severity": "nonblocking_flag",
+      "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+    },
+    {
+      "case_id": "medqa-us-test-0245",
+      "kind": "source_formatting",
+      "severity": "nonblocking_flag",
+      "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+    },
+    {
+      "case_id": "medqa-us-test-1250",
+      "kind": "source_formatting",
+      "severity": "nonblocking_flag",
+      "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+    },
+    {
+      "case_id": "medqa-us-test-0158",
+      "kind": "source_formatting",
+      "severity": "nonblocking_flag",
+      "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+    },
+    {
+      "case_id": "medqa-us-test-1176",
+      "kind": "source_formatting",
+      "severity": "nonblocking_flag",
+      "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+    },
+    {
+      "case_id": "medqa-us-test-1258",
+      "kind": "source_formatting",
+      "severity": "nonblocking_flag",
+      "note": "Extraneous trailing quotation mark in question or final option; wording otherwise appears complete."
+    }
+  ],
+  "caveats": [
+    "All100 final stems/options covered by independent gold-blinded input-completeness review. Ninety-eight were read in v2 and verified unchanged in v3 by exact question strings, ordered option pairs, source row indices and IDs. Two replacements0838 and0179 were independently read in v3.",
+    "Both replacement questions provide descriptive imaging findings in text. No absent-image dependency, empty option, or apparent truncation was found in these replacements.",
+    "No previously blocking v1 or v2 case IDs remain in v3. All100 have nonempty options A through D.",
+    "This pass certifies only the reviewed input-completeness scope. It is not clinician clinical review, validation of gold labels, or an exhaustive assessment of source medical accuracy.",
+    "Nonblocking source unit, wording, table-formatting and quotation-mark notes are carried forward unchanged. No source inputs were corrected.",
+    "No gold labels, model predictions, credentials, or external model APIs were accessed. Review preceded scoring."
+  ],
+  "review_provenance": {
+    "previous_review": "data/medqa-english-v2/input-review.json",
+    "previous_review_sha256": "fdd7e1599845b10dd5e9f38d523cb5e5c16463458999e180532b584050d02902",
+    "unchanged_items_verified": 98,
+    "new_items_read": [
+      "medqa-us-test-0838",
+      "medqa-us-test-0179"
+    ],
+    "removed_items": [
+      "medqa-us-test-0102",
+      "medqa-us-test-0635"
+    ],
+    "verification": "Exact question text, ordered options, source_row_index and case_id comparison for all98 retained items"
+  }
+}

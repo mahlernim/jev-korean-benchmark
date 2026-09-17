@@ -1,0 +1,103 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A reproducible early-access evaluation of Jev on Korean reading, paraphrase decisions and medical text."><title>Original-English MedQA comparison</title><style>body{margin:0;background:#f7f8fa;color:#192434;font:17px/1.7 system-ui,-apple-system,sans-serif}main{max-width:1020px;margin:auto;padding:48px 28px 80px}nav{font-size:14px;display:flex;gap:22px;flex-wrap:wrap;border-bottom:1px solid #cad2dc;padding-bottom:18px}h1{font-size:clamp(30px,5vw,48px);line-height:1.15;letter-spacing:-.035em;margin:40px 0 18px}h2{font-size:25px;margin-top:44px;line-height:1.3}h3{font-size:21px}p,li{max-width:880px}a{color:#125ac4;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;margin:20px 0;background:white}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #d7dee7;vertical-align:top}th{background:#e9eef5}code{font-size:.85em;overflow-wrap:anywhere}pre{padding:16px;background:#e9eef5;overflow:auto}footer{border-top:1px solid #cad2dc;margin-top:50px;padding-top:16px;font-size:13px;color:#526173}.table-wrap{overflow-x:auto} @media(max-width:600px){main{padding:24px 16px 50px}body{font-size:16px}th,td{padding:8px;min-width:65px}}img{max-width:100%;height:auto}</style></head><body><main><nav><a href="index.html">Jev Korean pilot</a><a href="methodology.html">Methods</a><a href="korean-supplement.html">한국어</a><a href="results.zip">Download results</a><a href="https://github.com/mahlernim/jev-korean-benchmark">Code and data</a></nav><h1 id="original-english-medqa-comparison">Original-English MedQA comparison</h1>
+<h2 id="abstract">Abstract</h2>
+<p>On 100 matched original-English four-option MedQA test questions, Jev scored 89/100 and Luna-none scored 84/100. Luna minus Jev was -5 percentage points, with a paired 95% bootstrap interval from -11 to +0. This is an exploratory benchmark estimate, not clinical validation or a controlled language comparison.</p>
+<p><img alt="Matched English MedQA accuracy, latency and cost" src="figures/medqa-english.png" /></p>
+<p><strong>Figure 1.</strong> Both models receive the same 100 questions and four original options. Accuracy bars are Wilson 95% intervals. Latency and token cost are observed point estimates from four concurrent requests per provider. They do not describe the earlier sequential experiments.</p>
+<h2 id="data-and-methods">Data and methods</h2>
+<p><a href="https://github.com/jind11/MedQA">MedQA</a> contains original English USMLE-style questions. We used the four-option test split via a <a href="https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options">pinned documented mirror</a>. Source provenance, revision, SHA256, row IDs and selection rules are preserved in the downloadable evidence. Byte identity with the primary Google Drive release was not independently verified.</p>
+<p>The source contains 1273 rows. Conservative screening excluded 128, leaving 1145 eligible rows. Selection uses seed 20260917, preserving A-D order and original answer keys. The rejected v1 sample had missing visual references missed by its initial automated screen. An expanded screen produced v2; independent review found two further incomplete stems. Final v3 retains 98 reviewed items and replaces those two using a frozen seeded rule. Neither rejected version was scored. Every final input was checked through independent AI-assisted, gold-blinded review. This checks input completeness, not clinical correctness or gold-label validity; nonblocking source wording and unit issues remain documented.</p>
+<p>Both models receive the same English question, options and instruction to select the single best answer. Gold answers are excluded from inputs. Jev uses Choice; Luna uses the Responses API with reasoning effort none, standard service and a strict decision-only JSON schema capped at 128 output tokens. No retrieval, tools or explanations are requested. Jev supplies probabilities natively. We do not fabricate comparable probabilities for Luna.</p>
+<p>The full 200-request manifest was frozen before inference. Four worker threads per provider run contemporaneously in separate pools, with a shared $0.25 estimated-spend ceiling that reserves in-flight costs. The first five items per provider form the initial ten-call usage check and remain part of the frozen score. There is no post-result prompt tuning. At most two transient retries are retained; fatal validation or model changes stop new admissions while already admitted calls may finish.</p>
+<p>Accuracy is correct/planned, with terminal failures counted as incorrect if present. Valid-response accuracy is also retained. Paired item bootstrap intervals use 4,000 resamples and the fixed seed. The discordance table and two-sided exact McNemar test are descriptive, without multiplicity adjustment. Small pilot intervals do not establish equivalence.</p>
+<h2 id="results">Results</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th style="text-align: right;">Correct / planned</th>
+<th style="text-align: right;">Accuracy (95% CI)</th>
+<th style="text-align: right;">Attempts</th>
+<th style="text-align: right;">Terminal failures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jev</td>
+<td style="text-align: right;">89/100</td>
+<td style="text-align: right;">89% (81.4%, 93.7%)</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Luna none</td>
+<td style="text-align: right;">84/100</td>
+<td style="text-align: right;">84% (75.6%, 89.9%)</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Paired correctness</th>
+<th style="text-align: right;">Luna correct</th>
+<th style="text-align: right;">Luna incorrect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jev correct</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td>Jev incorrect</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table></div>
+<p>Two-sided exact McNemar p = 0.1797. The direction of the point estimate should not be treated as an established model ranking.</p>
+<h2 id="parallel-timing-and-cost">Parallel timing and cost</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th style="text-align: right;">Median / p95 latency, ms</th>
+<th style="text-align: right;">Sum of call seconds</th>
+<th style="text-align: right;">Sum of active spans, seconds</th>
+<th style="text-align: right;">Valid responses per active second</th>
+<th style="text-align: right;">Estimated USD</th>
+<th style="text-align: right;">Input / output tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jev</td>
+<td style="text-align: right;">229 / 664</td>
+<td style="text-align: right;">28.77</td>
+<td style="text-align: right;">7.50</td>
+<td style="text-align: right;">13.33</td>
+<td style="text-align: right;">0.002305</td>
+<td style="text-align: right;">54,870 / 4,500</td>
+</tr>
+<tr>
+<td>Luna none</td>
+<td style="text-align: right;">1111 / 2378</td>
+<td style="text-align: right;">129.60</td>
+<td style="text-align: right;">33.52</td>
+<td style="text-align: right;">2.98</td>
+<td style="text-align: right;">0.006676</td>
+<td style="text-align: right;">26,178 / 1,200</td>
+</tr>
+</tbody>
+</table></div>
+<p>Combined invocation wall time was 33.84 seconds. It includes both providers running concurrently, initialization, persistence, retry delays and closure, but excludes preparation, review and human gaps. Summed call duration is not elapsed batch time. Provider active spans run from the first to last recorded request within each invocation, then sum across invocations.</p>
+<p>Per-call latency wraps network calls, decoding and answer validation. Dispatch and initialization wait are recorded separately. Concurrent measurements reflect contention, provider limits and shared client/network conditions. Do not compare their batch elapsed time with the previous concurrency-one experiment or interpret the difference as a model speed improvement.</p>
+<p>Costs use reported provider-specific tokens at $0.042/million Jev input tokens, output free, and $0.20/million Luna input, $0.02 cached input and $1.20 output. These are published-price estimates, not invoices. Unknown-usage failures retain conservative reservations in the ledger.</p>
+<h2 id="relation-to-the-korean-results">Relation to the Korean results</h2>
+<p>The Korean KorMedMCQA pilot and this original-English MedQA sample are different item sets. They differ in curriculum, difficulty, selection and number of options. A model ranking reversal across them would be a task-specific finding, not proof that English caused it. Do not subtract the two benchmark accuracies to estimate a language effect or pool them into one medical score.</p>
+<p>The observed point estimates do reverse: Korean KorMedMCQA with Korean instructions was Jev 80% versus Luna 88%, while this English MedQA sample is Jev 89% versus Luna 84%. The English paired interval includes zero, and the independent question sets prevent attributing that reversal specifically to language.</p>
+<p>Public benchmark training exposure is unknown. Source screening affects representativeness. Historical examination answers were preserved. This pilot evaluates multiple-choice benchmark performance, not diagnostic safety or clinical readiness.</p>
+<p><a href="https://github.com/mahlernim/jev-korean-benchmark/tree/main/results/medqa-english-v3">Public evidence</a> · <a href="luna-comparison.html">Korean comparison</a> · <a href="index.html">Main report</a></p><footer>Early-access pilot · September 17, 2026 · Synthetic medical cases await clinician review.</footer></main></body></html>

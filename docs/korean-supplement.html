@@ -1,5 +1,19 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A reproducible early-access evaluation of Jev on Korean reading, paraphrase decisions and medical text."><title>Jev 한국어 및 의학 평가 부록</title><style>body{margin:0;background:#f7f8fa;color:#192434;font:17px/1.7 system-ui,-apple-system,sans-serif}main{max-width:1020px;margin:auto;padding:48px 28px 80px}nav{font-size:14px;display:flex;gap:22px;flex-wrap:wrap;border-bottom:1px solid #cad2dc;padding-bottom:18px}h1{font-size:clamp(30px,5vw,48px);line-height:1.15;letter-spacing:-.035em;margin:40px 0 18px}h2{font-size:25px;margin-top:44px;line-height:1.3}h3{font-size:21px}p,li{max-width:880px}a{color:#125ac4;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;margin:20px 0;background:white}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #d7dee7;vertical-align:top}th{background:#e9eef5}code{font-size:.85em;overflow-wrap:anywhere}pre{padding:16px;background:#e9eef5;overflow:auto}footer{border-top:1px solid #cad2dc;margin-top:50px;padding-top:16px;font-size:13px;color:#526173}.table-wrap{overflow-x:auto} @media(max-width:600px){main{padding:24px 16px 50px}body{font-size:16px}th,td{padding:8px;min-width:65px}}img{max-width:100%;height:auto}</style></head><body><main><nav><a href="index.html">Jev Korean pilot</a><a href="methodology.html">Methods</a><a href="korean-supplement.html">한국어</a><a href="results.zip">Download results</a><a href="https://github.com/mahlernim/jev-korean-benchmark">Code and data</a></nav><h1 id="jev">Jev 한국어 및 의학 평가 부록</h1>
+<!-- aggregate-ko-start -->
+<h2 id="_1">영어·한국어 통합 비교</h2>
+<p>6개 평가 조건을 동일 가중치로 평균하면 Jev 86.33%, Luna-none 86.67%입니다. 이는 선택한 평가 묶음의 기술통계이며 모델의 일반적 우열을 뜻하지 않습니다. Belebele와 PAWS-X는 언어 간 동일 문항을 사용하지만 영어 MedQA와 한국어 KorMedMCQA는 서로 다른 시험입니다. 의학 문항의 차이를 언어 효과로 해석하지 않습니다.</p>
+<p><a href="aggregate.html">통합 표·그림 및 상세 분석</a></p>
+<!-- aggregate-ko-end -->
+
 <p>2026년 9월 17일 얼리 액세스 모델 <code>jev-1.13.0</code>을 평가했습니다. 1,036개의 평가 조건을 실행했고, 연결 오류 재시도 1회를 포함한 API 시도는 1,037회였습니다. 같은 문항의 언어별 조건과 반복 실험이 포함되므로 서로 독립적인 1,036개 문항을 평가한 것은 아닙니다.</p>
+<!-- medqa-ko-start -->
+<h2 id="medqa">영어 원문 MedQA 후속 평가</h2>
+<p>한국어 문항을 번역하지 않고 원래 영어로 작성된 MedQA 시험 문항 100개를 평가했습니다. Jev는 89/100, Luna-none은 84/100이었습니다. 점추정치 순서는 한국어 시험 결과와 반대였지만, Luna−Jev 차이의 탐색적 95% 구간은 -11~+0%p로 0을 포함합니다.</p>
+<p>두 벤치마크는 문항, 교육과정, 난도 및 선택지 수가 다르므로 이 결과만으로 영어가 순위 역전의 원인이라고 해석할 수 없습니다. 모델별 동시 요청 수는 4개였으며 이전 순차 실행의 시간과 직접 비교하지 않습니다.</p>
+<p>두 모델의 합산 추정 API 비용은 $0.00898, 준비 및 검토를 제외한 병렬 실행시간은 약 34초였습니다.</p>
+<p><a href="medqa-english.html">영어 MedQA 전체 보고서와 그림</a></p>
+<!-- medqa-ko-end -->
+
 <!-- luna-ko-start -->
 <h2 id="luna-none">Luna none 후속 비교</h2>
 <p>동일한 1,036개 평가 조건을 GPT-5.6 Luna의 추론 설정 <code>none</code>으로 실행했습니다. 아래는 한국어 본문과 한국어 지시문을 사용한 결과이며, 각 과제는 100문항입니다.</p>
@@ -35,7 +49,7 @@
 <p>아래 내용은 최초 Jev 단독 평가 기록입니다.</p>
 <!-- luna-ko-end -->
 
-<h2 id="_1">주요 결과</h2>
+<h2 id="_2">주요 결과</h2>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -63,7 +77,7 @@
 </tbody>
 </table></div>
 <p>독해와 정교한 의미 구별의 성능이 달랐습니다. 의학 시험 결과는 한국어 원문만 평가한 것으로, 오답의 원인을 한국어 이해 부족으로 단정할 수 없습니다. 그림이나 표가 필요한 것으로 의심되는 문항을 보수적으로 제외하여 전체 시험의 과목 구성과도 다를 수 있습니다.</p>
-<h2 id="_2">실행 시간과 비용</h2>
+<h2 id="_3">실행 시간과 비용</h2>
 <ul>
 <li>호출별 클라이언트 지연시간 중앙값은 221 ms, 95백분위수는 306 ms였습니다.</li>
 <li>API 호출 시간의 합은 262.0초였습니다. 네트워크와 SDK 응답 처리가 포함되며 서버 계산 시간만을 뜻하지 않습니다.</li>
@@ -71,7 +85,7 @@
 <li>첫 개발용 10회는 전체 실행시간 계측을 추가하기 전에 실행했습니다. 호출별 지연시간은 모든 요청에 기록되어 있습니다.</li>
 </ul>
 <p>일부 소수 둘째 자리 확률값의 합이 1이 아니어서 검증기가 한 차례 중단되었습니다. 원본과 중단 기록을 보존한 뒤, 반올림으로 설명 가능한 제한된 오차만 허용하고 확률 지표 계산 시 정규화했습니다. 서버의 반올림 방식은 확인되지 않았으며 이 분석 변경은 평가 방법에 공개했습니다. 정답 판정과 원본 확률값은 바꾸지 않았습니다.</p>
-<h2 id="_3">의학 문장 실험의 한계</h2>
+<h2 id="_4">의학 문장 실험의 한계</h2>
 <p>합성 의학 문장 40개와 영어 번역은 아직 임상의 검토를 받지 않았습니다. 해당 결과는 탐색적 부록이며 주된 의학 점수에서 제외합니다. 실제 환자 기록, 진단 안전성, 치료 결정, 긴 의무기록 처리 능력을 검증한 연구가 아닙니다.</p>
 <p>추가 점검에서 PAWS-X 문장 순서를 뒤집자 5쌍 중 3쌍의 판단이 바뀌었습니다. 의미 동등성은 문장 순서와 무관해야 하므로 후속 검증 가치가 있는 실패 양상입니다. 다만 5쌍으로 전체 오류율을 추정할 수는 없습니다.</p>
 <p>공개 벤치마크의 학습 노출 여부는 알 수 없습니다. 다른 모델과 비교 실험을 하지 않았으므로 속도·비용·정확도 우월성을 주장하지 않습니다. 작은 표본에서 1~2문항 차이를 일반적인 언어 성능 차이로 확대 해석해서는 안 됩니다.</p>
