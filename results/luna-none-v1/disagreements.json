@@ -1,0 +1,1122 @@
+[
+  {
+    "eval_id": "belebele-8c4db14e52be875e__ko_en",
+    "task": "belebele",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "4",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "belebele-8c4db14e52be875e__ko_ko",
+    "task": "belebele",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "4",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "belebele-7f3ada63d6686c7c__ko_en",
+    "task": "belebele",
+    "condition": "ko_en",
+    "gold": "3",
+    "luna": "4",
+    "jev": "3",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "belebele-ebf426ae131cdeff__en_en",
+    "task": "belebele",
+    "condition": "en_en",
+    "gold": "2",
+    "luna": "2",
+    "jev": "4",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "belebele-ebf426ae131cdeff__ko_en",
+    "task": "belebele",
+    "condition": "ko_en",
+    "gold": "2",
+    "luna": "2",
+    "jev": "4",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "belebele-ebf426ae131cdeff__ko_ko",
+    "task": "belebele",
+    "condition": "ko_ko",
+    "gold": "2",
+    "luna": "2",
+    "jev": "4",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "belebele-66c76c721a3e9d34__en_en",
+    "task": "belebele",
+    "condition": "en_en",
+    "gold": "4",
+    "luna": "3",
+    "jev": "4",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "belebele-9881d64792dc69ae__en_en",
+    "task": "belebele",
+    "condition": "en_en",
+    "gold": "4",
+    "luna": "1",
+    "jev": "4",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "belebele-9881d64792dc69ae__ko_en",
+    "task": "belebele",
+    "condition": "ko_en",
+    "gold": "4",
+    "luna": "1",
+    "jev": "4",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "belebele-9881d64792dc69ae__ko_ko",
+    "task": "belebele",
+    "condition": "ko_ko",
+    "gold": "4",
+    "luna": "1",
+    "jev": "4",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "belebele-c389cd7dfb2c53d7__en_en",
+    "task": "belebele",
+    "condition": "en_en",
+    "gold": "1",
+    "luna": "1",
+    "jev": "2",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "belebele-c389cd7dfb2c53d7__ko_en",
+    "task": "belebele",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "1",
+    "jev": "2",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "belebele-f0b7aadb4f3e56ed__ko_en",
+    "task": "belebele",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "2",
+    "jev": "4",
+    "luna_correct": false,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "belebele-f0b7aadb4f3e56ed__ko_ko",
+    "task": "belebele",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "2",
+    "jev": "4",
+    "luna_correct": false,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "belebele-f471b61b75e8cb4d__ko_en",
+    "task": "belebele",
+    "condition": "ko_en",
+    "gold": "4",
+    "luna": "3",
+    "jev": "4",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "belebele-f471b61b75e8cb4d__ko_ko",
+    "task": "belebele",
+    "condition": "ko_ko",
+    "gold": "4",
+    "luna": "3",
+    "jev": "4",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "belebele-bb42edc717241afa__en_en",
+    "task": "belebele",
+    "condition": "en_en",
+    "gold": "1",
+    "luna": "1",
+    "jev": "4",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "belebele-bb42edc717241afa__ko_en",
+    "task": "belebele",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "1",
+    "jev": "2",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "belebele-bb42edc717241afa__ko_ko",
+    "task": "belebele",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "1",
+    "jev": "2",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "belebele-064e684d30c94efa__ko_en",
+    "task": "belebele",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "2",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-3964__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-4379__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-7821__en_en",
+    "task": "pawsx",
+    "condition": "en_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-7821__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-7821__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-5702__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-5702__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-209__en_en",
+    "task": "pawsx",
+    "condition": "en_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-209__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-209__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-6969__en_en",
+    "task": "pawsx",
+    "condition": "en_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-6969__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-6969__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-3507__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-3507__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-6516__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-6516__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-2727__en_en",
+    "task": "pawsx",
+    "condition": "en_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-2727__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-2824__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "0",
+    "luna": "1",
+    "jev": "0",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-2119__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-1288__en_en",
+    "task": "pawsx",
+    "condition": "en_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-1288__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-1288__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "0",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-2283__en_en",
+    "task": "pawsx",
+    "condition": "en_en",
+    "gold": "1",
+    "luna": "1",
+    "jev": "0",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-2283__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "1",
+    "jev": "0",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-5235__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5235__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5401__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5401__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5279__en_en",
+    "task": "pawsx",
+    "condition": "en_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5279__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5279__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5018__en_en",
+    "task": "pawsx",
+    "condition": "en_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5366__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "1",
+    "jev": "0",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-1834__en_en",
+    "task": "pawsx",
+    "condition": "en_en",
+    "gold": "1",
+    "luna": "1",
+    "jev": "0",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-6312__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "1",
+    "jev": "0",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-6312__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "1",
+    "jev": "0",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "pawsx-3867__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-3867__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-265__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-265__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5772__en_en",
+    "task": "pawsx",
+    "condition": "en_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5772__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5772__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-4841__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-4841__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-7647__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-1160__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-1160__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-7036__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-7036__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5309__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-5309__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-4531__ko_en",
+    "task": "pawsx",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-4531__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-7975__en_en",
+    "task": "pawsx",
+    "condition": "en_en",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "pawsx-7975__ko_ko",
+    "task": "pawsx",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "0",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "kormed-2022-2-1__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "2",
+    "luna": "2",
+    "jev": "3",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-2-1__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "2",
+    "luna": "2",
+    "jev": "3",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-3-71__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "3",
+    "luna": "3",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-3-71__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "3",
+    "luna": "3",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-1-12__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "2",
+    "luna": "2",
+    "jev": "5",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-1-12__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "2",
+    "luna": "2",
+    "jev": "5",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-1-77__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "2",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "kormed-2022-1-77__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "2",
+    "jev": "5",
+    "luna_correct": false,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-1-7__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "4",
+    "luna": "2",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-1-7__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "4",
+    "luna": "3",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-1-36__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "3",
+    "luna": "3",
+    "jev": "5",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-1-36__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "3",
+    "luna": "3",
+    "jev": "5",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-1-19__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "5",
+    "luna": "5",
+    "jev": "4",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2022-1-19__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "5",
+    "luna": "5",
+    "jev": "4",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2023-1-9__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "3",
+    "luna": "3",
+    "jev": "1",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2023-1-9__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "3",
+    "luna": "4",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2023-1-79__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "3",
+    "luna": "3",
+    "jev": "4",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2023-1-79__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "3",
+    "luna": "3",
+    "jev": "4",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2023-1-19__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "3",
+    "luna": "1",
+    "jev": "3",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "kormed-2023-1-19__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "3",
+    "luna": "2",
+    "jev": "3",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "kormed-2023-1-13__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "4",
+    "luna": "4",
+    "jev": "5",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2023-1-13__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "4",
+    "luna": "4",
+    "jev": "5",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2023-3-32__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "5",
+    "luna": "5",
+    "jev": "4",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2023-3-32__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "5",
+    "luna": "5",
+    "jev": "4",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2023-1-69__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "2",
+    "luna": "1",
+    "jev": "2",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "kormed-2023-1-69__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "2",
+    "luna": "1",
+    "jev": "2",
+    "luna_correct": false,
+    "jev_correct": true
+  },
+  {
+    "eval_id": "kormed-2023-1-6__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "5",
+    "luna": "2",
+    "jev": "3",
+    "luna_correct": false,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2023-1-6__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "5",
+    "luna": "2",
+    "jev": "3",
+    "luna_correct": false,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2024-1-25__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "3",
+    "jev": "5",
+    "luna_correct": false,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2024-1-32__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "1",
+    "luna": "1",
+    "jev": "2",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2024-1-32__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "1",
+    "luna": "1",
+    "jev": "2",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2024-1-4__ko_ko",
+    "task": "kormed",
+    "condition": "ko_ko",
+    "gold": "5",
+    "luna": "5",
+    "jev": "4",
+    "luna_correct": true,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "kormed-2024-4-72__ko_en",
+    "task": "kormed",
+    "condition": "ko_en",
+    "gold": "4",
+    "luna": "2",
+    "jev": "1",
+    "luna_correct": false,
+    "jev_correct": false
+  },
+  {
+    "eval_id": "medical-negation-07__en_en",
+    "task": "medical_text",
+    "condition": "en_en",
+    "gold": "unknown",
+    "luna": "absent",
+    "jev": "unknown",
+    "luna_correct": false,
+    "jev_correct": true
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "stage": 2,
+  "planned": 200,
+  "successful": 200,
+  "failed": 0,
+  "pending": 0,
+  "groups": {
+    "kormed/ko_en": {
+      "n": 100,
+      "correct": 89,
+      "accuracy": 0.89,
+      "ci95": [
+        0.8136870349691969,
+        0.9374580364293543
+      ],
+      "paired": {
+        "n": 100,
+        "difference": 0.07,
+        "ci95": [
+          0.0,
+          0.14
+        ],
+        "left_only_correct": 3,
+        "right_only_correct": 10
+      },
+      "median_latency_ms": 1097.5585500127636,
+      "p95_latency_ms": 2771.9350699975616,
+      "cost_usd": 0.0059566
+    },
+    "kormed/ko_ko": {
+      "n": 100,
+      "correct": 88,
+      "accuracy": 0.88,
+      "ci95": [
+        0.8018790057328857,
+        0.9300059356298052
+      ],
+      "paired": {
+        "n": 100,
+        "difference": 0.08,
+        "ci95": [
+          0.02,
+          0.15
+        ],
+        "left_only_correct": 2,
+        "right_only_correct": 10
+      },
+      "median_latency_ms": 1031.6813999961596,
+      "p95_latency_ms": 2749.2193000114635,
+      "cost_usd": 0.0061366
+    }
+  },
+  "language_differences": {
+    "kormed/ko_ko-ko_en": {
+      "n": 100,
+      "difference": -0.01,
+      "ci95": [
+        -0.03,
+        0.0
+      ],
+      "left_only_correct": 1,
+      "right_only_correct": 0
+    }
+  }
+}

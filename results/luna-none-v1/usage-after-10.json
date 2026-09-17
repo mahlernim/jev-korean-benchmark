@@ -1,0 +1,7 @@
+{
+  "n": 10,
+  "input_tokens": 1035,
+  "output_tokens": 120,
+  "cost_usd": 0.000351,
+  "note": "Development-only projection is not representative of longer benchmark inputs. Continue within the 0.25 USD ceiling."
+}

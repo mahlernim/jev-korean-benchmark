@@ -1,5 +1,7 @@
 # An early look at Jev on Korean and medical text
 
+A subsequent [Luna-none comparison](luna-comparison.html) evaluates the same cases. This page preserves the original Jev-only pilot.
+
 ## A small early-access pilot
 
 We evaluated TypeSafe **jev-1.13.0** on September 17, 2026, using 1,036 planned evaluations and 1,037 sequential API attempts including retries. The study compares English and Korean reading comprehension and paraphrase decisions, tests Korean medical examination knowledge, and separately explores simple synthetic medical-note interpretation.

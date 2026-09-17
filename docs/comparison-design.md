@@ -1,6 +1,6 @@
 # Jev and LLM comparison design
 
-Evidence checked September 17, 2026. This is a proposed extension. No Luna measurements are included in the current results.
+Evidence checked September 17, 2026. This records the rationale prepared before the Luna run. The [completed Luna-none comparison](luna-comparison.html) is reported separately.
 
 ## Existing evidence
 

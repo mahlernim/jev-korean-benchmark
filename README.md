@@ -4,6 +4,27 @@ A small, reproducible early-access evaluation of TypeSafe Jev. English reporting
 
 The scored public tasks use 100 Belebele questions, 100 PAWS-X pairs and 100 KorMedMCQA doctor questions. There are 36 development calls, 120 exploratory synthetic medical calls and 80 robustness calls, for 1,036 planned calls overall. These are repeated conditions on 340 scored source cases, not 1,036 independent questions.
 
+<!-- luna-summary-start -->
+## Luna-none comparison
+
+Luna was tested on the same 1,036 conditions with reasoning effort `none` and decision-only structured output. The table shows Korean content with Korean instructions, 100 cases per task.
+
+| Task | Jev | Luna none | Luna minus Jev, pp (95% paired interval) |
+|---|---:|---:|---:|
+| Belebele | 96% | 95% | -1 (-5, +3) |
+| PAWS-X | 76% | 72% | -4 (-14, +5) |
+| KorMedMCQA | 80% | 88% | +8 (+2, +15) |
+
+![Jev and Luna-none accuracy, latency and cost](docs/figures/luna-comparison.png)
+
+**Comparison figure.** Matched Korean-instruction cases. Accuracy bars are 95% Wilson intervals. Latency and cost use logarithmic axes and have no uncertainty intervals. Cost per 1,000 calls is a scaling of observed token charges, not a separate 1,000-call experiment. Different execution times and provider transports limit causal speed comparisons.
+
+Across all stages, Luna used **$0.05337** in estimated API charges and **1543.6 seconds** of summed API attempt time. Successful-call median / p95 latency was **1110 / 3113 ms**. Jev's corresponding figures were $0.02056, 262.0 seconds and 221 / 306 ms. These are observed service measurements, not guaranteed performance. No higher-reasoning Luna condition has been run.
+
+[Full comparison report](https://ahn-lab.org/jev-korean-benchmark/luna-comparison.html) · [Recorded Luna evidence](results/luna-none-v1/) · [Design and existing comparisons](docs/comparison-design.md) · [Medical benchmark context infographic](docs/kormedmcqa-context.md)
+
+The original Jev-only findings follow. Synthetic medical results remain unreviewed and exploratory.
+<!-- luna-summary-end -->
 ## Read the findings
 
 ### Results at a glance
@@ -53,6 +74,19 @@ uv pip install --python .venv/Scripts/python.exe -r requirements.txt
 For live calls, put a `TYPESAFE_API_KEY` or `TYPESAFE_KEY` assignment in local `typesafe.env`. This file is ignored by Git. Never commit credentials. The live runner reads this file directly, disables SDK retries, and implements two logged retries of transient failures itself.
 
 ## Commands
+
+The separate Luna comparison runner uses an `OPENAI_API_KEY` assignment in the same ignored `typesafe.env`. Its fixed experiment is `luna-none-v1`, with explicit reasoning effort `none`, decision-only structured output, sequential requests and a $0.25 estimated-cost ceiling. Successful requests are preserved on resume. Run stages in order and inspect each generated stage report before continuing.
+
+```powershell
+# Rebuild the original Jev inputs first with the prepare command below.
+.venv/Scripts/python.exe -X utf8 -m jevbench.luna prepare
+.venv/Scripts/python.exe -X utf8 -m jevbench.luna run --stage 0 --limit 10
+# Inspect usage, then finish Stage 0 and run Stages 1 through 4 separately.
+.venv/Scripts/python.exe -X utf8 -m jevbench.luna run --stage 0
+.venv/Scripts/python.exe -X utf8 -m jevbench.luna run --stage 1
+```
+
+After downloading published Luna evidence, `python -m jevbench.luna restore` reconstructs its local response records and reports without API calls. The frozen Luna runner is for reproducing this specific experiment. Changing reasoning, prompts, output format or source cases requires a new experiment rather than editing or rerunning completed records.
 
 ```powershell
 # Download pinned sources and reconstruct the exact manifest. No API calls.

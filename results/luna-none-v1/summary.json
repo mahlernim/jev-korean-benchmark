@@ -1,0 +1,14 @@
+{
+  "successful": 1036,
+  "attempts": 1037,
+  "input_tokens": 191819,
+  "output_tokens": 12502,
+  "cached_tokens": 0,
+  "reasoning_tokens": 0,
+  "estimated_cost_usd": 0.0533662,
+  "ledger_usd": 0.0542044,
+  "median_ms": 1110.2648499945644,
+  "p95_ms": 3112.54745000042,
+  "api_seconds": 1543.6143230998423,
+  "runner_seconds": 1550.9135865999851
+}

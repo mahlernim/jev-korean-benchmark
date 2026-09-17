@@ -1,0 +1,442 @@
+{
+  "stage": 4,
+  "planned": 80,
+  "successful": 80,
+  "failed": 0,
+  "pending": 0,
+  "groups": {},
+  "robustness": {
+    "belebele/repeat1": [
+      {
+        "eval_id": "belebele-9c20288f818f9034__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-e41332056136ccdd__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-66c76c721a3e9d34__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": true
+      },
+      {
+        "eval_id": "belebele-60ac40668df9494f__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-a96cbee62035e1c3__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "belebele/repeat2": [
+      {
+        "eval_id": "belebele-9c20288f818f9034__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-e41332056136ccdd__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-66c76c721a3e9d34__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-60ac40668df9494f__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-a96cbee62035e1c3__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "belebele/variant1": [
+      {
+        "eval_id": "belebele-9c20288f818f9034__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-e41332056136ccdd__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-66c76c721a3e9d34__ko_ko__variant1",
+        "luna_flip": true,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-60ac40668df9494f__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-a96cbee62035e1c3__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "belebele/variant2": [
+      {
+        "eval_id": "belebele-9c20288f818f9034__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-e41332056136ccdd__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-66c76c721a3e9d34__ko_ko__variant2",
+        "luna_flip": true,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-60ac40668df9494f__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "belebele-a96cbee62035e1c3__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "pawsx/repeat1": [
+      {
+        "eval_id": "pawsx-5309__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "pawsx-956__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "pawsx-1231__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "pawsx-2727__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "pawsx-7821__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "pawsx/repeat2": [
+      {
+        "eval_id": "pawsx-5309__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "pawsx-956__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "pawsx-1231__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "pawsx-2727__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "pawsx-7821__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "pawsx/variant1": [
+      {
+        "eval_id": "pawsx-5309__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": true
+      },
+      {
+        "eval_id": "pawsx-956__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "pawsx-1231__ko_ko__variant1",
+        "luna_flip": true,
+        "jev_flip": true
+      },
+      {
+        "eval_id": "pawsx-2727__ko_ko__variant1",
+        "luna_flip": true,
+        "jev_flip": true
+      },
+      {
+        "eval_id": "pawsx-7821__ko_ko__variant1",
+        "luna_flip": true,
+        "jev_flip": false
+      }
+    ],
+    "pawsx/variant2": [
+      {
+        "eval_id": "pawsx-5309__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": true
+      },
+      {
+        "eval_id": "pawsx-956__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "pawsx-1231__ko_ko__variant2",
+        "luna_flip": true,
+        "jev_flip": true
+      },
+      {
+        "eval_id": "pawsx-2727__ko_ko__variant2",
+        "luna_flip": true,
+        "jev_flip": true
+      },
+      {
+        "eval_id": "pawsx-7821__ko_ko__variant2",
+        "luna_flip": true,
+        "jev_flip": false
+      }
+    ],
+    "kormed/repeat1": [
+      {
+        "eval_id": "kormed-2024-2-63__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-19__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-20__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2022-4-23__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-13__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "kormed/repeat2": [
+      {
+        "eval_id": "kormed-2024-2-63__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-19__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-20__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2022-4-23__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-13__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "kormed/variant1": [
+      {
+        "eval_id": "kormed-2024-2-63__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-19__ko_ko__variant1",
+        "luna_flip": true,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-20__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2022-4-23__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-13__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "kormed/variant2": [
+      {
+        "eval_id": "kormed-2024-2-63__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-19__ko_ko__variant2",
+        "luna_flip": true,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-20__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2022-4-23__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "kormed-2023-1-13__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "medical_text/repeat1": [
+      {
+        "eval_id": "medical-experiencer-03__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-negation-05__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-medication-02__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-evidence-05__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-temporality-05__ko_ko__repeat1",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "medical_text/repeat2": [
+      {
+        "eval_id": "medical-experiencer-03__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-negation-05__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-medication-02__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-evidence-05__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-temporality-05__ko_ko__repeat2",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "medical_text/variant1": [
+      {
+        "eval_id": "medical-experiencer-03__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-negation-05__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-medication-02__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-evidence-05__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-temporality-05__ko_ko__variant1",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ],
+    "medical_text/variant2": [
+      {
+        "eval_id": "medical-experiencer-03__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-negation-05__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-medication-02__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-evidence-05__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      },
+      {
+        "eval_id": "medical-temporality-05__ko_ko__variant2",
+        "luna_flip": false,
+        "jev_flip": false
+      }
+    ]
+  }
+}

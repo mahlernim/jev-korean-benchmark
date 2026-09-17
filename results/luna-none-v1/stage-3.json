@@ -1,0 +1,75 @@
+{
+  "stage": 3,
+  "planned": 120,
+  "successful": 120,
+  "failed": 0,
+  "pending": 0,
+  "groups": {
+    "medical_text/en_en": {
+      "n": 40,
+      "correct": 39,
+      "accuracy": 0.975,
+      "ci95": [
+        0.8711863103652591,
+        0.9955731684973186
+      ],
+      "paired": {
+        "n": 40,
+        "difference": -0.025,
+        "ci95": [
+          -0.075,
+          0.0
+        ],
+        "left_only_correct": 1,
+        "right_only_correct": 0
+      },
+      "median_latency_ms": 1247.3721999995178,
+      "p95_latency_ms": 3267.646214996057,
+      "cost_usd": 0.00135
+    },
+    "medical_text/ko_en": {
+      "n": 40,
+      "correct": 40,
+      "accuracy": 1.0,
+      "ci95": [
+        0.9123783988027135,
+        1
+      ],
+      "paired": {
+        "n": 40,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "left_only_correct": 0,
+        "right_only_correct": 0
+      },
+      "median_latency_ms": 1093.655350006884,
+      "p95_latency_ms": 2907.650590009869,
+      "cost_usd": 0.0013776
+    },
+    "medical_text/ko_ko": {
+      "n": 40,
+      "correct": 40,
+      "accuracy": 1.0,
+      "ci95": [
+        0.9123783988027135,
+        1
+      ],
+      "paired": {
+        "n": 40,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "left_only_correct": 0,
+        "right_only_correct": 0
+      },
+      "median_latency_ms": 988.5988500027452,
+      "p95_latency_ms": 2415.3390849984116,
+      "cost_usd": 0.001464
+    }
+  }
+}

@@ -177,6 +177,8 @@ def build_narrative(manifest,attempts):
     flipped=sum(v['flip'] for v in order_check)
     lines.insert(lines.index('## Robustness')+2, f"**Sentence-order sensitivity was visible even in this small check.** Reversing the two sentences changed {flipped} of {len(order_check)} PAWS-X predictions relative to the base condition. The same cases flipped in both reversed runs. Semantic equivalence is symmetric, so this is a useful failure mode to investigate on a larger held-out set. It is not an estimate of the population-wide flip rate.")
     lines.insert(lines.index('## Experiment design'), f"A small robustness check also found that reversing sentence order changed {flipped}/{len(order_check)} paraphrase predictions. This observation is more actionable than interpreting a one-point instruction-language difference as a general advantage.\n")
+    if (docs/'luna-comparison.md').exists():
+        lines.insert(2,'A subsequent [Luna-none comparison](luna-comparison.html) evaluates the same cases. This page preserves the original Jev-only pilot.\n')
     (docs/'report.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     ko=f'''# Jev 한국어 및 의학 평가 부록
 
@@ -218,6 +220,7 @@ def build_narrative(manifest,attempts):
 def render_web():
     docs=ROOT/'docs'
     style='''body{margin:0;background:#f7f8fa;color:#192434;font:17px/1.7 system-ui,-apple-system,sans-serif}main{max-width:1020px;margin:auto;padding:48px 28px 80px}nav{font-size:14px;display:flex;gap:22px;flex-wrap:wrap;border-bottom:1px solid #cad2dc;padding-bottom:18px}h1{font-size:clamp(30px,5vw,48px);line-height:1.15;letter-spacing:-.035em;margin:40px 0 18px}h2{font-size:25px;margin-top:44px;line-height:1.3}h3{font-size:21px}p,li{max-width:880px}a{color:#125ac4;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;margin:20px 0;background:white}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #d7dee7;vertical-align:top}th{background:#e9eef5}code{font-size:.85em;overflow-wrap:anywhere}pre{padding:16px;background:#e9eef5;overflow:auto}footer{border-top:1px solid #cad2dc;margin-top:50px;padding-top:16px;font-size:13px;color:#526173}.table-wrap{overflow-x:auto} @media(max-width:600px){main{padding:24px 16px 50px}body{font-size:16px}th,td{padding:8px;min-width:65px}}'''
+    style += 'img{max-width:100%;height:auto}'
     for source in docs.glob('*.md'):
         body=markdown.markdown(source.read_text(encoding='utf-8'),extensions=['tables','fenced_code','toc'])
         body=body.replace('<table>','<div class="table-wrap"><table>').replace('</table>','</table></div>')
