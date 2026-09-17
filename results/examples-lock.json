@@ -1,0 +1,39 @@
+{
+  "seed": 20260928,
+  "note": "Items selected from outside the scored set so that publishing them cannot contaminate the reported questions or any rerun of them.",
+  "revisions": {
+    "belebele": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+    "pawsx": "4cd8187c404bda33cb1f62b49b001115862acf37",
+    "kormed": "79efd6f91edfc8036330d7a4daa88b9f2deb9a82",
+    "medqa": "0fb93dd23a7339b6dcd27e241cb9b5eca62d4d18"
+  },
+  "source_files": {
+    "belebele": {
+      "data/sources/belebele/7899cdfa4e1e0d733fd77c848e2c273cb1d32be2/README.md": "311c1a2dc30595eb6c7788c0c20548ea00169eef93dc5b0436c7ccdacaf84231",
+      "data/sources/belebele/7899cdfa4e1e0d733fd77c848e2c273cb1d32be2/data/eng_Latn.jsonl": "15af884c2b5994fdc71199e79d553a1864b08ce1b31894aa87f6be925a064a31",
+      "data/sources/belebele/7899cdfa4e1e0d733fd77c848e2c273cb1d32be2/data/kor_Hang.jsonl": "e995f945e9dd7a87ed9c2c727b3fac01cf0e82fa94989cf448266d4f1c136fe2"
+    },
+    "pawsx": {
+      "data/sources/pawsx/4cd8187c404bda33cb1f62b49b001115862acf37/README.md": "a497f37155a0812792b18c2914614112171a520c7cd47ab624dcce0885488303",
+      "data/sources/pawsx/4cd8187c404bda33cb1f62b49b001115862acf37/en/test-00000-of-00001.parquet": "fdb1e43f1068cf0cec955327cfdedc2d3065f15d3cd673c9d0002e6e87cc7915",
+      "data/sources/pawsx/4cd8187c404bda33cb1f62b49b001115862acf37/ko/test-00000-of-00001.parquet": "b27692abb0b1be9f9a3a22f80cee749d9dd35870a6f2874c594777aac3aa6988"
+    },
+    "kormed": {
+      "data/sources/kormed/79efd6f91edfc8036330d7a4daa88b9f2deb9a82/README.md": "8eb09286d6575e4553cb3dd5bb4511ab82cc16e485aa56725f3afd8a2f761af6",
+      "data/sources/kormed/79efd6f91edfc8036330d7a4daa88b9f2deb9a82/doctor/test-00000-of-00001-a16785256f5f42b8.parquet": "d7c3696c9adc4fa4764be997518937beadedef9ac4d02331d224c98d709d2df9"
+    },
+    "medqa": {
+      "phrases_no_exclude_test.jsonl": "c3b905ccfa66152dc25afbcb2c10e86c0bdb208824f0658fcdb2c040f60a2beb"
+    }
+  },
+  "selected": {
+    "belebele": [
+      "https://en.wikivoyage.org/wiki/Music_festival_circuit",
+      1
+    ],
+    "pawsx": "5227",
+    "kormed": "2023-1-46",
+    "medqa": "medqa-us-test-0073"
+  },
+  "sha256": "f308509d6c3e356babc467150ab15e882b219910396589c6e8569f83e5094434"
+}
