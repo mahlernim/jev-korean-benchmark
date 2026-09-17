@@ -6,6 +6,7 @@ The scored public tasks use 100 Belebele questions, 100 PAWS-X pairs and 100 Kor
 
 ## Read the findings
 
+- [Live web report](https://ahn-lab.org/jev-korean-benchmark/)
 - [English report](docs/report.md)
 - [Korean supplement](docs/korean-supplement.md)
 - [Methodology](docs/methodology.md)

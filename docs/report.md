@@ -92,6 +92,8 @@ Returned confidence summarizes a distribution and is not itself measured correct
 
 The initial strict sum-to-one validator stopped on one five-option vector summing to 0.99. We preserved that event and amended the analysis to allow only bounded rounding-compatible vectors, normalizing them for probability metrics. The [methodology amendment](methodology.html#probability-validation-amendment) documents the rule and timing. This is consistent with observed two-decimal precision, but server rounding has not been independently confirmed.
 
+Three primary medical distributions and one robustness distribution needed normalization. For the medical groups, normalization changed mean Brier score by less than 0.0001 and mean log loss by less than 0.00021. Accuracy and confidence-based coverage were unchanged. Raw-vector sensitivity metrics are included in the downloadable JSON.
+
 ## Runtime and cost
 
 The resolved model was `jev-1.13.0` throughout. The requested alias was `jev-latest`. Requests ran sequentially through Python SDK 0.6.0 on Windows, with a 30-second timeout and at most two logged retries for transient failures.
