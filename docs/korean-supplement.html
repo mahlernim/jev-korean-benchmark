@@ -1,5 +1,40 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A reproducible early-access evaluation of Jev on Korean reading, paraphrase decisions and medical text."><title>Jev 한국어 및 의학 평가 부록</title><style>body{margin:0;background:#f7f8fa;color:#192434;font:17px/1.7 system-ui,-apple-system,sans-serif}main{max-width:1020px;margin:auto;padding:48px 28px 80px}nav{font-size:14px;display:flex;gap:22px;flex-wrap:wrap;border-bottom:1px solid #cad2dc;padding-bottom:18px}h1{font-size:clamp(30px,5vw,48px);line-height:1.15;letter-spacing:-.035em;margin:40px 0 18px}h2{font-size:25px;margin-top:44px;line-height:1.3}h3{font-size:21px}p,li{max-width:880px}a{color:#125ac4;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;margin:20px 0;background:white}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #d7dee7;vertical-align:top}th{background:#e9eef5}code{font-size:.85em;overflow-wrap:anywhere}pre{padding:16px;background:#e9eef5;overflow:auto}footer{border-top:1px solid #cad2dc;margin-top:50px;padding-top:16px;font-size:13px;color:#526173}.table-wrap{overflow-x:auto} @media(max-width:600px){main{padding:24px 16px 50px}body{font-size:16px}th,td{padding:8px;min-width:65px}}img{max-width:100%;height:auto}</style></head><body><main><nav><a href="index.html">Jev Korean pilot</a><a href="methodology.html">Methods</a><a href="korean-supplement.html">한국어</a><a href="results.zip">Download results</a><a href="https://github.com/mahlernim/jev-korean-benchmark">Code and data</a></nav><h1 id="jev">Jev 한국어 및 의학 평가 부록</h1>
 <p>2026년 9월 17일 얼리 액세스 모델 <code>jev-1.13.0</code>을 평가했습니다. 1,036개의 평가 조건을 실행했고, 연결 오류 재시도 1회를 포함한 API 시도는 1,037회였습니다. 같은 문항의 언어별 조건과 반복 실험이 포함되므로 서로 독립적인 1,036개 문항을 평가한 것은 아닙니다.</p>
+<!-- luna-ko-start -->
+<h2 id="luna-none">Luna none 후속 비교</h2>
+<p>동일한 1,036개 평가 조건을 GPT-5.6 Luna의 추론 설정 <code>none</code>으로 실행했습니다. 아래는 한국어 본문과 한국어 지시문을 사용한 결과이며, 각 과제는 100문항입니다.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>평가</th>
+<th style="text-align: right;">Jev</th>
+<th style="text-align: right;">Luna none</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Belebele</td>
+<td style="text-align: right;">96%</td>
+<td style="text-align: right;">95%</td>
+</tr>
+<tr>
+<td>PAWS-X</td>
+<td style="text-align: right;">76%</td>
+<td style="text-align: right;">72%</td>
+</tr>
+<tr>
+<td>KorMedMCQA</td>
+<td style="text-align: right;">80%</td>
+<td style="text-align: right;">88%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Luna의 추정 API 비용은 $0.05337, 호출 시간의 합은 1543.6초였습니다. Jev는 각각 $0.02056, 262.0초였습니다. 실제 청구서와 대조한 금액은 아니며, 서로 다른 시점의 네트워크 및 서비스 상태가 포함됩니다.</p>
+<p>일반 한국어 과제의 모델 간 차이는 불확실성이 컸습니다. 의사 시험에서는 Luna가 8%p 높았고, 대응 표본의 탐색적 95% 구간은 +2~+15%p였습니다. 다중 비교 보정을 하지 않은 작은 표본 결과이며 임상적 신뢰성을 입증하지 않습니다. 더 높은 추론 설정은 아직 평가하지 않았습니다.</p>
+<p><a href="luna-comparison.html">전체 비교 보고서와 그림</a> · <a href="kormedmcqa-context.html">의학 벤치마크 비교 맥락</a></p>
+<p>아래 내용은 최초 Jev 단독 평가 기록입니다.</p>
+<!-- luna-ko-end -->
+
 <h2 id="_1">주요 결과</h2>
 <div class="table-wrap"><table>
 <thead>

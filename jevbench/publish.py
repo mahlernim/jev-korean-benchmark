@@ -213,7 +213,13 @@ def build_narrative(manifest,attempts):
 
 [영문 전체 보고서](index.html) · [평가 방법](methodology.html) · [원시 응답 및 결과 다운로드](results.zip) · [임상의 검토용 문항](clinician-review.html)
 '''
-    (docs/'korean-supplement.md').write_text(ko,encoding='utf-8')
+    ko_path=docs/'korean-supplement.md'
+    if ko_path.exists():
+        existing_ko=ko_path.read_text(encoding='utf-8')
+        if '<!-- luna-ko-start -->' in existing_ko and '<!-- luna-ko-end -->' in existing_ko:
+            block='<!-- luna-ko-start -->'+existing_ko.split('<!-- luna-ko-start -->',1)[1].split('<!-- luna-ko-end -->',1)[0]+'<!-- luna-ko-end -->\n\n'
+            ko=ko.replace('## 주요 결과',block+'## 주요 결과',1)
+    ko_path.write_text(ko,encoding='utf-8')
     (docs/'clinician-review.md').write_text((ROOT/'data'/manifest['experiment']/'clinician_review.md').read_text(encoding='utf-8').rstrip()+'\n',encoding='utf-8')
 
 

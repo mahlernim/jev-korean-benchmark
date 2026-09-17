@@ -153,6 +153,25 @@ def main():
     else:
         text=text.replace('## Read the findings','\n'.join(block)+'\n## Read the findings',1)
     readme.write_text(text,encoding='utf-8')
+    ko_path=ROOT/'docs/korean-supplement.md'
+    ko_text=ko_path.read_text(encoding='utf-8')
+    ko_block=['<!-- luna-ko-start -->','## Luna none 후속 비교','',
+        '동일한 1,036개 평가 조건을 GPT-5.6 Luna의 추론 설정 `none`으로 실행했습니다. 아래는 한국어 본문과 한국어 지시문을 사용한 결과이며, 각 과제는 100문항입니다.','',
+        '| 평가 | Jev | Luna none |','|---|---:|---:|']
+    for task,label,stage in tasks:
+        g=read(DIRECTORY/f'reports/stage-{stage}.json')['groups'][task+'/ko_ko']
+        j=read(ROOT/f'results/stage-{stage}.json')['groups'][task+'/ko_ko']
+        ko_block.append(f"| {label} | {j['accuracy']:.0%} | {g['accuracy']:.0%} |")
+    ko_block+=['',f"Luna의 추정 API 비용은 ${total['estimated_cost_usd']:.5f}, 호출 시간의 합은 {total['api_seconds']:.1f}초였습니다. Jev는 각각 $0.02056, 262.0초였습니다. 실제 청구서와 대조한 금액은 아니며, 서로 다른 시점의 네트워크 및 서비스 상태가 포함됩니다.",'',
+        '일반 한국어 과제의 모델 간 차이는 불확실성이 컸습니다. 의사 시험에서는 Luna가 8%p 높았고, 대응 표본의 탐색적 95% 구간은 +2~+15%p였습니다. 다중 비교 보정을 하지 않은 작은 표본 결과이며 임상적 신뢰성을 입증하지 않습니다. 더 높은 추론 설정은 아직 평가하지 않았습니다.','',
+        '[전체 비교 보고서와 그림](luna-comparison.html) · [의학 벤치마크 비교 맥락](kormedmcqa-context.html)','',
+        '아래 내용은 최초 Jev 단독 평가 기록입니다.','<!-- luna-ko-end -->','']
+    if '<!-- luna-ko-start -->' in ko_text:
+        before,rest=ko_text.split('<!-- luna-ko-start -->',1); _,after=rest.split('<!-- luna-ko-end -->',1)
+        ko_text=before+'\n'.join(ko_block)+after.lstrip('\n')
+    else:
+        ko_text=ko_text.replace('## 주요 결과','\n'.join(ko_block)+'\n## 주요 결과',1)
+    ko_path.write_text(ko_text,encoding='utf-8')
     design=ROOT/'docs/comparison-design.md'
     design.write_text(design.read_text(encoding='utf-8').replace(
         'This is a proposed extension. No Luna measurements are included in the current results.',
